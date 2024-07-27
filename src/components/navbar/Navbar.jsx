@@ -57,7 +57,7 @@ export default function Navbar() {
         <span className="sr-only">Toggle navigation menu</span>
       </button>
       <div className={`absolute top-16 left-0 px-16 text-center space-y-4 w-full bg-black p-4 ${isMenuOpen ? 'block' : 'hidden'}`}>
-        <Link to="/home" className="block mx-32 text-md font-medium text-white border-b shadow-sm shadow-white hover:text-yellow-500" onClick={closeMenu}>
+        <Link to="/" className="block mx-32 text-md font-medium text-white border-b shadow-sm shadow-white hover:text-yellow-500" onClick={closeMenu}>
           Home
         </Link>
         <Link to="/services" className="block mx-28 text-md font-medium text-white border-b shadow-sm shadow-white hover:text-yellow-500" onClick={closeMenu}>

@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="mb-4 md:mb-0">
           <img className="w-48 h-24" src="./images/promotrw.png" alt="Promotrw Logo" />
           <div className="hidden md:flex space-x-4 py-4">
-            <Link to="/home" className="hover:text-muted-foreground">
+            <Link to="/" className="hover:text-muted-foreground">
               Home
             </Link>
             <Link to="/services" className="hover:text-muted-foreground">
