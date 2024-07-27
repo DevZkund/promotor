@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -7,21 +8,21 @@ const Footer = () => {
         <div className="mb-4 md:mb-0">
           <img className="w-48 h-24" src="./images/promotrw.png" alt="Promotrw Logo" />
           <div className="hidden md:flex space-x-4 py-4">
-            <a href="#" className="hover:text-muted-foreground">
+            <Link to="/home" className="hover:text-muted-foreground">
               Home
-            </a>
-            <a href="#" className="hover:text-muted-foreground">
+            </Link>
+            <Link to="/services" className="hover:text-muted-foreground">
               Services
-            </a>
-            <a href="#" className="hover:text-muted-foreground">
+            </Link>
+            <Link to="/about" className="hover:text-muted-foreground">
               About Us
-            </a>
-            <a href="#" className="hover:text-muted-foreground">
+            </Link>
+            <Link to="/contact" className="hover:text-muted-foreground">
               Contact Us
-            </a>
-            <a href="#" className="hover:text-muted-foreground">
+            </Link>
+            <Link to="/blogs" className="hover:text-muted-foreground">
               Blogs
-            </a>
+            </Link>
           </div>
         </div>
         <div className="text-sm text-right  md:text-left">
@@ -32,15 +33,15 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex justify-center md:justify-end space-x-4 pt-3 mt-4 border-t-[0.1px] border-t-white/5">
-        <a href="#" className="hover:text-muted-foreground underline">
+        <Link to="#insta" className="hover:text-muted-foreground underline">
           insta
-        </a>
-        <a href="#" className="hover:text-muted-foreground underline">
+        </Link>
+        <Link to="#youtube" className="hover:text-muted-foreground underline">
           Youtube
-        </a>
-        <a href="#" className="hover:text-muted-foreground underline">
+        </Link>
+        <Link to="#linkedin" className="hover:text-muted-foreground underline">
           in
-        </a>
+        </Link>
       </div>
     </footer>
   );

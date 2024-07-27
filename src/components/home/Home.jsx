@@ -198,7 +198,7 @@ const ReviewsCard = () => {
   );
 };
 
-export default function LandingPage() {
+export default function Home() {
   useEffect(() => {
     AOS.init({
       duration: 1200,
