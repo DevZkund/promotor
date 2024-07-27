@@ -1,0 +1,17 @@
+.circular-color-box {
+    background: radial-gradient(circle, white, black,white , black, white,black);
+    background-size: 500% 500%;
+    animation: animateBg 12s infinite linear;
+  }
+  
+  @keyframes animateBg {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 50% 100%;
+    }
+    100% {
+      background-position: 100% 0%;
+    }
+}
