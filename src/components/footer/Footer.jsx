@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-white/5 text-foreground px-4 md:px-16 pb-8 mt-36">
+    <footer className="bg-white/5 text-foreground px-4 md:px-16 pb-8">
       <div className="flex flex-row md:flex-row  justify-between items-center">
         <div className="mb-4 md:mb-0">
           <img className="w-48 h-24" src="./images/promotrw.png" alt="Promotrw Logo" />
