@@ -31,6 +31,7 @@ return (
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/abd4d96b5758f643617697a2efc7857d33c6b1f8e864048dfb3f92c2a49184b1?apiKey=0a4a5a77f3084b74ad367ef3cc9e3928&&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928"
                 className="shrink-0 self-start aspect-[0.45] w-[21px]"
+                alt="abc"
               />
               <div className="flex flex-col">
                 <div className="text-lg font-bold">Chat to us</div>
@@ -42,6 +43,7 @@ return (
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/1fecaf2f9dc0202c6642cda095087e97722250af32690aaab4898d73abf477dc?apiKey=0a4a5a77f3084b74ad367ef3cc9e3928&&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928"
                 className="shrink-0 aspect-[0.61] w-[20px]"
+                alt="abc"
               />
               <div className="flex-auto text-lg self-start">
                 Visit our Office Branch
@@ -56,6 +58,7 @@ return (
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/58808968ce035f710f9e4437d39925603a625e74792589cac0292f63370b7fc3?apiKey=0a4a5a77f3084b74ad367ef3cc9e3928&&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928"
                 className="shrink-0 w-6 aspect-square"
+                alt="abc"
               />
               <div className="self-start text-lg">Call Us</div>
             </div>
@@ -101,16 +104,19 @@ return (
                         loading="lazy"
                         src="./images/checked.svg"
                         className="aspect-[1.15] w-[23px]"
+                        alt="abc"
                       />
                       <img
                         loading="lazy"
                         src="./images/unChecked.svg"
                         className="mt-8 aspect-[1.15] w-[23px]"
+                        alt="abc"
                       />
                       <img
                         loading="lazy"
                         src="./images/unChecked.svg"
                         className="mt-7 aspect-[1.15] w-[23px]"
+                        alt="abc"
                       />
                     </div>
                     <div className="my-auto text-base leading-6 text-black">
@@ -131,16 +137,19 @@ return (
                         loading="lazy"
                         src="./images/unChecked.svg"
                         className="w-5 aspect-square"
+                        alt="abc"
                       />
                       <img
                         loading="lazy"
                         src="./images/unChecked.svg"
                         className="mt-8 w-5 aspect-square"
+                        alt="abc"
                       />
                       <img
                         loading="lazy"
                         src="./images/unChecked.svg"
                         className="mt-7 w-5 aspect-square"
+                        alt="abc"
                       />
                     </div>
                     <div className="my-auto text-base leading-6 text-black">
