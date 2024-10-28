@@ -17,20 +17,20 @@ export default function Navbar() {
       <div className="flex items-center space-x-4 h-8 w-44">
         <img src="./images/promotrw.png" alt="logo" />
       </div>
-      <nav className="hidden md:flex space-x-4 lg:space-x-8">
-        <Link className="text-base md:text-sm lg:text-md" to="/">
+      <nav className="hidden md:flex space-x-4 lg:space-x-8 ">
+        <Link className="text-base md:text-sm lg:text-md xl:text-xl" to="/">
           Home
         </Link>
-        <Link className="text-base md:text-sm lg:text-md" to="/services">
+        <Link className="text-base md:text-sm lg:text-md xl:text-xl" to="/services">
           Services
         </Link>
-        <Link className="text-base md:text-sm lg:text-md" to="/about">
+        <Link className="text-base md:text-sm lg:text-md xl:text-xl" to="/about">
           About Us
         </Link>
-        <Link className="text-base md:text-sm lg:text-md" to="/contact">
+        <Link className="text-base md:text-sm lg:text-md xl:text-xl" to="/contact">
           Contact Us
         </Link>
-        <Link className="text-base md:text-sm lg:text-md" to="/blogs">
+        <Link className="text-base md:text-sm lg:text-md xl:text-xl" to="/blogs">
           Blogs
         </Link>
       </nav>

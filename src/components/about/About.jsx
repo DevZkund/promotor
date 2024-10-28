@@ -15,13 +15,33 @@ function FounderSection() {
       <h2 className="text-xl md:text-2xl lg:text-4xl font-bold">
         Founder - Tushar Dhiman
       </h2>
-      <div className="grid md:grid-cols-2 grid-col-1 justify-evenly items-center md:items-start my-12 mx-auto h-full w-11/12 lg:w-10/12">
-        <div className="w-full h-full  overflow-hidden mb-8 md:mb-0">
+      <div className="grid md:grid-cols-2 grid-col-1 justify-evenly items-center md:items-start my-12 mx-auto h-full w-11/12 lg:w-10/12 ">
+        <div className="w-full h-full relative  overflow-hidden mb-8 md:mb-0">
           <img
             className="rounded-lg object-cover shadow-md shadow-white p-2 w-full h-auto"
             src="./images/founder.png"
             alt="Founder"
           />
+          <div className="w-[100%] mx-auto text-justify absolute bottom-0 py-4 px-6 bg-black rounded-tl-3xl rounded-tr-3xl">
+            <p>
+              You'll often find me sipping on bottomless cups of coffee,
+              brainstorming the next big campaign, and occasionally challenging
+              the office plant to a game of chess (I usually lose). I believe
+              that marketing isn't just about selling; it's about storytelling,
+              and I'm here to craft captivating narratives that resonate with
+              your audience. <br />
+              "Why did the marketer bring a magnifying glass to the meeting? To
+              find those tiny details that make a big difference!"
+            </p>
+            <div className="text-right">
+              <h1 className="mt-3 me-2">- Tushar Dhiman </h1>
+              <h1>
+                <b>
+                  ( Founder & <span className="text-amber-400">CEO</span> )
+                </b>
+              </h1>
+            </div>
+          </div>
         </div>
         <div className="flex-1 flex items-center justify-center w-full md:w-auto">
           <div className="flex flex-col items-center justify-start pt-5 w-full lg:w-4/5 px-6">
@@ -93,24 +113,24 @@ function FounderSection() {
 // WhyDifferent Section
 function WhyDifferentSection() {
   return (
-    <section className="">
-      <div className="flex justify-center items-center px-16 py-20 bg-zinc-800 max-md:px-5">
-        <div className="flex flex-col mt-16 w-full max-w-[1446px] max-md:mt-10 max-md:max-w-full">
-          <div className="max-md:max-w-full">
-            <div className="flex gap-5 max-md:flex-col">
-              <div className="flex flex-col w-[42%] max-md:ml-0 max-md:w-full">
-                <div className="flex flex-col mt-1 font-bold text-white max-md:mt-10 max-md:max-w-full">
-                  <div className="text-sm uppercase tracking-[2.8px] max-md:max-w-full">
+    <section className=" ">
+      <div className="flex justify-center py-10 items-center mx-auto  bg-zinc-800 max-md:px-5">
+        <div className="flex flex-col mt-16 w-full max-w-[1446px]  max-md:mt-10 max-md:max-w-full">
+          <div className="max-md:max-w-full ">
+            <div className="flex justify-center  max-md:flex-col ">
+              <div className="flex flex-col w-[35%] mr-0  max-md:ml-0 max-md:w-full">
+                <div className="flex flex-col mt-1  text-white max-md:mt-10 max-md:max-w-full">
+                  <div className="text-sm uppercase font-bold tracking-[2.8px] max-md:max-w-full">
                     Why we are here
                   </div>
-                  <div className="mt-6 text-5xl text-yellow-400 max-md:max-w-full max-md:text-4xl">
+                  <div className="mt-6 text-4xl font-bold text-yellow-400 max-md:max-w-full max-md:text-4xl">
                     Why we are Different in <br />
                     <span className="text-yellow-400 underline">business</span>
                   </div>
-                  <div className="mt-11 text-3xl max-md:mt-10 max-md:max-w-full">
+                  <div className="mt-8 text-xl font-bold max-md:mt-7 max-md:max-w-full">
                     Trust, Diligence, Succeed!
                   </div>
-                  <div className="mt-11 text-base leading-8 max-md:mt-10 max-md:max-w-full">
+                  <div className="mt-6 text-sm leading-6 max-md:mt-5 max-md:max-w-full">
                     here are many variations of passages of Lorem Ipsum
                     available, <br />
                     but the majority have suffered alteration in some form, by{" "}
@@ -119,57 +139,20 @@ function WhyDifferentSection() {
                     <br />
                     slightly believable.{" "}
                   </div>
-                  <div className="self-start px-11 py-5 mt-14 text-sm bg-black rounded-[90px] max-md:px-5 max-md:mt-10">
+                  <div className="self-start px-5 py-2 mt-5 text-sm bg-black rounded-[90px] max-md:px-5 max-md:mt-10">
                     Know More
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col ml-5 w-[58%] max-md:ml-0 max-md:w-full">
-                <div className="shrink-0 mx-auto max-w-full bg-stone-300 h-[520px] w-[776px] max-md:mt-10" />
+              <div className="flex flex-col ml-5 w-[40%] max-md:ml-0 max-md:w-full ">
+                <div className="shrink-0 mx-auto max-w-full bg-stone-300 h-[22rem] w-[32rem] max-md:mt-10 rounded-2xl">
+                  <img
+                    src="./images/about-img-2.png"
+                    alt="about-img-2"
+                    className="h-[22rem] w-[32rem]"
+                  />
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="flex gap-5 justify-between items-center self-center mt-16 w-full max-w-[1408px] max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
-            <div className="flex flex-col self-stretch my-auto">
-              <div className="flex gap-5 justify-between text-xl font-bold text-white whitespace-nowrap">
-                <div>1985</div>
-                <div>1997</div>
-              </div>
-              <div className="flex gap-5 justify-between mt-8 max-md:pr-5">
-                <div className="shrink-0 rounded-full bg-white bg-opacity-60 h-[17px] w-[17px]" />
-                <div className="shrink-0 rounded-full bg-white bg-opacity-60 h-[17px] w-[17px]" />
-              </div>
-            </div>
-            <div className="flex flex-col items-center self-stretch font-bold text-white">
-              <div className="self-stretch px-16 py-10 text-xl whitespace-nowrap bg-stone-300 max-md:pr-7 max-md:pl-7">
-                2001
-              </div>
-              <div className="z-10 shrink-0 -mt-3 bg-yellow-400 rounded-full h-[27px] w-[27px]" />
-              <div className="mt-7 text-base text-center">
-                Trust, Diligence, <br />& succeed
-              </div>
-            </div>
-            <div className="flex flex-col self-stretch my-auto text-xl font-bold text-white whitespace-nowrap">
-              <div>2003</div>
-              <div className="shrink-0 self-center mt-8 rounded-full bg-white bg-opacity-60 h-[17px] w-[17px]" />
-            </div>
-            <div className="flex flex-col self-stretch my-auto text-xl font-bold text-white whitespace-nowrap">
-              <div>2007</div>
-              <div className="shrink-0 self-center mt-8 rounded-full bg-white bg-opacity-60 h-[17px] w-[17px]" />
-            </div>
-            <div className="flex flex-col self-stretch my-auto">
-              <div className="flex gap-5 justify-between text-xl font-bold text-white whitespace-nowrap">
-                <div>2015</div>
-                <div>2019</div>
-              </div>
-              <div className="flex gap-5 justify-between mt-8 max-md:pr-5">
-                <div className="shrink-0 rounded-full bg-white bg-opacity-60 h-[17px] w-[17px]" />
-                <div className="shrink-0 rounded-full bg-white bg-opacity-60 h-[17px] w-[17px]" />
-              </div>
-            </div>
-            <div className="flex flex-col self-stretch my-auto text-xl font-bold text-white whitespace-nowrap">
-              <div>2023</div>
-              <div className="shrink-0 self-center mt-8 rounded-full bg-white bg-opacity-60 h-[17px] w-[17px]" />
             </div>
           </div>
         </div>
@@ -198,8 +181,8 @@ function TestimonialContent() {
     <div className="flex gap-5 max-md:flex-col">
       <div className="flex flex-col w-[30%]  max-md:ml-0 max-md:w-full">
         <div className="flex flex-col mt-0 font-bold text-black  max-md:mt-0">
-          <div className="flex justify-end items-start h-48  -mt-20 bg-stone-300 ">            
-            <img className="-mr-6 mt-4 w-12  " src="./images/“.svg" alt="" />          
+          <div className="flex justify-end items-start h-48  -mt-20 bg-stone-300 ">
+            <img className="-mr-6 mt-4 w-12  " src="./images/“.svg" alt="" />
           </div>
           <h3 className="mt-9 text-3xl max-md:mt-10">Sureender Shinga</h3>
           <p className="mt-4 text-base">Chief Executive Officer</p>
@@ -269,12 +252,12 @@ function BrandLogos() {
     },
     {
       src: "https://cdn.builder.io/api/v1/image/assets/TEMP/b139dee2e3827a9056c8cc90a7d49c68f289811929920620c0e6363dbe216e02?apiKey=0a4a5a77f3084b74ad367ef3cc9e3928&&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928",
-      width: "154px",
+      width: "112px",
       aspect: "4.76",
     },
   ];
   return (
-    <section className="flex flex-col self-stretch  pr-1.5 pb-px w-full bg-white max-md:max-w-full">
+    <section className="flex flex-col self-stretch  pr-1.5 pb-px w-full bg-white max-md:max-w-full overflow-hidden">
       <div className="shrink-0 h-px bg-stone-300 max-md:mt-10 max-md:max-w-full" />
       <div className="flex gap-5 justify-between items-center self-center px-5 w-full max-w-[1760px] max-md:flex-wrap max-md:max-w-full">
         {logos.map((logo, index) => (
@@ -286,7 +269,7 @@ function BrandLogos() {
               className={`shrink-0 self-stretch my-auto max-w-full aspect-[${logo.aspect}] w-[${logo.width}]`}
             />
             {index < logos.length - 1 && (
-              <div className="shrink-0 self-stretch w-px h-60 bg-stone-300" />
+              <div className="shrink-0 self-stretch w-px h-48 bg-stone-300" />
             )}
           </React.Fragment>
         ))}
@@ -419,7 +402,7 @@ export default function About() {
       <Header />
       <FounderSection />
       <WhyDifferentSection />
-      <ClientTestimonial/>
+      <ClientTestimonial />
       <PartnersSection />
       <BusinessTalk />
     </div>
