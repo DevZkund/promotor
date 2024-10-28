@@ -18,6 +18,7 @@ function Businesses() {
               <div className="flex flex-col  items-center px-6 xl:px-8 pt-12 pb-24 w-full text-center text-black bg-yellow-600 rounded-[370px] max-md:px-5 max-md:pb-24 max-md:mt-10">
                 <img
                   alt="temp"
+                
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/2adcf355da4c082a72a4a4e85b949c9296a3148145df981dbf497e988b552ffb?placeholderIfAbsent=true&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928"
                   className="object-contain max-w-full aspect-[0.91] w-[139px]"
