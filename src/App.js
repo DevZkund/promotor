@@ -6,6 +6,7 @@ import About from "./components/about/About";
 import Footer from "./components/footer/Footer";
 import Contacts from "./components/contacts/Contacts";
 import Services from "./components/services/Services";
+import ServicesDetails from "./components/services/ServicesDetails";
 
 function App() {
   return (
@@ -13,10 +14,11 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route  path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contacts />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/service" element={<ServicesDetails />} />
         </Routes>
         <Footer />
       </Router>

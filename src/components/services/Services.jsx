@@ -1,86 +1,54 @@
 import React from "react";
+import { services } from "./servicesData";
 
-function Businesses() {
+function StrategicSolutions() {
   return (
-    <div className="flex overflow-hidden flex-col items-end px-20 pt-40 pb-12 bg-black max-md:px-5 max-md:pt-24">
-      <div className="flex flex-col w-full max-w-[1579px] max-md:max-w-full">
-        <div className="self-center text-sm font-bold text-white uppercase tracking-[2.8px]">
+    <section className="flex overflow-hidden flex-col items-center px-20 pt-8 pb-12 bg-black max-md:px-5">
+      <div className="flex flex-col ml-14 max-w-full w-[1276px]">
+        <h2 className="self-center text-sm font-bold text-black uppercase tracking-[2.8px]">
           WHAT WE DO
-        </div>
-        <div className="self-center mt-3 text-5xl font-bold text-center text-white max-md:max-w-full max-md:text-4xl">
+        </h2>
+        <h1 className="self-center mt-3 text-5xl font-bold text-center text-white max-md:max-w-full max-md:text-4xl">
           strategic digital solutions to <br />
           <span className="text-yellow-600 underline">businesses</span> and
           organizations.
-        </div>
-        <div className="mt-20 w-full max-w-[1443px] max-md:mt-10 max-md:max-w-full">
-          <div className="flex justify-center gap-10 max-md:flex-col  ">
-            <div className="flex flex-col w-[25%] max-md:ml-0 max-md:w-full">
-              <div className="flex flex-col  items-center px-6 xl:px-8 pt-12 pb-24 w-full text-center text-black bg-yellow-600 rounded-[370px] max-md:px-5 max-md:pb-24 max-md:mt-10">
-                <img
-                  alt="temp"
-                
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/2adcf355da4c082a72a4a4e85b949c9296a3148145df981dbf497e988b552ffb?placeholderIfAbsent=true&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928"
-                  className="object-contain max-w-full aspect-[0.91] w-[139px]"
-                />
-                <div className="mt-6 text-sm uppercase tracking-[2.8px]">
-                  Digital Marketing
-                </div>
-                <div className="flex shrink-0 w-44 h-px bg-black" />
-                <div className="self-stretch mt-6 text-2xl xl:text-3xl font-bold">
-                  Get all Digital Solutions <br />
-                  from our Experts
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col ml-5 w-[25%]  max-md:ml-0 max-md:w-full">
-              <div className="flex flex-col  items-center px-6 xl:px-8 pt-12 pb-24 w-full font-bold text-center text-black bg-white rounded-[370px] shadow-[0px_3px_15px_rgba(0,0,0,0.1)] max-md:px-5 max-md:pb-24 max-md:mt-10">
-                <img
-                  alt="temp"
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/b170b68af7215f7657954bf7114d01d2b445652a51e5988b667d219a95032402?placeholderIfAbsent=true&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928"
-                  className="object-contain max-w-full aspect-[0.86] w-[102px]"
-                />
-                <div className="mt-14 text-sm uppercase tracking-[2.8px] max-md:mt-10">
-                  Reputed
-                </div>
-                <div className="flex shrink-0 mt-1.5 w-24 h-px bg-black" />
-                <div className="self-stretch mt-8  text-2xl xl:text-3xl">
-                  13+ Years of Successful
-                  <br />
-                  Client Relations
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col ml-5 w-[25%] h-full  max-md:ml-0 max-md:w-full">
-              <div className="flex flex-col  items-center px-6 xl:px-8 pt-12 pb-24 w-full font-bold text-center text-black bg-white rounded-[370px] shadow-[0px_3px_15px_rgba(0,0,0,0.1)] max-md:px-5 max-md:py-24 max-md:mt-10">
-                <img
-                  alt="temp"
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/37481f25f786579658c3bf9d0d82e443e8d9bf962bf37d5ef5c357d7a5da5883?placeholderIfAbsent=true&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928"
-                  className="object-contain w-24 aspect-[0.88]"
-                />
-                <div className="mt-14 text-sm uppercase tracking-[2.8px] max-md:mt-10">
-                  SUPPORT
-                </div>
-                <div className="flex shrink-0 mt-1.5 w-24 h-px bg-black" />
-                <div className="self-stretch mt-8  text-2xl xl:text-3xl">
-                  24/7 Quick Support
-                  <br />& Reliable Solutions
-                </div>
-              </div>
-            </div>
+        </h1>
+        <div className="mt-20 max-md:mt-10 max-md:max-w-full">
+          <div className=" grid grid-cols-3 gap-5 max-md:flex-col ">
+            {services.map((service, index) => (
+              <ServiceColumn key={index} {...service} />
+            ))}
           </div>
         </div>
-        <div className="flex gap-2.5 self-end mt-12 text-2xl text-white">
-          <div className="grow">view All</div>
+      </div>
+    </section>
+  );
+}
+function ServiceColumn({ title, description, imageSrc, link }) {
+  const handleClick = () => {
+    if (link) {
+      window.location.href = link; 
+    }
+  };
+
+  return (
+    <div className="flex flex-col w-[100%] max-md:ml-0 max-md:w-full">
+      <div
+        onClick={handleClick} // Add onClick to trigger the navigation
+        className={`flex flex-col items-center px-7 pt-1 pb-14 w-full text-black bg-gray-200 hover:bg-amber-500 rounded-xl max-md:px-5 max-md:mt-10`}
+      >
+        {imageSrc && (
           <img
-            alt="temp"
             loading="lazy"
-            srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/74b02a93-746f-4674-b0f7-4597a3c2eba6?placeholderIfAbsent=true&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/74b02a93-746f-4674-b0f7-4597a3c2eba6?placeholderIfAbsent=true&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/74b02a93-746f-4674-b0f7-4597a3c2eba6?placeholderIfAbsent=true&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/74b02a93-746f-4674-b0f7-4597a3c2eba6?placeholderIfAbsent=true&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/74b02a93-746f-4674-b0f7-4597a3c2eba6?placeholderIfAbsent=true&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/74b02a93-746f-4674-b0f7-4597a3c2eba6?placeholderIfAbsent=true&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/74b02a93-746f-4674-b0f7-4597a3c2eba6?placeholderIfAbsent=true&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/74b02a93-746f-4674-b0f7-4597a3c2eba6?placeholderIfAbsent=true&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928"
-            className="object-contain shrink-0 my-auto w-8 bg-amber-400 rounded-full aspect-[1.18]"
+            src={imageSrc}
+            alt="services"
+            className="object-contain max-w-full aspect-square w-[134px] m-1"
           />
-        </div>
+        )}
+        <h3 className={`text-2xl font-bold`}>{title}</h3>
+        <p className={`self-stretch mt-3 text-[15px] text-center`}>
+          {description}
+        </p>
       </div>
     </div>
   );
@@ -313,7 +281,7 @@ function OurInstagram() {
 function Services() {
   return (
     <>
-      <Businesses />
+      <StrategicSolutions />
       <Optimization />
       <OurMilstone />
       <GetInTouch />
