@@ -1,9 +1,18 @@
 import React from "react";
 import { services } from "./servicesData";
+import { Link } from "react-router-dom";
 
 function StrategicSolutions() {
   return (
-    <section className="flex overflow-hidden flex-col items-center px-20 pt-8 pb-12 bg-black max-md:px-5">
+    <section className="flex overflow-hidden flex-col items-center  pt-8 pb-12 bg-black max-md:px-5">
+      <div className="flex justify-center items-center  py-8 mt-1.5 w-full font-bold text-white bg-stone-800 max-md:px-5 max-md:max-w-full">
+        <div className="flex flex-col">
+          <div className="text-6xl max-md:text-4xl">Our Services</div>
+          <div className="self-center mt-6 text-base uppercase tracking-[3.2px]">
+          Home / Our Services
+          </div>
+        </div>
+      </div>
       <div className="flex flex-col ml-14 max-w-full w-[1276px]">
         <h2 className="self-center text-sm font-bold text-black uppercase tracking-[2.8px]">
           WHAT WE DO
@@ -13,7 +22,7 @@ function StrategicSolutions() {
           <span className="text-yellow-600 underline">businesses</span> and
           organizations.
         </h1>
-        <div className="mt-20 max-md:mt-10 max-md:max-w-full">
+        <div className="mt-20 px-8 max-md:mt-10 max-md:max-w-full">
           <div className=" grid grid-cols-3 gap-5 max-md:flex-col ">
             {services.map((service, index) => (
               <ServiceColumn key={index} {...service} />
@@ -25,31 +34,26 @@ function StrategicSolutions() {
   );
 }
 function ServiceColumn({ title, description, imageSrc, link }) {
-  const handleClick = () => {
-    if (link) {
-      window.location.href = link; 
-    }
-  };
-
   return (
     <div className="flex flex-col w-[100%] max-md:ml-0 max-md:w-full">
-      <div
-        onClick={handleClick} // Add onClick to trigger the navigation
-        className={`flex flex-col items-center px-7 pt-1 pb-14 w-full text-black bg-gray-200 hover:bg-amber-500 rounded-xl max-md:px-5 max-md:mt-10`}
-      >
-        {imageSrc && (
-          <img
-            loading="lazy"
-            src={imageSrc}
-            alt="services"
-            className="object-contain max-w-full aspect-square w-[134px] m-1"
-          />
-        )}
-        <h3 className={`text-2xl font-bold`}>{title}</h3>
-        <p className={`self-stretch mt-3 text-[15px] text-center`}>
-          {description}
-        </p>
-      </div>
+      <Link to={link}>
+        <div
+          className={`flex flex-col items-center px-7 pt-1 pb-14 w-full text-black bg-gray-200 hover:bg-amber-500 rounded-xl max-md:px-5 max-md:mt-10`}
+        >
+          {imageSrc && (
+            <img
+              loading="lazy"
+              src={imageSrc}
+              alt="services"
+              className="object-contain max-w-full aspect-square w-[134px] m-1"
+            />
+          )}
+          <h3 className={`text-2xl font-bold`}>{title}</h3>
+          <p className={`self-stretch mt-3 text-[15px] text-center`}>
+            {description}
+          </p>
+        </div>
+      </Link>
     </div>
   );
 }
@@ -233,9 +237,9 @@ function GetInTouch() {
           </div>
           <div className="flex flex-wrap gap-0.5 mt-20 max-md:mt-10 max-md:max-w-full">
             <div className="flex flex-col grow shrink-0 my-auto basis-0 w-fit max-md:max-w-full">
-              <div className="self-start ml-4 max-md:ml-2.5">
-                Enter your Email
-              </div>
+              <input className="mt-9 text-base text-white placeholder:text-white bg-transparent outline-none max-md:mt-10 max-md:max-w-full" placeholder="Your Email ID"/>
+                
+         
               <div className="flex shrink-0 mt-3.5 h-px bg-zinc-300 max-md:max-w-full" />
             </div>
             <div className="flex justify-center items-center  font-bold whitespace-nowrap bg-yellow-600 rounded-full h-[88px] w-[88px] max-md:px-5">

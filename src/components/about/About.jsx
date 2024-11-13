@@ -2,10 +2,14 @@ import React from "react";
 
 function Header() {
   return (
-    <div className="bg-white/10 text-white text-center py-2">
-      <h1 className="text-3xl font-bold">About Us</h1>
-      <p className="text-[12px] mt-1">HOME / ABOUT US</p>
-    </div>
+    <div className="flex justify-center items-center px-16 py-8 mt-9 w-full font-bold text-white bg-stone-800 max-md:px-5 max-md:max-w-full">
+        <div className="flex flex-col">
+          <div className="text-6xl max-md:text-4xl">About Us</div>
+          <div className="self-center mt-6 text-base uppercase tracking-[3.2px]">
+          Home / Aboutus
+          </div>
+        </div>
+      </div>
   );
 }
 
@@ -398,7 +402,7 @@ function SendButton() {
 
 export default function About() {
   return (
-    <div>
+    <div className="">
       <Header />
       <FounderSection />
       <WhyDifferentSection />

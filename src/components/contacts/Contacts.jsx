@@ -3,8 +3,8 @@ import { useState } from "react";
 
 export default function Contacts() {
   return (
-    <div className="flex flex-col bg-black">
-      <div className="flex justify-center items-center px-16 py-8 mt-1.5 w-full font-bold text-black bg-stone-400 max-md:px-5 max-md:max-w-full">
+    <div className="flex flex-col pt-8 bg-black">
+      <div className="flex justify-center items-center px-16 py-8 mt-1.5 w-full font-bold text-white bg-stone-800 max-md:px-5 max-md:max-w-full">
         <div className="flex flex-col">
           <div className="text-6xl max-md:text-4xl">Contact Us</div>
           <div className="self-center mt-6 text-base uppercase tracking-[3.2px]">
