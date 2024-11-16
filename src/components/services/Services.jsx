@@ -9,7 +9,7 @@ function StrategicSolutions() {
         <div className="flex flex-col">
           <div className="text-6xl max-md:text-4xl">Our Services</div>
           <div className="self-center mt-6 text-base uppercase tracking-[3.2px]">
-          Home / Our Services
+            Home / Our Services
           </div>
         </div>
       </div>
@@ -23,9 +23,9 @@ function StrategicSolutions() {
           organizations.
         </h1>
         <div className="mt-20 px-8 max-md:mt-10 max-md:max-w-full">
-          <div className=" grid grid-cols-3 gap-5 max-md:flex-col ">
-            {services.map((service, index) => (
-              <ServiceColumn key={index} {...service} />
+          <div className="grid grid-cols-3 gap-5 max-md:flex-col">
+            {services.map((service) => (
+              <ServiceColumn key={service.id} {...service} />
             ))}
           </div>
         </div>
@@ -33,11 +33,14 @@ function StrategicSolutions() {
     </section>
   );
 }
-function ServiceColumn({ title, description, imageSrc, link }) {
+function ServiceColumn({id, title, description, imageSrc, link }) {
   return (
-    <div className="flex flex-col w-[100%] max-md:ml-0 max-md:w-full">
-      <Link to={link}>
+    <div id={id} className="flex flex-col w-[100%] max-md:ml-0 max-md:w-full">
+      <Link to={`${link}?service=${id}`}>
         <div
+        onClick={()=>{
+          
+        }}
           className={`flex flex-col items-center px-7 pt-1 pb-14 w-full text-black bg-gray-200 hover:bg-amber-500 rounded-xl max-md:px-5 max-md:mt-10`}
         >
           {imageSrc && (
@@ -237,9 +240,11 @@ function GetInTouch() {
           </div>
           <div className="flex flex-wrap gap-0.5 mt-20 max-md:mt-10 max-md:max-w-full">
             <div className="flex flex-col grow shrink-0 my-auto basis-0 w-fit max-md:max-w-full">
-              <input className="mt-9 text-base text-white placeholder:text-white bg-transparent outline-none max-md:mt-10 max-md:max-w-full" placeholder="Your Email ID"/>
-                
-         
+              <input
+                className="mt-9 text-base text-white placeholder:text-white bg-transparent outline-none max-md:mt-10 max-md:max-w-full"
+                placeholder="Your Email ID"
+              />
+
               <div className="flex shrink-0 mt-3.5 h-px bg-zinc-300 max-md:max-w-full" />
             </div>
             <div className="flex justify-center items-center  font-bold whitespace-nowrap bg-yellow-600 rounded-full h-[88px] w-[88px] max-md:px-5">
