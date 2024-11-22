@@ -76,12 +76,45 @@ export default function Contacts() {
           </div>
         </div>
       </div>
-      {/* <div className="flex gap-5 justify-between items-start py-20 pl-16 mt-36 w-full bg-stone-300 max-md:flex-wrap max-md:pl-5 max-md:mt-10 max-md:max-w-full">
-      <div className="shrink-0 max-w-full bg-white h-[481px] w-[402px]" />
-      <div className="shrink-0 max-w-full bg-white h-[481px] w-[402px]" />
-      <div className="shrink-0 max-w-full bg-white h-[481px] w-[402px]" />
-      <div className="shrink-0 w-52 bg-white h-[481px]" />
-    </div> */}
+
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-5 py-10 pl-5 pr-5 mt-36 w-full bg-stone-300 max-md:pl-5 max-md:mt-10">
+        <div className="bg-white h-[481px] w-full max-h-[60vh] sm:h-[300px]">
+          <video
+            src="videos/contact-V.mp4"
+            className="w-full h-full object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+            ref={(video) => {
+              if (video) {
+                video.playbackRate = 0.5; // Set playback speed to 50% (slow)
+              }
+            }}
+          />
+        </div>
+        <div className="bg-white h-[481px] w-full max-h-[60vh] sm:h-[300px]">
+          <img
+            src="images/contact2.jfif"
+            alt="Placeholder 2"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="bg-white h-[481px] w-full max-h-[60vh] sm:h-[300px]">
+          <img
+            src="https://via.placeholder.com/400"
+            alt="Placeholder 3"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="bg-white h-[481px] w-full max-h-[60vh] sm:h-[300px]">
+          <img
+            src="https://via.placeholder.com/400"
+            alt="Placeholder 4"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
     </div>
   );
 }
@@ -125,7 +158,6 @@ function Contact() {
         strategyConsulting: formData.strategy,
         other: formData.other,
       },
-      
     };
     console.log("Form Data:", dataToSubmit);
 
@@ -319,9 +351,7 @@ function CheckboxDesign({ checkedState, toggleCheckbox }) {
             </div>
           </div>
         </div>
-        
       </div>
     </div>
   );
 }
-

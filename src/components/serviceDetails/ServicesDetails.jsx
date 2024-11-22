@@ -120,7 +120,7 @@ const ImageGrid = ({ images }) => {
             alt={item.name}
             className="object-contain max-w-full rounded-2xl aspect-[1.08] w-[90px]"
           />
-          <p className="mt-2 text-black text-center text-lg">{item.name}</p>
+          <p  className="mt-2 text-black text-center text-lg">{item.name}</p>
         </div>
       ))}
     </div>
@@ -137,7 +137,7 @@ const GraphicDesignSection = ({
   footer,
 }) => {
   return (
-    <div className="bg-black mt-8 text-white w-[80%]  mx-auto">
+    <div className="bg-black mt-8 text-white w-[80%]  mx-auto ">
       <h1 className="text-[50px] font-normal">
         <span className="text-white">{title.split(" ")[0]}</span>
         <span className="text-yellow-500"> {title.split(" ")[1]}</span>
@@ -155,7 +155,7 @@ const GraphicDesignSection = ({
           </li>
         ))}
       </ul>
-      <p className="mt-8 text-gray-300">{footer}</p>
+      <p style={{ whiteSpace: 'pre-line' }} className="mt-8 text-gray-300 text-justify">{footer}</p>
     </div>
   );
 };
