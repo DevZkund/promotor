@@ -82,12 +82,11 @@ function ContactForm() {
   );
 }
 
-const VideoComponent = () => {
+const VideoComponent = ({path}) => {
   return (
     <div className="mx-2">
       <video width="100%" autoPlay loop muted>
-        <source src="/videos/serviceAds.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
+        <source src={path} type="video/mp4" />
       </video>
     </div>
   );
@@ -182,14 +181,14 @@ function ServicesDetails() {
     );
   }
 
-  const { imageGrid, graphicDesignSection } = serviceData;
+  const { imageGrid, graphicDesignSection, video } = serviceData;
 
   return (
     <main className="self-end my-14 w-full max-w-[1441px] max-md:mt-10 max-md:mr-2 max-md:max-w-full">
       <HeaderSD />
       <div className="flex mt-4 gap-5 max-md:flex-col">
         <article className="flex flex-col w-[74%] max-md:ml-0 max-md:w-full">
-          <VideoComponent />
+          <VideoComponent path={video.path} />
           <GraphicDesignSection {...graphicDesignSection} />
           <div className="flex space-y-4 flex-col items-center mt-5 w-full max-md:mt-10 max-md:max-w-full">
             <ImageGrid images={imageGrid.slice(0, 4)} />

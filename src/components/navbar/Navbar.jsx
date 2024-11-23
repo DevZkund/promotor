@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,6 +10,11 @@ export default function Navbar() {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+  };
+
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/contact"); 
   };
 
   return (
@@ -32,7 +37,7 @@ export default function Navbar() {
         </Link>
        
       </nav>
-      <button className="hidden md:inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm md:text-base lg:text-lg font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-primary/90 lg:h-8 md:h-6 md:px-2 lg:px-4 py-2 bg-white text-gray-800">
+      <button onClick={handleNavigate} className="hidden md:inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm md:text-base lg:text-lg font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-primary/90 lg:h-8 md:h-6 md:px-2 lg:px-4 py-2 bg-white text-gray-800">
         Say Hi!
       </button>
       <button
@@ -59,34 +64,34 @@ export default function Navbar() {
         <span className="sr-only">Toggle navigation menu</span>
       </button>
       <div
-        className={`absolute top-16 left-0 px-16 text-center space-y-4 w-full bg-black p-4 ${
+        className={`absolute top-16 left-0  text-center space-y-4 w-full bg-black p-4 ${
           isMenuOpen ? "block" : "hidden"
         }`}
       >
         <Link
           to="/"
-          className="block mx-32 text-md font-medium text-white border-b shadow-sm shadow-white hover:text-yellow-500"
+          className="block  text-md font-medium text-white     hover:text-yellow-500"
           onClick={closeMenu}
         >
           Home
         </Link>
         <Link
           to="/services"
-          className="block mx-28 text-md font-medium text-white border-b shadow-sm shadow-white hover:text-yellow-500"
+          className="block  text-md font-medium text-white     hover:text-yellow-500"
           onClick={closeMenu}
         >
           Services
         </Link>
         <Link
           to="/about"
-          className="block mx-24 text-md font-medium text-white border-b shadow-sm shadow-white hover:text-yellow-500"
+          className="block text-md font-medium text-white     hover:text-yellow-500"
           onClick={closeMenu}
         >
           About Us
         </Link>
         <Link
           to="/contact"
-          className="block mx-20 text-md font-medium text-white border-b shadow-sm shadow-white hover:text-yellow-500"
+          className="block  text-md font-medium text-white     hover:text-yellow-500"
           onClick={closeMenu}
         >
           Contact Us

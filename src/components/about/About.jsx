@@ -20,24 +20,27 @@ function FounderSection() {
         Founder - Tushar Dhiman
       </h2>
       <div className="grid md:grid-cols-2 grid-col-1 justify-evenly items-center md:items-start my-12 mx-auto h-full w-11/12 lg:w-10/12 ">
-        <div className="w-full h-full relative  overflow-hidden mb-8 md:mb-0">
+        <div className="w-full  h-full relative  overflow-hidden mb-8 md:mb-0">
           <img
             className="rounded-lg object-cover shadow-md shadow-white p-2 w-full h-auto"
             src="./images/founder.png"
             alt="Founder"
           />
-          <div className="w-[100%] mx-auto text-justify absolute bottom-0 py-4 px-6 bg-black rounded-tl-3xl rounded-tr-3xl">
-            <p>
+         
+        </div>
+        <div className="flex-1  items-center text-justify justify-center px-8 pt-4 w-full md:w-auto">
+          <p className="leading-relaxed text-xl">
               You'll often find me sipping on bottomless cups of coffee,
               brainstorming the next big campaign, and occasionally challenging
               the office plant to a game of chess (I usually lose). I believe
               that marketing isn't just about selling; it's about storytelling,
               and I'm here to craft captivating narratives that resonate with
-              your audience. <br />
+              your audience. <br /><br />
               "Why did the marketer bring a magnifying glass to the meeting? To
               find those tiny details that make a big difference!"
             </p>
-            <div className="text-right">
+            <br />
+            <div className="text-center">
               <h1 className="mt-3 me-2">- Tushar Dhiman </h1>
               <h1>
                 <b>
@@ -45,10 +48,10 @@ function FounderSection() {
                 </b>
               </h1>
             </div>
-          </div>
+          
         </div>
-        <div className="flex-1 flex items-center justify-center w-full md:w-auto">
-          <div className="flex flex-col items-center justify-start pt-5 w-full lg:w-4/5 px-6">
+      </div>
+       <div className="flex flex-col lg:flex-row items-start justify-evenly space-x-2  pt-5 w-full px-6 border ">
             <div className="bg-[#FFBF00] py-5 px-3 rounded-xl text-center w-full lg:w-auto h-auto lg:h-64">
               <div className="flex flex-row justify-start items-center  py-4 px-4">
                 <span className="text-[8vw]  md:text-6xl font-bold text-black font-nexa">
@@ -108,9 +111,7 @@ function FounderSection() {
                 alt="arrow up"
               />
             </div>
-          </div>
-        </div>
-      </div>
+          </div> 
     </section>
   );
 }

@@ -1,5 +1,8 @@
 export const servicePageData = {
   digitalMarketing: {
+    video: {
+      path: "/videos/digitalMarketing.mp4"
+    },
     imageGrid: [
       { src: "/icons/brandStationery.png", name: "Brand Awareness" },
       {
@@ -29,6 +32,9 @@ export const servicePageData = {
     },
   },
   graphicDesigning: {
+    video: {
+      path: "/videos/graphic.mp4"
+    },
     imageGrid: [
       { src: "/icons/brandStationery.png", name: "Brand Stationary" },
       { src: "/icons/brandStationery.png", name: `Brand Merchandise` },
@@ -62,6 +68,9 @@ export const servicePageData = {
     },
   },
   webDevelopment: {
+    video: {
+      path: "/videos/webDevelopment.mp4"
+    },
     imageGrid: [
       { src: "/icons/brandStationery.png", name: "Brand Stationary" },
       { src: "/icons/brandStationery.png", name: `Brand Merchandise` },
@@ -95,6 +104,9 @@ export const servicePageData = {
     },
   },
   traditionalMarketing: {
+    video: {
+      path: "/videos/webDevelopment.mp4"
+    },
     imageGrid: [
       { src: "/icons/brandStationery.png", name: "Brand Stationary" },
       { src: "/icons/brandStationery.png", name: `Brand Merchandise` },

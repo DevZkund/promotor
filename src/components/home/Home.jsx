@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "./index.css";
 import "aos/dist/aos.css";
+import { useNavigate } from "react-router-dom";
 
 const LoadingBanner = () => {
   return (
@@ -20,6 +21,10 @@ const LoadingBanner = () => {
   );
 };
 const DigitalMarketing = () => {
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/services"); 
+  };
   return (
     <div className="flex flex-col md:grid md:grid-cols-2 justify-evenly items-center gap-[2.33vw] p-[4.69vw] w-full border-b-[0.1px] border-b-white/5">
       <div className="w-full flex justify-center  overflow-hidden">
@@ -54,7 +59,7 @@ const DigitalMarketing = () => {
         <h1 className="text-[8vw] font-prociono">
           Serv<span className="text-yellow-400">ices</span>
         </h1>
-        <button className="border-white border-2 shadow-sm shadow-white bg-yellow-500 text-black lg:w-44 lg:h-16 w-28 h-12 my-4 lg:mt-24 rounded-lg font-bold md:text-sm text-sm lg:text-lg">
+        <button onClick={handleNavigate} className="border-white border-2 shadow-sm shadow-white bg-yellow-500 hover:bg-yellow-400 hover:scale-110 text-black lg:w-44 lg:h-16 w-28 h-12 my-4 lg:mt-24 rounded-lg font-bold md:text-sm text-sm lg:text-lg">
           Explore More
         </button>
       </div>
@@ -63,34 +68,42 @@ const DigitalMarketing = () => {
 };
 const TrustedCompanies = () => {
   const images = [
-    { src: "./images/charged.png", alt: "Albasir", animation: "fade-left" },
-    { src: "./images/charged.png", alt: "Albasir", animation: "fade-down" },
-    { src: "./images/charged.png", alt: "Albasir", animation: "fade-right" },
-    { src: "./images/charged.png", alt: "Albasir", animation: "fade-right" },
+    { src: "./images/charged.png", alt: "Charged", animation: "fade-left" },
+    { src: "./images/coke.png", alt: "Coke", animation: "fade-down" },
+    { src: "./images/albasir.png", alt: "Albasir", animation: "fade-right" },
+    { src: "./images/charged.png", alt: "Charged", animation: "fade-right" },
   ];
+
   return (
-    <div className="my-4 space-x-2 ">
+    <div className="my-4 space-x-2 overflow-hidden">
       <h1
         data-aos="fade-up"
-        className="font-spectral font-extrabold lg:text-7xl md:text-5xl text-3xl text-center my-16 "
+        className="font-spectral font-extrabold lg:text-7xl md:text-5xl text-3xl text-center my-16"
       >
-        Trusted By Fast Growing{" "} <br />
-        <span className="text-yellow-400">Companies</span>{" "}
+        Trusted By Fast Growing <br />
+        <span className="text-yellow-400">Companies</span>
       </h1>
-      <div className="flex flex-wrap justify-evenly items-center  ">
+      <div className="flex flex-wrap justify-evenly items-center">
         {images.map((image, index) => (
           <div
             key={index}
             data-aos={image.animation}
-            className="overflow-hidden rounded-xl border lg:w-80 lg:h-40 md:w-60 md:h-32 w-32 h-16 my-4"
+            className="overflow-hidden rounded-xl lg:w-80 lg:h-40 md:w-60 md:h-32 w-40 h-20 my-4"
           >
-            <img className="object-cover" src={image.src} alt={image.alt} />
+            <img
+              className="w-full h-full object-cover"
+              src={image.src}
+              alt={image.alt}
+            />
           </div>
         ))}
       </div>
     </div>
   );
 };
+
+
+
 const StackedText = ({ topText, bottomText }) => {
   return (
     <div className="flex flex-col items-center -space-y-10">
