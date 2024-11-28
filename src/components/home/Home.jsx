@@ -20,52 +20,116 @@ const LoadingBanner = () => {
     </div>
   );
 };
-const DigitalMarketing = () => {
+
+export const cardsData = [
+  {
+    title: "Graphic Designing",
+    description:
+      "Graphic design is the art of composing visual elements — such as typography, images, colors, and shapes. Designing the layout of a magazine, creating a poster for a theatre performance, and designing packaging for a product are all examples of graphic design.",
+    imageUrl: "./images/graphic.png",
+    buttonLabel: "Explore",
+    path: "/service?service=graphicDesigning"
+  },
+  {
+    title: "Web Development",
+    description:
+      " Web Development refers to a term that includes all the processes involved in developing a web project or website.Web developers develop websites, specifically by creating the site's code, connecting it to a server and maintaining its accessibility to users.",
+    imageUrl: "./images/web.png",
+    buttonLabel: "Explore",
+    path: "/service?service=webDevelopment"
+    
+  },
+  {
+    title: "Digital Marketing",
+    description:
+      "Boost your online presence with our cutting-edge Digital Marketing service. At Digital Marketing, we use performance marketing to leverage your brand across various platforms and channels to drive desired results.",
+    imageUrl: "./images/digital.png",
+    buttonLabel: "Explore",
+    path: "/service?service=digitalMarketing"
+  },
+];
+
+
+const DigitalMarketing = ({ cardsData }) => {
   const navigate = useNavigate();
-  const handleNavigate = () => {
-    navigate("/services"); 
+  const [currentCardIndex, setCurrentCardIndex] = useState(0); // Current card index
+  const [animationClass, setAnimationClass] = useState("opacity-0 translate-x-full"); // Initial animation class
+
+  useEffect(() => {
+    // Update the animation and card index every 4 seconds
+    const interval = setInterval(() => {
+      setAnimationClass("opacity-0 translate-x-full"); // Start slide-out animation
+      setTimeout(() => {
+        setCurrentCardIndex((prevIndex) => (prevIndex + 1) % cardsData.length);
+        setAnimationClass("opacity-0 -translate-x-full"); // Prepare for slide-in animation
+        setTimeout(() => {
+          setAnimationClass("opacity-100 translate-x-0"); // Slide-in animation
+        }, 300); // Small delay for smooth transition
+      }, 600); // Slide-out duration
+    }, 4000); // Change card every 4 seconds
+
+    // Clear the interval on unmount
+    return () => clearInterval(interval);
+  }, [cardsData]);
+
+  // Get the current card
+  const currentCard = cardsData[currentCardIndex];
+
+  const handleNavigate = (path) => {
+    navigate(path);
   };
+
   return (
     <div className="flex flex-col md:grid md:grid-cols-2 justify-evenly items-center gap-[2.33vw] p-[4.69vw] w-full border-b-[0.1px] border-b-white/5">
-      <div className="w-full flex justify-center  overflow-hidden">
-        <div className="bg-white/5  w-10/12 h-auto md:w-80 p-[2.33vw] shadow-sm shadow-white grid justify-center items-center rounded-[2.8rem]">
-          <div className="w-[80%] h-[90%] m-auto lg:w-full lg:h-full rounded-xl overflow-hidden">
-            <img
-              className="w-full h-full"
-              src="./images/MARKETING-MAIN.jfif"
-              alt="MARKETING-MAIN"
-            />
+      {/* Animated Card Section */}
+      <div className="w-full flex justify-center overflow-hidden">
+        <div className="bg-white/5 w-10/12 h-auto md:w-80 p-[1.5vw] shadow-sm shadow-white grid justify-center items-center rounded-[2.8rem]">
+          <div className=" w-[80%] h-[90%] m-auto lg:w-full lg:h-full rounded-xl ">
+            <div
+              className={` w-full h-full transition-all duration-500 ease-in-out ${animationClass}`}
+            >
+              <img
+                className="w-full h-full object-cover rounded-xl"
+                src={currentCard.imageUrl}
+                alt={currentCard.title}
+              />
+            </div>
           </div>
           <h1 className="text-white lg:text-[1.87vw] md:text-2xl text-xl font-prociono mt-[0.8vw] text-center">
-            Digital Marketing
+            {currentCard.title}
           </h1>
           <p className="font-prompt lg:text-sm md:text-sm text-[12px] text-justify p-3 pt-[0.8vw]">
-            Boost your online presence with our cutting-edge Digital Marketing
-            service. At Digital Marketing, we use performance marketing to
-            leverage your brand across various platforms and channels to drive
-            desired results.
+            {currentCard.description}
           </p>
           <div className="flex justify-center items-center mt-[1.8vw]">
             <div className="flex justify-center items-center w-36 h-8 lg:w-[9vw] lg:h-[3.5vw] md:w-36 md:h-10 circular-color-box shadow-sm shadow-white/70 rounded-xl">
-              <button className="w-[96%] h-[94%] bg-black/90 rounded-lg text-center">
-                Explore
+              <button onClick={() => handleNavigate(currentCard.path)} className="w-[96%] h-[94%] bg-black/90 rounded-lg text-center">
+                {currentCard.buttonLabel}
               </button>
             </div>
           </div>
         </div>
       </div>
-      <div className=" text-center  w-full  gap-[3vw] py-[1.87vw] mt-8 md:mt-0">
+
+      {/* Static Text Section */}
+      <div className="text-center w-full gap-[3vw] py-[1.87vw] mt-8 md:mt-0">
         <h1 className="text-[8vw] font-prociono">Our</h1>
         <h1 className="text-[8vw] font-prociono">
           Serv<span className="text-yellow-400">ices</span>
         </h1>
-        <button onClick={handleNavigate} className="border-white border-2 shadow-sm shadow-white bg-yellow-500 hover:bg-yellow-400 hover:scale-110 text-black lg:w-44 lg:h-16 w-28 h-12 my-4 lg:mt-24 rounded-lg font-bold md:text-sm text-sm lg:text-lg">
+        <button
+          onClick={() => handleNavigate("/services")}
+          className="border-white border-2 shadow-sm shadow-white bg-yellow-500 hover:bg-yellow-400 hover:scale-110 text-black lg:w-44 lg:h-16 w-28 h-12 my-4 lg:mt-24 rounded-lg font-bold md:text-sm text-sm lg:text-lg"
+        >
           Explore More
         </button>
       </div>
     </div>
   );
 };
+
+
+
 const TrustedCompanies = () => {
   const images = [
     { src: "./images/charged.png", alt: "Charged", animation: "fade-left" },
@@ -221,7 +285,7 @@ export default function Home() {
   return (
     <div id="home" className="bg-black/80 w-full ">
       <LoadingBanner />
-      <DigitalMarketing />
+      <DigitalMarketing cardsData={cardsData} />
       <TrustedCompanies />
       <ReviewsCard />
     </div>

@@ -102,14 +102,14 @@ export default function Contacts() {
         </div>
         <div className="bg-white h-[481px] w-full max-h-[60vh] sm:h-[300px]">
           <img
-            src="https://via.placeholder.com/400"
+            src="images/contact3.png"
             alt="Placeholder 3"
             className="w-full h-full object-cover"
           />
         </div>
         <div className="bg-white h-[481px] w-full max-h-[60vh] sm:h-[300px]">
           <img
-            src="https://via.placeholder.com/400"
+            src="images/contact4.jpg"
             alt="Placeholder 4"
             className="w-full h-full object-cover"
           />

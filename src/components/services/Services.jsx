@@ -38,7 +38,7 @@ function ServiceColumn({ id, title, description, imageSrc, link }) {
     <div id={id} className="flex flex-col  w-[100%] max-md:ml-0 max-md:w-full">
       <Link to={`${link}?service=${id}`}>
         <div
-          onClick={() => {}}
+          onClick={() => { }}
           className={`flex flex-col items-center px-7 pt-1 pb-14 w-full text-black bg-gray-200 hover:bg-amber-500 rounded-xl max-md:px-5 max-md:mt-10`}
         >
           {imageSrc && (
@@ -272,20 +272,73 @@ function OurInstagram() {
           Follow # Promotr
         </div>
         <div className="flex flex-wrap justify-center gap-3.5 self-stretch mt-12 max-md:mt-10 max-md:max-w-full">
-          <div className="flex shrink-0 aspect-square bg-stone-300 h-[198px] rounded-[30px] w-[200px]" />
-          <div className="flex shrink-0 aspect-square bg-stone-300 h-[198px] rounded-[30px] w-[200px]" />
-          <div className="flex shrink-0 aspect-square bg-stone-300 h-[198px] rounded-[30px] w-[200px]" />
-          <div className="flex flex-col justify-center items-center px-16 aspect-square bg-stone-300 rounded-[30px] max-md:px-5 max-md:py-24">
+          {/* First Div */}
+          <div className="flex shrink-0 aspect-square bg-stone-300 h-[198px] rounded-[30px] w-[200px] overflow-hidden">
             <img
-              alt="temp"
+              alt="image1"
               loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/7755031af78101a31b0783ec9a1b863ef3d00bfa4d74d5c0ae071bcb84e8195a?placeholderIfAbsent=true&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928"
-              className="object-contain aspect-square w-[50px]"
+              src=" ./images/contact1.png"
+              className="object-cover w-full h-full"
             />
           </div>
-          <div className="flex shrink-0 aspect-square bg-stone-300 h-[198px] rounded-[30px] w-[200px]" />
-          <div className="flex shrink-0 aspect-square bg-stone-300 h-[198px] rounded-[30px] w-[200px]" />
+
+          {/* Second Div */}
+          <div className="flex shrink-0 aspect-square bg-stone-300 h-[198px] rounded-[30px] w-[200px] overflow-hidden">
+            <img
+              alt="image2"
+              loading="lazy"
+              src=" ./images/contact1.png"
+              className="object-cover w-full h-full"
+            />
+          </div>
+
+          {/* Third Div */}
+          <div className="flex shrink-0 aspect-square bg-stone-300 h-[198px] rounded-[30px] w-[200px] overflow-hidden">
+            <img
+              alt="image3"
+              loading="lazy"
+              src=" ./images/contact1.png"
+              className="object-cover w-full h-full"
+            />
+          </div>
+
+          {/* Fourth Div with Overlay */}
+          <div className="flex flex-col justify-center items-center px-16 aspect-square bg-stone-300 rounded-[30px] max-md:px-5 max-md:py-24 relative overflow-hidden">
+            <img
+              alt="image4"
+              loading="lazy"
+              src="./images/contact1.png"
+              className="object-cover w-full h-full absolute top-0 left-0"
+            />
+            <img
+              alt="logo"
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/7755031af78101a31b0783ec9a1b863ef3d00bfa4d74d5c0ae071bcb84e8195a?placeholderIfAbsent=true&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928"
+              className="relative z-10 object-contain aspect-square w-[50px]"
+            />
+          </div>
+
+          {/* Fifth Div */}
+          <div className="flex shrink-0 aspect-square bg-stone-300 h-[198px] rounded-[30px] w-[200px] overflow-hidden">
+            <img
+              alt="image5"
+              loading="lazy"
+              src=" ./images/contact1.png"
+              className="object-cover w-full h-full"
+            />
+          </div>
+
+          {/* Sixth Div */}
+          <div className="flex shrink-0 aspect-square bg-stone-300 h-[198px] rounded-[30px] w-[200px] overflow-hidden">
+            <img
+              alt="image6"
+              loading="lazy"
+              src=" ./images/contact3.png"
+              className="object-cover w-full h-full"
+            />
+          </div>
         </div>
+
       </div>
     </div>
   );

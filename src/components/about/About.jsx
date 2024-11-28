@@ -408,7 +408,7 @@ export default function About() {
       <FounderSection />
       <WhyDifferentSection />
       <ClientTestimonial />
-      <PartnersSection />
+      {/* <PartnersSection /> */}
       <BusinessTalk />
     </div>
   );

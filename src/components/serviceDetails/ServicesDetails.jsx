@@ -119,7 +119,7 @@ const ImageGrid = ({ images }) => {
             alt={item.name}
             className="object-contain max-w-full rounded-2xl aspect-[1.08] w-[90px]"
           />
-          <p  className="mt-2 text-black text-center text-lg">{item.name}</p>
+          <p  className="px-4 text-black text-center text-lg">{item.name}</p>
         </div>
       ))}
     </div>
