@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import {  useLocation, useNavigate } from "react-router-dom";
 import { servicePageData } from "./serviceDetailsData";
 
@@ -131,6 +131,44 @@ const ImageGrid = ({ images }) => {
   );
 };
 
+const ImageSlider = () => {
+  const images = [
+    "images/contact1.png",
+    "images/contact2.png",
+    "images/contact3.png",
+    "images/contact4.png",
+    "images/contact5.png",
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false); // Start fading out
+      setTimeout(() => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        setFade(true); // Fade in the new image
+      }, 500); // Wait for fade-out duration
+    }, 3000); // Change image every 3 seconds
+    return () => clearInterval(interval); // Clean up on unmount
+  }, [images.length]);
+
+  return (
+    <div
+      className="flex shrink-0 self-center m-4 max-w-full rounded-md bg-stone-300 h-[350px] shadow-[0px_4px_24px_rgba(0,0,0,0.08)] w-[350px] overflow-hidden relative"
+    >
+      <img
+        src={images[currentImageIndex]}
+        alt="Sliding content"
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+          fade ? "opacity-100" : "opacity-0"
+        }`}
+      />
+    </div>
+  );
+};
+
 const GraphicDesignSection = ({
   title,
   subtitle,
@@ -202,7 +240,7 @@ function ServicesDetails() {
         </article>
         <aside className="flex flex-col  w-[24%] max-md:ml-0 max-md:w-full">
           <ContactForm />
-          <div className="flex shrink-0 self-center m-4 max-w-full rounded-md bg-stone-300 h-[350px] shadow-[0px_4px_24px_rgba(0,0,0,0.08)] w-[350px]" />
+          <ImageSlider/>
         </aside>
       </div>
     </main>
