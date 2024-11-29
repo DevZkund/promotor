@@ -284,80 +284,80 @@ function BrandLogos() {
 }
 
 // Partnars Section
-function PartnersSection() {
-  return (
-    <div className="flex flex-col items-center p-20 bg-zinc-800 max-md:px-5">
-      <div className="flex gap-5 justify-between mt-12 w-full font-bold text-white max-w-[1456px] max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
-        <div className="flex flex-col self-end mt-7 max-md:max-w-full">
-          <div className="text-sm uppercase tracking-[2.8px] max-md:max-w-full">
-            OUR TEAM MEMBERS
-          </div>
-          <div className="mt-7 text-5xl max-md:max-w-full max-md:text-4xl">
-            Our Design{" "}
-            <span className="text-yellow-400 underline">Experts</span>
-          </div>
-        </div>
-        <img
-          loading="lazy"
-          src="./images/arrow-circle-up.svg"
-          className="shrink-0 max-w-full aspect-square w-[118px]"
-          alt="arrow-circle-up"
-        />
-      </div>
-      <div className="mt-20 w-full max-w-[1720px] max-md:mt-10 max-md:max-w-full">
-        <div className="flex gap-5 max-md:flex-col">
-          <div className="flex flex-col w-[52%] max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col grow max-md:mt-10 max-md:max-w-full">
-              <div className="max-md:max-w-full">
-                <div className="flex gap-5 max-md:flex-col">
-                  <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-                    <div className="shrink-0 mx-auto max-w-full bg-stone-300 h-[400px] w-[388px] max-md:mt-10" />
-                  </div>
-                  <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-                    <div className="flex  justify-center items-center px-8 py-16 w-full text-base bg-stone-300  h-[400px] text-zinc-50 max-md:px-5 max-md:mt-10">
-                      <div className="py-4  mt-80 bg-black rounded-[40px] max-md:px-5 max-md:mt-10">
-                        <span className="font-bold underline ms-3">Fb</span>
-                        <span className="font-bold me-3"> - Be - Tw- In</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="flex gap-5 justify-between self-center mt-12 max-w-full text-white w-[603px] max-md:flex-wrap max-md:mt-10">
-                <div className="flex flex-col ms-2">
-                  <div className="text-2xl font-bold">Karnia Kafia</div>
-                  <div className="self-center mt-6 text-base">Development</div>
-                </div>
-                <div className="flex flex-col me-8">
-                  <div className="text-2xl font-bold">Dr Henry William</div>
-                  <div className="self-center mt-5 text-base">CEO</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col ml-5 w-[24%] max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col items-center text-white max-md:mt-10">
-              <div className="shrink-0 self-stretch bg-stone-600 h-[400px]" />
-              <div className="mt-11 text-2xl font-bold max-md:mt-10">
-                Vennila Turka
-              </div>
-              <div className="mt-6 text-base">Traniner</div>
-            </div>
-          </div>
-          <div className="flex flex-col ml-5 w-[24%] max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col items-center text-white max-md:mt-10">
-              <div className="shrink-0 self-stretch bg-stone-300 h-[400px]" />
-              <div className="mt-11 text-2xl font-bold max-md:mt-10">
-                Dr John Hussain
-              </div>
-              <div className="mt-6 text-base">Designer</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+// function PartnersSection() {
+//   return (
+//     <div className="flex flex-col items-center p-20 bg-zinc-800 max-md:px-5">
+//       <div className="flex gap-5 justify-between mt-12 w-full font-bold text-white max-w-[1456px] max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
+//         <div className="flex flex-col self-end mt-7 max-md:max-w-full">
+//           <div className="text-sm uppercase tracking-[2.8px] max-md:max-w-full">
+//             OUR TEAM MEMBERS
+//           </div>
+//           <div className="mt-7 text-5xl max-md:max-w-full max-md:text-4xl">
+//             Our Design{" "}
+//             <span className="text-yellow-400 underline">Experts</span>
+//           </div>
+//         </div>
+//         <img
+//           loading="lazy"
+//           src="./images/arrow-circle-up.svg"
+//           className="shrink-0 max-w-full aspect-square w-[118px]"
+//           alt="arrow-circle-up"
+//         />
+//       </div>
+//       <div className="mt-20 w-full max-w-[1720px] max-md:mt-10 max-md:max-w-full">
+//         <div className="flex gap-5 max-md:flex-col">
+//           <div className="flex flex-col w-[52%] max-md:ml-0 max-md:w-full">
+//             <div className="flex flex-col grow max-md:mt-10 max-md:max-w-full">
+//               <div className="max-md:max-w-full">
+//                 <div className="flex gap-5 max-md:flex-col">
+//                   <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
+//                     <div className="shrink-0 mx-auto max-w-full bg-stone-300 h-[400px] w-[388px] max-md:mt-10" />
+//                   </div>
+//                   <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+//                     <div className="flex  justify-center items-center px-8 py-16 w-full text-base bg-stone-300  h-[400px] text-zinc-50 max-md:px-5 max-md:mt-10">
+//                       <div className="py-4  mt-80 bg-black rounded-[40px] max-md:px-5 max-md:mt-10">
+//                         <span className="font-bold underline ms-3">Fb</span>
+//                         <span className="font-bold me-3"> - Be - Tw- In</span>
+//                       </div>
+//                     </div>
+//                   </div>
+//                 </div>
+//               </div>
+//               <div className="flex gap-5 justify-between self-center mt-12 max-w-full text-white w-[603px] max-md:flex-wrap max-md:mt-10">
+//                 <div className="flex flex-col ms-2">
+//                   <div className="text-2xl font-bold">Karnia Kafia</div>
+//                   <div className="self-center mt-6 text-base">Development</div>
+//                 </div>
+//                 <div className="flex flex-col me-8">
+//                   <div className="text-2xl font-bold">Dr Henry William</div>
+//                   <div className="self-center mt-5 text-base">CEO</div>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//           <div className="flex flex-col ml-5 w-[24%] max-md:ml-0 max-md:w-full">
+//             <div className="flex flex-col items-center text-white max-md:mt-10">
+//               <div className="shrink-0 self-stretch bg-stone-600 h-[400px]" />
+//               <div className="mt-11 text-2xl font-bold max-md:mt-10">
+//                 Vennila Turka
+//               </div>
+//               <div className="mt-6 text-base">Traniner</div>
+//             </div>
+//           </div>
+//           <div className="flex flex-col ml-5 w-[24%] max-md:ml-0 max-md:w-full">
+//             <div className="flex flex-col items-center text-white max-md:mt-10">
+//               <div className="shrink-0 self-stretch bg-stone-300 h-[400px]" />
+//               <div className="mt-11 text-2xl font-bold max-md:mt-10">
+//                 Dr John Hussain
+//               </div>
+//               <div className="mt-6 text-base">Designer</div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
 
 // BusinessTalk
 function BusinessTalk() {
