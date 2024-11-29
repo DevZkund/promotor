@@ -51,7 +51,7 @@ function FounderSection() {
           
         </div>
       </div>
-       <div className="flex flex-col lg:flex-row items-start justify-evenly space-x-2  pt-5 w-full px-6 border ">
+       <div className="flex flex-col lg:flex-row items-start justify-evenly space-x-2  pt-5 w-full px-6  ">
             <div className="bg-[#FFBF00] py-5 px-3 rounded-xl text-center w-full lg:w-auto h-auto lg:h-64">
               <div className="flex flex-row justify-start items-center  py-4 px-4">
                 <span className="text-[8vw]  md:text-6xl font-bold text-black font-nexa">
@@ -395,7 +395,7 @@ function EmailForm() {
 }
 function SendButton() {
   return (
-    <button className="flex justify-center items-center border gap-0.5 m-auto text-sm max-md:flex-wrap rounded-full bg-yellow-400  h-[88px] w-[88px] ">
+    <button className="flex justify-center items-center  gap-0.5 m-auto text-sm max-md:flex-wrap rounded-full bg-yellow-400  h-[88px] w-[88px] ">
       <span className="font-bold whitespace-nowrap">SEND</span>
     </button>
   );

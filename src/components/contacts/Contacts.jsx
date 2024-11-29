@@ -68,7 +68,14 @@ export default function Contacts() {
                 <br />
                 +1 612-659-2000
               </div>
-              <div className="shrink-0 self-stretch mt-14 bg-stone-300 h-[260px] max-md:mt-10 max-md:max-w-full" />
+              <div className="shrink-0 self-stretch mt-14 bg-stone-300 h-[260px] max-md:mt-10 max-md:max-w-full">
+              <img
+            src="images/contact6.png"
+            alt="Placeholder 2"
+            className="w-full h-full object-cover"
+          />
+
+              </div>
             </div>
           </div>
           <div className="flex flex-col ml-5 w-[55%] max-md:ml-0 max-md:w-full">

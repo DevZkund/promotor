@@ -20,16 +20,15 @@ const Footer = () => {
             <Link to="/contact" className="hover:text-muted-foreground">
               Contact Us
             </Link>
-            <Link to="/blogs" className="hover:text-muted-foreground">
-              Blogs
-            </Link>
+            
           </div>
         </div>
         <div className="text-sm text-right  md:text-left">
-          <p>Phone: +91 99999 99999</p>
-          <p>Email: planthaven@gmail.com</p>
-          <p>Contact Us: info@planthaven.com</p>
-          <p>Address: Chennai, India</p>
+          <p>Phone: +91-6283910290</p>
+          <p>Phone: +61- 416927444</p>
+          <p>Email: Promotrworld01@gmail.com</p>
+          {/* <p>Contact Us: info@planthaven.com</p> */}
+          <p>Address: Head quaters- 7/5 scanlon DR Epping Melbourne</p>
         </div>
       </div>
       <div className="flex justify-center md:justify-end space-x-4 pt-2  border-t-[0.1px] border-t-white/5">

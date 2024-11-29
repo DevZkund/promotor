@@ -287,7 +287,7 @@ function OurInstagram() {
             <img
               alt="image2"
               loading="lazy"
-              src=" ./images/contact1.png"
+              src=" ./images/contact2.png"
               className="object-cover w-full h-full"
             />
           </div>
@@ -297,7 +297,7 @@ function OurInstagram() {
             <img
               alt="image3"
               loading="lazy"
-              src=" ./images/contact1.png"
+              src=" ./images/contact3.png"
               className="object-cover w-full h-full"
             />
           </div>
@@ -307,7 +307,7 @@ function OurInstagram() {
             <img
               alt="image4"
               loading="lazy"
-              src="./images/contact1.png"
+              src="./images/contact6.png"
               className="object-cover w-full h-full absolute top-0 left-0"
             />
             <img
@@ -323,7 +323,7 @@ function OurInstagram() {
             <img
               alt="image5"
               loading="lazy"
-              src=" ./images/contact1.png"
+              src=" ./images/contact5.png"
               className="object-cover w-full h-full"
             />
           </div>
@@ -333,7 +333,7 @@ function OurInstagram() {
             <img
               alt="image6"
               loading="lazy"
-              src=" ./images/contact3.png"
+              src=" ./images/contact4.jpg"
               className="object-cover w-full h-full"
             />
           </div>
