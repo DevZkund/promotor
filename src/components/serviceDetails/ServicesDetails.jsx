@@ -136,7 +136,7 @@ const ImageSlider = () => {
     "images/contact1.png",
     "images/contact2.png",
     "images/contact3.png",
-    "images/contact4.png",
+    "images/contact4.jpg",
     "images/contact5.png",
   ];
 
