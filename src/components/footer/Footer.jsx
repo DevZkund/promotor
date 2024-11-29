@@ -20,7 +20,7 @@ const Footer = () => {
             <Link to="/contact" className="hover:text-muted-foreground">
               Contact Us
             </Link>
-            
+
           </div>
         </div>
         <div className="text-sm text-right  md:text-left">
@@ -28,19 +28,26 @@ const Footer = () => {
           <p>Phone: +61- 416927444</p>
           <p>Email: Promotrworld01@gmail.com</p>
           {/* <p>Contact Us: info@planthaven.com</p> */}
-          <p>Address: Head quaters- 7/5 scanlon DR Epping Melbourne</p>
+          <p>Address: Head quaters- 7/5 <br></br>scanlon DR Epping Melbourne</p>
         </div>
       </div>
       <div className="flex justify-center md:justify-end space-x-4 pt-2  border-t-[0.1px] border-t-white/5">
-        <Link to="#insta" className="hover:text-muted-foreground underline">
-          insta
+        <Link
+          to="https://www.instagram.com/promotrworld/"
+          target="_blank"
+          className="hover:text-muted-foreground underline"
+        >
+          Insta
         </Link>
-        <Link to="#youtube" className="hover:text-muted-foreground underline">
-          Youtube
+
+        <Link
+          to="https://www.linkedin.com/company/promotr-marketing-agency/people/?viewAsMember=true"
+          target="_blank"
+          className="hover:text-muted-foreground underline"
+        >
+          LinkedIn
         </Link>
-        <Link to="#linkedin" className="hover:text-muted-foreground underline">
-          in
-        </Link>
+
       </div>
     </footer>
   );

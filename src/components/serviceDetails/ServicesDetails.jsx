@@ -1,5 +1,5 @@
 import React from "react";
-import {  useLocation } from "react-router-dom";
+import {  useLocation, useNavigate } from "react-router-dom";
 import { servicePageData } from "./serviceDetailsData";
 
 function ContactForm() {
@@ -48,7 +48,7 @@ function ContactForm() {
           />
           <div className="flex flex-col">
             <div className="text-lg font-bold">Chat to us</div>
-            <div className="mt-2 text-sm">Info@gilli.com</div>
+            <div className="mt-2 text-sm">promotrworld01@gmail.com</div>
           </div>
         </div>
         <div className="flex gap-5 mt-10 text-xl font-bold max-md:mt-10">
@@ -61,7 +61,7 @@ function ContactForm() {
           <div className="flex-auto text-lg self-start">Visit our Office Branch</div>
         </div>
         <div className="mt-0 ml-9 text-sm leading-6 max-md:ml-2.5">
-          800 Nicollet Mall, Minneapolis, MN 55402, United States
+        Head quaters- 7/5 scanlon DR Epping Melbourne
         </div>
         <div className="flex gap-5 justify-start mt-6 text-xl font-bold max-md:mt-10">
           <img
@@ -73,9 +73,9 @@ function ContactForm() {
           <div className="self-start text-lg">Call Us</div>
         </div>
         <div className="mt-2 text-base leading-6 max-md:ml-2.5">
-          +1 502-240-6226
+          +91 6283910290
           <br />
-          +1 612-659-2000
+          +61- 416927444
         </div>
       </div>
     </div>
@@ -106,12 +106,17 @@ const HeaderSD = () => {
 };
 
 const ImageGrid = ({ images }) => {
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/contact");
+  };
   return (
-    <div className="flex justify-center gap-5 max-md:flex-col">
+    <div className="flex justify-center gap-5 max-md:flex-col"  >
       {images.map((item, index) => (
         <div
           key={index}
           className="flex flex-col justify-evenly items-center w-[212px] h-[196px] rounded-3xl bg-white max-md:w-full max-md:ml-0 transition-transform duration-300 hover:scale-105"
+        onClick={()=> handleNavigate()}
         >
           <img
             loading="lazy"

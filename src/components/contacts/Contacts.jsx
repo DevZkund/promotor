@@ -36,7 +36,7 @@ export default function Contacts() {
                 />
                 <div className="flex flex-col">
                   <div className="text-lg font-bold">Chat to us</div>
-                  <div className="mt-2 text-sm">Info@gilli.com</div>
+                  <div className="mt-2 text-sm">promotrworld01@gmail.com</div>
                 </div>
               </div>
               <div className="flex gap-5 mt-10 text-xl font-bold max-md:mt-10">
@@ -51,8 +51,7 @@ export default function Contacts() {
                 </div>
               </div>
               <div className="mt-0 ml-9 text-sm leading-6 max-md:ml-2.5">
-                800 Nicollet Mall, Minneapolis, MN 55402, <br />
-                United States
+                Head quaters- 7/5 scanlon DR Epping Melbourne
               </div>
               <div className="flex gap-5 justify-between mt-6 text-xl font-bold max-md:mt-10">
                 <img
@@ -64,16 +63,16 @@ export default function Contacts() {
                 <div className="self-start text-lg">Call Us</div>
               </div>
               <div className="mt-2 ml-9 text-base leading-6 max-md:ml-2.5">
-                +1 502-240-6226
+                +91 6283910290
                 <br />
-                +1 612-659-2000
+                +61- 416927444
               </div>
               <div className="shrink-0 self-stretch mt-14 bg-stone-300 h-[260px] max-md:mt-10 max-md:max-w-full">
-              <img
-            src="images/contact6.png"
-            alt="Placeholder 2"
-            className="w-full h-full object-cover"
-          />
+                <img
+                  src="images/contact6.png"
+                  alt="Placeholder 2"
+                  className="w-full h-full object-cover"
+                />
 
               </div>
             </div>
