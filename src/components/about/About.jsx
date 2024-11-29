@@ -72,45 +72,44 @@ function FounderSection() {
                 many variations of passages of Lorem Ipsum available.
               </div>
             </div>
-            <div className="mt-2 w-full text-center py-4 bg-[#D9D9D9] flex justify-center px-4">
-              <p className="text-3xl lg:text-5xl text-left text-black ps-2 font-bold">
+            <div className="bg-[#FFBF00] py-5 px-3 rounded-xl text-center w-full lg:w-auto h-auto lg:h-64">
+              <div className="flex flex-row justify-start items-center  py-4 px-4">
+                <span className="text-[8vw]  md:text-6xl font-bold text-black font-nexa">
                 96
-              </p>
-              <p className="text-sm lg:text-md text-left ml-4 text-black font-bold">
-                Completed <br /> Projects
-              </p>
-              <img
-                className="ml-auto w-8 h-8"
-                src="./images/arrow-up.svg"
-                alt="arrow up"
-              />
+                </span>
+                <span className="text-[3.8vw] md:text-2xl font-semibold text-black text-start ml-2 md:ml-4">
+                Completed <br /> Project
+                </span>
+                <img
+                  className="md:mt-4 lg:mt-0 ml-auto w-8 h-8"
+                  src="./images/arrow-down.svg"
+                  alt="arrow down"
+                />
+              </div>
+              <div className="text-sm lg:text-[13px] mt-4 px-4 text-left text-black">
+              Project completion marks the successful culmination of a planned set of activities and deliverables. It signifies that all objectives and milestones have been achieved within the defined scope, time, and budget.
+              </div>
             </div>
-            <div className="mt-2 w-full text-center py-4 bg-[#D9D9D9] flex justify-center px-4">
-              <p className="text-3xl lg:text-5xl text-left text-black ps-2 font-bold">
+            <div className="bg-[#FFBF00] py-5 px-3 rounded-xl text-center w-full lg:w-auto h-auto lg:h-64">
+              <div className="flex flex-row justify-start items-center  py-4 px-4">
+                <span className="text-[8vw]  md:text-6xl font-bold text-black font-nexa">
                 11K
-              </p>
-              <p className="text-sm lg:text-md text-left ml-4 text-black font-bold">
-                Happy <br /> Customers
-              </p>
-              <img
-                className="ml-auto w-8 h-8"
-                src="./images/arrow-up.svg"
-                alt="arrow up"
-              />
+                </span>
+                <span className="text-[3.8vw] md:text-2xl font-semibold text-black text-start ml-2 md:ml-4">
+                Happy <br /> customers
+                </span>
+                <img
+                  className="md:mt-4 lg:mt-0 ml-auto w-8 h-8"
+                  src="./images/arrow-down.svg"
+                  alt="arrow down"
+                />
+              </div>
+              <div className="text-sm lg:text-[13px] mt-4 px-4 text-left text-black">
+              Project completion is the final phase of a project where all planned tasks, deliverables, and objectives are successfully achieved. It involves reviewing the work to ensure it meets the required standards.
+              </div>
             </div>
-            <div className="mt-2 w-full text-center py-4 bg-[#D9D9D9] flex justify-center px-4">
-              <p className="text-3xl lg:text-5xl text-left text-black ps-2 font-bold">
-                96
-              </p>
-              <p className="text-sm lg:text-md text-left ml-4 text-black font-bold">
-                Total <br /> Achievements
-              </p>
-              <img
-                className="ml-auto w-8 h-8"
-                src="./images/arrow-up.svg"
-                alt="arrow up"
-              />
-            </div>
+           
+           
           </div> 
     </section>
   );
@@ -187,7 +186,12 @@ function TestimonialContent() {
       <div className="flex flex-col w-[30%]  max-md:ml-0 max-md:w-full">
         <div className="flex flex-col mt-0 font-bold text-black  max-md:mt-0">
           <div className="flex justify-end items-start h-48  -mt-20 bg-stone-300 ">
-            <img className="-mr-6 mt-4 w-12  " src="./images/“.svg" alt="" />
+          <img
+              alt="image6"
+              loading="lazy"
+              src=" ./images/contact6.png"
+              className="object-cover w-full h-full"
+            />
           </div>
           <h3 className="mt-9 text-3xl max-md:mt-10">Sureender Shinga</h3>
           <p className="mt-4 text-base">Chief Executive Officer</p>
@@ -208,7 +212,7 @@ function TestimonialContent() {
             from a Lorem Ipsum passage, and going through the cites of the word
             in classical literature,{" "}
           </p>
-          <div className="flex gap-5 justify-between  w-[94px] max-md:mt-10">
+          {/* <div className="flex gap-5 justify-between  w-[94px] max-md:mt-10">
             <img
               loading="lazy"
               src="./images/prev.svg"
@@ -221,7 +225,7 @@ function TestimonialContent() {
               alt="next"
               className="shrink-0 w-3.5 aspect-[0.48]"
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
