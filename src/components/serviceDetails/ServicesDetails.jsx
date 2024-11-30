@@ -1,130 +1,99 @@
-import React, { useState,useEffect } from "react";
-import {  useLocation, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { servicePageData } from "./serviceDetailsData";
 
 function ContactForm() {
   return (
     <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-      <h2 className="text-xl font-semibold text-black mb-4">Have Any Queries?</h2>
+      <h2 className="text-lg md:text-xl font-semibold text-black mb-4">Have Any Queries?</h2>
 
       {/* Form Section */}
       <form className="text-black text-base">
         <input
           type="text"
           placeholder="Full name"
-          className="mt-9 text-base text-black placeholder:text-black bg-transparent outline-none max-md:mt-10 max-md:max-w-full"
+          className="w-full mt-4 text-sm md:text-base text-black placeholder:text-black bg-transparent border-b border-gray-400 outline-none"
         />
-        <div className="shrink-0 mt-2 h-px bg-gray-500 bg-opacity-50 max-md:max-w-full" />
         <input
           type="email"
           placeholder="Email"
-          className="mt-9 text-base text-black placeholder:text-black bg-transparent outline-none max-md:mt-10 max-md:max-w-full"
+          className="w-full mt-4 text-sm md:text-base text-black placeholder:text-black bg-transparent border-b border-gray-400 outline-none"
         />
-        <div className="shrink-0 mt-2 h-px bg-gray-500 bg-opacity-50 max-md:max-w-full" />
         <textarea
           placeholder="Message"
-          className="mt-9 text-base text-black placeholder:text-black bg-transparent outline-none max-md:mt-10 max-md:max-w-full resize-none overflow-hidden"
-          rows="1"
+          className="w-full mt-4 text-sm md:text-base text-black placeholder:text-black bg-transparent border-b border-gray-400 outline-none resize-none"
+          rows="3"
         ></textarea>
-
-        <div className="shrink-0 mt-2 h-px bg-gray-500 bg-opacity-50 max-md:max-w-full" />
         <button
           type="submit"
-          className="w-full bg-yellow-500 text-white font-semibold py-2 mt-8 rounded-full hover:bg-yellow-600 transition duration-200"
+          className="w-full bg-yellow-500 text-sm md:text-base text-white font-semibold py-2 mt-8 rounded-full hover:bg-yellow-600 transition duration-200"
         >
           Send Queries
         </button>
       </form>
 
       {/* Contact Details Section */}
-      <div className="mt-8 text-center text-black">
-        <h3 className="text-lg font-semibold text-gray-800">Contact Our Office</h3>
-        <div className="flex gap-5 justify-start mt-8 max-md:mt-10">
-          <img
-            loading="lazy"
-            src="icons/click.png"
-            className="shrink-0 self-start aspect-[0.6] w-[21px]"
-            alt="Chat"
-          />
-          <div className="flex flex-col">
-            <div className="text-lg font-bold">Chat to us</div>
-            <div className="mt-2 text-sm">promotrworld01@gmail.com</div>
+      <div className="mt-8 text-black">
+        <h3 className="text-sm md:text-lg font-semibold text-gray-800">Contact Our Office</h3>
+        <div className="flex gap-4 items-start mt-6">
+          <img src="icons/click.png" alt="Chat" className="w-6 h-6" />
+          <div>
+            <div className="text-sm md:text-lg font-bold">Chat to us</div>
+            <div className="text-xs lg:text-sm md:-ps-4 lg:p-0">promotrworld01@gmail.com</div>
           </div>
         </div>
-        <div className="flex gap-5 mt-10 text-xl font-bold max-md:mt-10">
-          <img
-            loading="lazy"
-            src="icons/location.png"
-            className="shrink-0 aspect-[0.61] w-[20px]"
-            alt="Location"
-          />
-          <div className="flex-auto text-lg self-start">Visit our Office Branch</div>
+        <div className="flex gap-4 items-start mt-6">
+          <img src="icons/location.png" alt="Location" className="w-6 h-6" />
+          <div>
+            <div className="text-sm md:text-lg font-bold">Visit our Office Branch</div>
+            <div className="text-xs md:text-sm">Headquarters: 7/5 Scanlon DR, Epping, Melbourne</div>
+          </div>
         </div>
-        <div className="mt-0 ml-9 text-sm leading-6 max-md:ml-2.5">
-        Head quaters- 7/5 scanlon DR Epping Melbourne
-        </div>
-        <div className="flex gap-5 justify-start mt-6 text-xl font-bold max-md:mt-10">
-          <img
-            loading="lazy"
-            src="icons/call.png"
-            className="shrink-0 w-6 aspect-square"
-            alt="Call"
-          />
-          <div className="self-start text-lg">Call Us</div>
-        </div>
-        <div className="mt-2 text-base leading-6 max-md:ml-2.5">
-          +91 6283910290
-          <br />
-          +61- 416927444
+        <div className="flex gap-4 items-start mt-6">
+          <img src="icons/call.png" alt="Call" className="w-6 h-6" />
+          <div>
+            <div className="text-sm md:text-lg font-bold">Call Us</div>
+            <div className="text-xs md:text-sm">
+              +91 6283910290 <br /> +61- 416927444
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-const VideoComponent = ({path}) => {
-  return (
-    <div className="mx-2">
-      <video width="100%" autoPlay loop muted>
-        <source src={path} type="video/mp4" />
-      </video>
-    </div>
-  );
-};
+const VideoComponent = ({ path }) => (
+  <div className="w-full">
+    <video className="w-full" autoPlay loop muted>
+      <source src={path} type="video/mp4" />
+    </video>
+  </div>
+);
 
-const HeaderSD = () => {
-  return (
-    <div className="flex justify-center items-center px-16 py-8 mt-8 w-full font-bold text-white bg-stone-800 max-md:px-5 max-md:max-w-full">
-      <div className="flex flex-col">
-        <div className="text-6xl max-md:text-4xl">Services - Detail</div>
-        <div className="self-center mt-6 text-base uppercase tracking-[3.2px]">
-          Home / Services
-        </div>
-      </div>
+const HeaderSD = () => (
+  <div className="flex justify-center items-center px-6 py-8 bg-stone-800 text-white">
+    <div className="text-center">
+      <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold">Services - Detail</h1>
+      <p className="mt-4 text-xs md:text-sm lg:text-base uppercase tracking-wide">Home / Services</p>
     </div>
-  );
-};
+  </div>
+);
 
 const ImageGrid = ({ images }) => {
   const navigate = useNavigate();
-  const handleNavigate = () => {
-    navigate("/contact");
-  };
+  const handleNavigate = () => navigate("/contact");
+
   return (
-    <div className="flex justify-center gap-5 max-md:flex-col"  >
+    <div className="grid grid-cols-4 gap-5 max-md:grid-cols-1">
       {images.map((item, index) => (
         <div
           key={index}
-          className="flex flex-col justify-evenly items-center w-[212px] h-[196px] rounded-3xl bg-white max-md:w-full max-md:ml-0 transition-transform duration-300 hover:scale-105"
-        onClick={()=> handleNavigate()}
+          className="flex flex-col items-center p-4 bg-white rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+          onClick={handleNavigate}
         >
-          <img
-            loading="lazy"
-            src={item.src}
-            alt={item.name}
-            className="object-contain max-w-full rounded-2xl aspect-[1.08] w-[90px]"
-          />
-          <p  className="px-4 text-black text-center text-lg">{item.name}</p>
+          <img src={item.src} alt={item.name} className="w-16 md:w-24 h-12 md:h-24 object-contain" />
+          <p className="mt-4 text-xs md:text-sm lg:text-base text-black text-center">{item.name}</p>
         </div>
       ))}
     </div>
@@ -145,23 +114,21 @@ const ImageSlider = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setFade(false); // Start fading out
+      setFade(false);
       setTimeout(() => {
         setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-        setFade(true); // Fade in the new image
-      }, 500); // Wait for fade-out duration
-    }, 3000); // Change image every 3 seconds
-    return () => clearInterval(interval); // Clean up on unmount
-  }, [images.length]);
+        setFade(true);
+      }, 500);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div
-      className="flex shrink-0 self-center m-4 max-w-full rounded-md bg-stone-300 h-[350px] shadow-[0px_4px_24px_rgba(0,0,0,0.08)] w-[350px] overflow-hidden relative"
-    >
+    <div className="relative w-full h-64 rounded-lg overflow-hidden">
       <img
         src={images[currentImageIndex]}
-        alt="Sliding content"
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+        alt="Slider"
+        className={`w-full h-full object-cover transition-opacity duration-500 ${
           fade ? "opacity-100" : "opacity-0"
         }`}
       />
@@ -169,56 +136,35 @@ const ImageSlider = () => {
   );
 };
 
-const GraphicDesignSection = ({
-  title,
-  subtitle,
-  companyName,
-  location,
-  description,
-  services,
-  footer,
-}) => {
-  return (
-    <div className="bg-black mt-8 text-white w-[80%]  mx-auto ">
-      <h1 className="text-[50px] font-normal">
-        <span className="text-white">{title.split(" ")[0]}</span>
-        <span className="text-yellow-500"> {title.split(" ")[1]}</span>
-      </h1>
-      <p className="mt-8 text-balance text-gray-300">{subtitle}</p>
-      <h2 className="mt-8 text-2xl font-semibold">
-        {companyName} {location}
-      </h2>
-      <p className="mt-4 text-sm text-gray-100">{description}</p>
-      <ul className="mt-4 space-y-2 list-none">
-        {services.map((service, index) => (
-          <li key={index} className="flex items-center">
-            <span className="mr-2">•</span>
-            {service}
-          </li>
-        ))}
-      </ul>
-      <p style={{ whiteSpace: 'pre-line' }} className="mt-8 text-gray-300 text-justify">{footer}</p>
-    </div>
-  );
-};
+const GraphicDesignSection = ({ title, subtitle, companyName, location, description, services, footer }) => (
+  <div className="p-6 bg-black text-white rounded-lg">
+    <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
+      {title.split(" ")[0]} <span className="text-yellow-500">{title.split(" ")[1]}</span>
+    </h1>
+    <p className="mt-4 text-sm md:text-base lg:text-lg text-gray-300">{subtitle}</p>
+    <h2 className="mt-6 text-sm md:text-lg lg:text-xl font-semibold">{companyName} {location}</h2>
+    <p className="mt-4 text-xs md:text-sm lg:text-base text-gray-400">{description}</p>
+    <ul className="mt-4 space-y-2">
+      {services.map((service, index) => (
+        <li key={index} className="flex items-start text-xs md:text-sm lg:text-base">
+          <span className="mr-2">•</span>
+          {service}
+        </li>
+      ))}
+    </ul>
+    <p className="mt-6 text-xs md:text-sm lg:text-base text-gray-300">{footer}</p>
+  </div>
+);
 
 function ServicesDetails() {
-
-  const location = useLocation(); 
-
-  console.log("Location object: ", location);
-
-  // Extract query parameters from the location object
+  const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
-  const service = queryParams.get("service");  // Get the 'service' query parameter
-
-  // Log the 'service' query parameter
-  console.log("Service Query Parameter: ", service); 
+  const service = queryParams.get("service");
   const serviceData = servicePageData[service];
 
   if (!serviceData) {
     return (
-      <div className="text-center  text-red-500 h-[70vh]">
+      <div className="flex items-center justify-center h-screen text-red-500">
         <h1>404 - Service Not Found</h1>
       </div>
     );
@@ -227,23 +173,21 @@ function ServicesDetails() {
   const { imageGrid, graphicDesignSection, video } = serviceData;
 
   return (
-    <main className="self-end my-14 w-full max-w-[1441px] max-md:mt-10 max-md:mr-2 max-md:max-w-full">
-      <HeaderSD />
-      <div className="flex mt-4 gap-5 max-md:flex-col">
-        <article className="flex flex-col w-[74%] max-md:ml-0 max-md:w-full">
-          <VideoComponent path={video.path} />
-          <GraphicDesignSection {...graphicDesignSection} />
-          <div className="flex space-y-4 flex-col items-center mt-5 w-full max-md:mt-10 max-md:max-w-full">
-            <ImageGrid images={imageGrid.slice(0, 4)} />
-            <ImageGrid images={imageGrid.slice(4)} />
-          </div>
-        </article>
-        <aside className="flex flex-col  w-[24%] max-md:ml-0 max-md:w-full">
-          <ContactForm />
-          <ImageSlider/>
-        </aside>
-      </div>
-    </main>
+    <div>
+      <HeaderSD/>
+    <main className="flex flex-col md:flex-row gap-8 px-4 py-8 w-full overflow-hidden">
+      <article className="flex-1 md:w-[70%] lg:w-3/4">
+        <VideoComponent path={video.path} />
+        <GraphicDesignSection {...graphicDesignSection} />
+        <ImageGrid images={imageGrid} />
+      </article>
+      <aside className="flex-shrink-0 md:w-[35%] lg:w-1/4">
+        <ContactForm />
+        <div className="mt-6">
+          <ImageSlider />
+        </div>
+      </aside>
+    </main></div>
   );
 }
 

@@ -23,7 +23,7 @@ function StrategicSolutions() {
           organizations.
         </h1>
         <div className="mt-20 px-8 max-md:mt-10 max-md:max-w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-md:flex-col">
+          <div className="grid grid-cols-1 border md:grid-cols-2 lg:grid-cols-3 gap-5 max-md:flex-col">
             {services.map((service) => (
               <ServiceColumn key={service.id} {...service} />
             ))}
@@ -35,7 +35,7 @@ function StrategicSolutions() {
 }
 function ServiceColumn({ id, title, description, imageSrc, link }) {
   return (
-    <div id={id} className="flex flex-col  w-[100%] max-md:ml-0 max-md:w-full">
+    <div id={id} className="flex flex-col   w-[100%] max-md:ml-0 max-md:w-full">
       <Link to={`${link}?service=${id}`}>
         <div
           className={`flex flex-col items-center px-7 pt-1 pb-14 w-full text-black bg-gray-200 hover:bg-amber-500 rounded-xl max-md:px-5 max-md:mt-10`}
