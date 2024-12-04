@@ -1,9 +1,12 @@
 import * as React from "react";
 import { useState } from "react";
+import emailjs from 'emailjs-com';
 
+// Main component
 export default function Contacts() {
   return (
     <div className="flex flex-col pt-8 bg-black">
+      {/* Header and Content */}
       <div className="flex justify-center items-center px-16 py-8 mt-1.5 w-full font-bold text-white bg-stone-800 max-md:px-5 max-md:max-w-full">
         <div className="flex flex-col">
           <div className="text-6xl max-md:text-4xl">Contact Us</div>
@@ -12,125 +15,103 @@ export default function Contacts() {
           </div>
         </div>
       </div>
+
+      {/* Main contact area */}
       <div className="self-center mt-36 px-2 md:px-24 w-full max-w-[1441px] max-md:mt-10 max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col">
           <div className="flex flex-col w-[45%] max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col grow items-start px-5 mt-1.5 text-white max-md:mt-10 max-md:max-w-full">
-              <div className="self-stretch text-sm font-bold text-white uppercase tracking-[2.8px] max-md:max-w-full">
-                Contact our agency
-              </div>
-              <div className="self-stretch mt-5 text-4xl font-bold text-white max-md:max-w-full max-md:text-4xl">
-                our <span className="text-yellow-400">Branch</span> office -{" "}
-              </div>
-              <div className="self-stretch mt-6 text-sm leading-6 max-md:mt-10 max-md:max-w-full">
-                here are many variations of passages of Lorem Ipsum available,{" "}
-                <br />
-                but the majority have suffered alteration in some form,{" "}
-              </div>
-              <div className="flex gap-5 justify-between mt-8 max-md:mt-10">
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/abd4d96b5758f643617697a2efc7857d33c6b1f8e864048dfb3f92c2a49184b1?apiKey=0a4a5a77f3084b74ad367ef3cc9e3928&&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928"
-                  className="shrink-0 self-start aspect-[0.45] w-[21px]"
-                  alt="abc"
-                />
-                <div className="flex flex-col">
-                  <div className="text-lg font-bold">Chat to us</div>
-                  <div className="mt-2 text-sm">promotrworld01@gmail.com</div>
-                </div>
-              </div>
-              <div className="flex gap-5 mt-10 text-xl font-bold max-md:mt-10">
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/1fecaf2f9dc0202c6642cda095087e97722250af32690aaab4898d73abf477dc?apiKey=0a4a5a77f3084b74ad367ef3cc9e3928&&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928"
-                  className="shrink-0 aspect-[0.61] w-[20px]"
-                  alt="abc"
-                />
-                <div className="flex-auto text-lg self-start">
-                  Visit our Office Branch
-                </div>
-              </div>
-              <div className="mt-0 ml-9 text-sm leading-6 max-md:ml-2.5">
-                Head quaters- 7/5 scanlon DR Epping Melbourne
-              </div>
-              <div className="flex gap-5 justify-between mt-6 text-xl font-bold max-md:mt-10">
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/58808968ce035f710f9e4437d39925603a625e74792589cac0292f63370b7fc3?apiKey=0a4a5a77f3084b74ad367ef3cc9e3928&&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928"
-                  className="shrink-0 w-6 aspect-square"
-                  alt="abc"
-                />
-                <div className="self-start text-lg">Call Us</div>
-              </div>
-              <div className="mt-2 ml-9 text-base leading-6 max-md:ml-2.5">
-                +91 6283910290
-                <br />
-                +61- 416927444
-              </div>
-              <div className="shrink-0 self-stretch mt-14 bg-stone-300 h-[260px] max-md:mt-10 max-md:max-w-full">
-                <img
-                  src="images/contact6.png"
-                  alt="Placeholder 2"
-                  className="w-full h-full object-cover"
-                />
-
-              </div>
-            </div>
+            <ContactDetails />
           </div>
           <div className="flex flex-col ml-5 w-[55%] max-md:ml-0 max-md:w-full">
-            <Contact />
+            <ContactForm />
           </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-5 py-10 pl-5 pr-5 mt-36 w-full bg-stone-300 max-md:pl-5 max-md:mt-10">
-        <div className="bg-white h-[481px] w-full max-h-[60vh] sm:h-[300px]">
-          <video
-            src="videos/contact-V.mp4"
-            className="w-full h-full object-cover"
-            autoPlay
-            loop
-            muted
-            playsInline
-            ref={(video) => {
-              if (video) {
-                video.playbackRate = 0.5; // Set playback speed to 50% (slow)
-              }
-            }}
-          />
-        </div>
-        <div className="bg-white h-[481px] w-full max-h-[60vh] sm:h-[300px]">
-          <img
-            src="images/contact2.jfif"
-            alt="Placeholder 2"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="bg-white h-[481px] w-full max-h-[60vh] sm:h-[300px]">
-          <img
-            src="images/contact3.png"
-            alt="Placeholder 3"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="bg-white h-[481px] w-full max-h-[60vh] sm:h-[300px]">
-          <img
-            src="images/contact4.jpg"
-            alt="Placeholder 4"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </div>
+      {/* Footer Section */}
+      <MediaDisplay />
+
     </div>
   );
 }
 
-function Contact() {
+// Contact Details Component
+const ContactDetails = () => (
+  <div className="flex flex-col grow items-start px-5 mt-1.5 text-white max-md:mt-10 max-md:max-w-full">
+    <div className="self-stretch text-sm font-bold text-white uppercase tracking-[2.8px] max-md:max-w-full">
+      Contact our agency
+    </div>
+    <div className="self-stretch mt-5 text-4xl font-bold text-white max-md:max-w-full max-md:text-4xl">
+      Our <span className="text-yellow-400">Branch</span> Office -{" "}
+    </div>
+    <div className="self-stretch mt-6 text-sm leading-6 max-md:mt-10 max-md:max-w-full">
+      Here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+    </div>
+    <ContactInfo />
+  </div>
+);
+
+// Contact Info Section (Email, Phone, Office Address)
+const ContactInfo = () => (
+  <>
+    <div className="flex gap-5 justify-between mt-8 max-md:mt-10">
+      <img
+        loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/abd4d96b5758f643617697a2efc7857d33c6b1f8e864048dfb3f92c2a49184b1?apiKey=0a4a5a77f3084b74ad367ef3cc9e3928&&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928"
+        className="shrink-0 self-start aspect-[0.45] w-[21px]"
+        alt="email icon"
+      />
+      <div className="flex flex-col">
+        <div className="text-lg font-bold">Chat to us</div>
+        <div className="mt-2 text-sm">promotrworld01@gmail.com</div>
+      </div>
+    </div>
+    <div className="flex gap-5 mt-10 text-xl font-bold max-md:mt-10">
+      <img
+        loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/1fecaf2f9dc0202c6642cda095087e97722250af32690aaab4898d73abf477dc?apiKey=0a4a5a77f3084b74ad367ef3cc9e3928&&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928"
+        className="shrink-0 aspect-[0.61] w-[20px]"
+        alt="location icon"
+      />
+      <div className="flex-auto text-lg self-start">
+        Visit our Office Branch
+      </div>
+    </div>
+    <div className="mt-0 ml-9 text-sm leading-6 max-md:ml-2.5">
+      Head quaters- 7/5 Scanlon DR Epping Melbourne
+    </div>
+    <div className="flex gap-5 justify-between mt-6 text-xl font-bold max-md:mt-10">
+      <img
+        loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/58808968ce035f710f9e4437d39925603a625e74792589cac0292f63370b7fc3?apiKey=0a4a5a77f3084b74ad367ef3cc9e3928&&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928"
+        className="shrink-0 w-6 aspect-square"
+        alt="phone icon"
+      />
+      <div className="self-start text-lg">Call Us</div>
+    </div>
+    <div className="mt-2 ml-9 text-base leading-6 max-md:ml-2.5">
+      +91 6283910290
+      <br />
+      +61- 416927444
+    </div>
+    <div className="shrink-0 self-stretch mt-8 bg-stone-300 h-[260px] max-md:mt-10 max-md:max-w-full">
+      <img
+        src="images/contact6.png"
+        alt="Placeholder 2"
+        className="w-full h-full object-cover"
+      />
+
+    </div>
+  </>
+);
+
+// Form Component
+function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     about: "",
-    websiteDesign: true,
+    websiteDesign: false,
     uxDesign: false,
     userResearch: false,
     contentCreation: false,
@@ -139,49 +120,43 @@ function Contact() {
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
-  };
-
-  const toggleCheckbox = (field) => {
-    setFormData((prevState) => ({
-      ...prevState,
-      [field]: !prevState[field],
+    const { name, value, type, checked } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: type === "checkbox" ? checked : value,
     }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Prepare the data for submission (add any necessary formatting)
     const dataToSubmit = {
-      ...formData,
-      services: {
-        websiteDesign: formData.design,
-        uxDesign: formData.ux,
-        userResearch: formData.research,
-        contentCreation: formData.content,
-        strategyConsulting: formData.strategy,
-        other: formData.other,
-      },
+      name: formData.name,
+      email: formData.email,
+      about: formData.about || "No information provided",
+      websiteDesign: formData.websiteDesign ? "Yes" : "No",
+      uxDesign: formData.uxDesign ? "Yes" : "No",
+      userResearch: formData.userResearch ? "Yes" : "No",
+      contentCreation: formData.contentCreation ? "Yes" : "No",
+      strategyConsulting: formData.strategyConsulting ? "Yes" : "No",
+      other: formData.other ? "Yes" : "No",
     };
-    console.log("Form Data:", dataToSubmit);
 
     try {
-      const response = await fetch("https://your-backend-url.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(dataToSubmit),
-      });
-      const result = await response.json();
-      if (response.ok) {
-        console.log("Form submitted successfully", result);
-        // Optionally reset form
+      const response = await emailjs.send(
+        'service_xdgfygi',
+        'template_ql7byg4',
+        dataToSubmit,
+        'yM19gTyg8r3XU9BsD'
+      );
+
+      if (response.status === 200) {
+        console.log("Form submitted successfully", response);
         setFormData({
           name: "",
           email: "",
           about: "",
-          websiteDesign: true,
+          websiteDesign: false,
           uxDesign: false,
           userResearch: false,
           contentCreation: false,
@@ -189,7 +164,7 @@ function Contact() {
           other: false,
         });
       } else {
-        console.error("Error submitting form", result);
+        console.error("Error submitting form", response);
       }
     } catch (error) {
       console.error("Error submitting form", error);
@@ -198,7 +173,7 @@ function Contact() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col bg-black">
-      <div className="flex flex-col grow md:px-6 lg:px-16 py-14 w-full rounded-md bg-yellow-400 bg-opacity-80 max-md:px-5 max-md:mt-10 max-md:max-w-full">
+      <div className="flex flex-col grow md:px-6 lg:px-16 py-14 w-full rounded-md bg-[#FFBF00C2] bg-opacity-80 max-md:px-5 max-md:mt-10 max-md:max-w-full">
         <div className="text-2xl md:text-3xl font-bold md:leading-10 leading-6 text-black max-md:max-w-full">
           Got Ideas? We’ve Got the Skills
           <br />
@@ -208,156 +183,174 @@ function Contact() {
           Tell us More about Yourself!
         </div>
 
-        {/* Name Input */}
+        {/* Form Inputs */}
         <input
+          required
+          type="text"
           name="name"
+          placeholder="Name"
+          className="mt-4 px-4 py-3 border-b text-black bg-transparent border-black placeholder:text-black"
           value={formData.name}
           onChange={handleChange}
-          className="mt-9 text-base text-black placeholder:text-black bg-transparent outline-none max-md:mt-10 max-md:max-w-full"
-          placeholder="Your Full Name"
         />
-        <div className="shrink-0 mt-4 h-px bg-black bg-opacity-50 max-md:max-w-full" />
 
-        {/* Email Input */}
         <input
+          required
+          type="email"
           name="email"
+          placeholder="Email"
+          className="mt-4 px-4 py-3 border-b bg-transparent border-black placeholder:text-black"
           value={formData.email}
           onChange={handleChange}
-          className="mt-9 text-base text-black placeholder:text-black bg-transparent outline-none max-md:mt-10 max-md:max-w-full"
-          placeholder="Your Email ID"
         />
-        <div className="shrink-0 mt-4 h-px bg-black bg-opacity-50 max-md:max-w-full" />
 
-        {/* About Input */}
-        <input
+        <textarea
           name="about"
+          placeholder="About Your Project"
+          className="mt-4 px-4 py-1 border-b bg-transparent border-black placeholder:text-black"
           value={formData.about}
           onChange={handleChange}
-          className="mt-9 text-base text-black placeholder:text-black bg-transparent outline-none max-md:mt-10 max-md:max-w-full"
-          placeholder="Tell Us About You"
         />
-        <div className="shrink-0 mt-4 h-px bg-black bg-opacity-50 max-md:max-w-full" />
 
-        <div className="mt-11 text-xl font-bold text-black max-md:mt-10 max-md:max-w-full">
+        {/* Checkboxes */}
+
+        <div className="text-lg md:text-xl mt-3 font-[500] md:leading-10 leading-6 text-black max-md:max-w-full">
           How can we Help?
         </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
+          <div>
+            <CheckboxInput
+              name="websiteDesign"
+              label="Website Design"
+              checked={formData.websiteDesign}
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <CheckboxInput
+              name="uxDesign"
+              label="UX Design"
+              checked={formData.uxDesign}
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <CheckboxInput
+              name="userResearch"
+              label="User Research"
+              checked={formData.userResearch}
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <CheckboxInput
+              name="contentCreation"
+              label="Content Creation"
+              checked={formData.contentCreation}
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <CheckboxInput
+              name="strategyConsulting"
+              label="Strategy Consulting"
+              checked={formData.strategyConsulting}
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <CheckboxInput
+              name="other"
+              label="Other"
+              checked={formData.other}
+              onChange={handleChange}
+            />
+          </div>
 
-        {/* Checkbox Design Component */}
-        <CheckboxDesign
-          checkedState={formData}
-          toggleCheckbox={toggleCheckbox}
-        />
+        </div>
+
 
         <button
           type="submit"
-          className="lg:px-16 text-center py-5 mt-14 text-base text-white bg-black rounded-[50px] max-md:px-5 max-md:mt-10 max-md:max-w-full"
+          className="self-center mt-10 text-lg w-full px-10 py-1 bg-black text-white rounded-full border-2 border-black hover:bg-yellow-400 hover:text-black"
         >
-          Let's Get Started
+          Submit
         </button>
       </div>
     </form>
   );
 }
 
-// CheckboxDesign Component
-function CheckboxDesign({ checkedState, toggleCheckbox }) {
-  return (
-    <div className="mt-9 max-md:pr-5 max-md:max-w-full">
-      <div className="flex gap-5 max-md:flex-col">
-        <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-          <div className="flex grow gap-4 max-md:mt-10">
-            <div className="flex flex-col items-center">
-              <img
-                onClick={() => toggleCheckbox("design")}
-                src={
-                  checkedState.design
-                    ? "./images/checked.svg"
-                    : "./images/unChecked.svg"
-                }
-                className="aspect-[1.15] w-[23px] cursor-pointer"
-                alt="Website Design Checkbox"
-              />
-              {/* Other checkbox items */}
-              <img
-                onClick={() => toggleCheckbox("ux")}
-                src={
-                  checkedState.ux
-                    ? "./images/checked.svg"
-                    : "./images/unChecked.svg"
-                }
-                className="mt-8 aspect-[1.15] w-[23px] cursor-pointer"
-                alt="UX Design Checkbox"
-              />
-              <img
-                onClick={() => toggleCheckbox("research")}
-                src={
-                  checkedState.research
-                    ? "./images/checked.svg"
-                    : "./images/unChecked.svg"
-                }
-                className="mt-7 aspect-[1.15] w-[23px] cursor-pointer"
-                alt="User Research Checkbox"
-              />
-            </div>
-            {/* Labels */}
-            <div className="my-auto text-base leading-6 text-black">
-              Website Design
-              <br />
-              <br />
-              UX Design
-              <br />
-              <br />
-              User Research
-            </div>
-          </div>
-        </div>
-        {/* Right Column */}
-        <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-          <div className="flex grow gap-5 max-md:mt-10">
-            <div className="flex flex-col items-center">
-              <img
-                onClick={() => toggleCheckbox("content")}
-                src={
-                  checkedState.content
-                    ? "./images/checked.svg"
-                    : "./images/unChecked.svg"
-                }
-                className="w-5 aspect-square cursor-pointer"
-                alt="Content Creation Checkbox"
-              />
-              <img
-                onClick={() => toggleCheckbox("strategy")}
-                src={
-                  checkedState.strategy
-                    ? "./images/checked.svg"
-                    : "./images/unChecked.svg"
-                }
-                className="mt-8 w-5 aspect-square cursor-pointer"
-                alt="Strategy & Consulting Checkbox"
-              />
-              <img
-                onClick={() => toggleCheckbox("other")}
-                src={
-                  checkedState.other
-                    ? "./images/checked.svg"
-                    : "./images/unChecked.svg"
-                }
-                className="mt-7 w-5 aspect-square cursor-pointer"
-                alt="Other Checkbox"
-              />
-            </div>
-            <div className="my-auto text-base leading-6 text-black">
-              Content Creation
-              <br />
-              <br />
-              Strategy & Consulting
-              <br />
-              <br />
-              Other
-            </div>
-          </div>
-        </div>
-      </div>
+// Reusable Checkbox Input Component
+const CheckboxInput = ({ name, label, checked, onChange }) => (
+  <div className="flex items-center mt-4">
+    <input
+      type="checkbox"
+      name={name}
+      checked={checked}
+      onChange={onChange}
+      className="w-6 h-6 border border-black bg-transparent appearance-none  checked:border-black relative"
+    />
+    <label htmlFor={name} className="ml-3 text-base text-black">
+      {label}
+    </label>
+    <style jsx>{`
+      input[type="checkbox"]:checked::before {
+        content: "";
+        position: absolute;
+        top: 28%;
+        left: 70%;
+        width: 20px;
+        height: 10px;
+        border-left: 1px solid black;
+        border-bottom: 1px solid black;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    `}</style>
+  </div>
+);
+
+
+
+// Media Display Component
+const MediaDisplay = () => (
+
+  <div className="grid grid-cols-1 md:grid-cols-4 gap-5 py-10 pl-5 pr-5 mt-36 w-full bg-stone-300 max-md:pl-5 max-md:mt-10">
+    <div className="bg-white h-[481px] w-full max-h-[60vh] sm:h-[300px]">
+      <video
+        src="videos/contact-V.mp4"
+        className="w-full h-full object-cover"
+        autoPlay
+        loop
+        muted
+        playsInline
+        ref={(video) => {
+          if (video) {
+            video.playbackRate = 0.5; // Set playback speed to 50% (slow)
+          }
+        }}
+      />
     </div>
-  );
-}
+    <div className="bg-white h-[481px] w-full max-h-[60vh] sm:h-[300px]">
+      <img
+        src="images/contact2.jfif"
+        alt="Placeholder 2"
+        className="w-full h-full object-cover"
+      />
+    </div>
+    <div className="bg-white h-[481px] w-full max-h-[60vh] sm:h-[300px]">
+      <img
+        src="images/contact3.png"
+        alt="Placeholder 3"
+        className="w-full h-full object-cover"
+      />
+    </div>
+    <div className="bg-white h-[481px] w-full max-h-[60vh] sm:h-[300px]">
+      <img
+        src="images/contact4.jpg"
+        alt="Placeholder 4"
+        className="w-full h-full object-cover"
+      />
+    </div>
+  </div>
+);
