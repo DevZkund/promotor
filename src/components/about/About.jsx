@@ -1,15 +1,18 @@
 import React from "react";
 
+import emailjs from 'emailjs-com';
+import { useState } from "react";
+
 function Header() {
   return (
     <div className="flex justify-center items-center px-16 py-8 mt-9 w-full font-bold text-white bg-stone-800 max-md:px-5 max-md:max-w-full">
-        <div className="flex flex-col">
-          <div className="text-6xl max-md:text-4xl">About Us</div>
-          <div className="self-center mt-6 text-base uppercase tracking-[3.2px]">
+      <div className="flex flex-col">
+        <div className="text-6xl max-md:text-4xl">About Us</div>
+        <div className="self-center mt-6 text-base uppercase tracking-[3.2px]">
           Home / Aboutus
-          </div>
         </div>
       </div>
+    </div>
   );
 }
 
@@ -26,91 +29,91 @@ function FounderSection() {
             src="./images/founder.png"
             alt="Founder"
           />
-         
+
         </div>
         <div className="flex-1  items-center text-justify justify-center px-8 pt-4 w-full md:w-auto">
           <p className="leading-relaxed text-xl">
-              You'll often find me sipping on bottomless cups of coffee,
-              brainstorming the next big campaign, and occasionally challenging
-              the office plant to a game of chess (I usually lose). I believe
-              that marketing isn't just about selling; it's about storytelling,
-              and I'm here to craft captivating narratives that resonate with
-              your audience. <br /><br />
-              "Why did the marketer bring a magnifying glass to the meeting? To
-              find those tiny details that make a big difference!"
-            </p>
-            <br />
-            <div className="text-center">
-              <h1 className="mt-3 me-2">- Tushar Dhiman </h1>
-              <h1>
-                <b>
-                  ( Founder & <span className="text-amber-400">CEO</span> )
-                </b>
-              </h1>
-            </div>
-          
+            You'll often find me sipping on bottomless cups of coffee,
+            brainstorming the next big campaign, and occasionally challenging
+            the office plant to a game of chess (I usually lose). I believe
+            that marketing isn't just about selling; it's about storytelling,
+            and I'm here to craft captivating narratives that resonate with
+            your audience. <br /><br />
+            "Why did the marketer bring a magnifying glass to the meeting? To
+            find those tiny details that make a big difference!"
+          </p>
+          <br />
+          <div className="text-center">
+            <h1 className="mt-3 me-2">- Tushar Dhiman </h1>
+            <h1>
+              <b>
+                ( Founder & <span className="text-amber-400">CEO</span> )
+              </b>
+            </h1>
+          </div>
+
         </div>
       </div>
-       <div className="flex flex-col lg:flex-row items-start justify-evenly space-x-2  pt-5 w-full px-6  ">
-            <div className="bg-[#FFBF00] py-5 px-3 rounded-xl text-center w-full lg:w-auto h-auto lg:h-64">
-              <div className="flex flex-row justify-start items-center  py-4 px-4">
-                <span className="text-[8vw]  md:text-6xl font-bold text-black font-nexa">
-                  10
-                </span>
-                <span className="text-[3.8vw] md:text-2xl font-semibold text-black text-start ml-2 md:ml-4">
-                  Years Of <br /> Experience
-                </span>
-                <img
-                  className="md:mt-4 lg:mt-0 ml-auto w-8 h-8"
-                  src="./images/arrow-down.svg"
-                  alt="arrow down"
-                />
-              </div>
-              <div className="text-sm lg:text-[13px] mt-4 px-4 text-left text-black">
-                Here are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration in some form. Here are
-                many variations of passages of Lorem Ipsum available.
-              </div>
-            </div>
-            <div className="bg-[#FFBF00] py-5 px-3 rounded-xl text-center w-full lg:w-auto h-auto lg:h-64">
-              <div className="flex flex-row justify-start items-center  py-4 px-4">
-                <span className="text-[8vw]  md:text-6xl font-bold text-black font-nexa">
-                96
-                </span>
-                <span className="text-[3.8vw] md:text-2xl font-semibold text-black text-start ml-2 md:ml-4">
-                Completed <br /> Project
-                </span>
-                <img
-                  className="md:mt-4 lg:mt-0 ml-auto w-8 h-8"
-                  src="./images/arrow-down.svg"
-                  alt="arrow down"
-                />
-              </div>
-              <div className="text-sm lg:text-[13px] mt-4 px-4 text-left text-black">
-              Project completion marks the successful culmination of a planned set of activities and deliverables. It signifies that all objectives and milestones have been achieved within the defined scope, time, and budget.
-              </div>
-            </div>
-            <div className="bg-[#FFBF00] py-5 px-3 rounded-xl text-center w-full lg:w-auto h-auto lg:h-64">
-              <div className="flex flex-row justify-start items-center  py-4 px-4">
-                <span className="text-[8vw]  md:text-6xl font-bold text-black font-nexa">
-                11K
-                </span>
-                <span className="text-[3.8vw] md:text-2xl font-semibold text-black text-start ml-2 md:ml-4">
-                Happy <br /> customers
-                </span>
-                <img
-                  className="md:mt-4 lg:mt-0 ml-auto w-8 h-8"
-                  src="./images/arrow-down.svg"
-                  alt="arrow down"
-                />
-              </div>
-              <div className="text-sm lg:text-[13px] mt-4 px-4 text-left text-black">
-              Project completion is the final phase of a project where all planned tasks, deliverables, and objectives are successfully achieved. It involves reviewing the work to ensure it meets the required standards.
-              </div>
-            </div>
-           
-           
-          </div> 
+      <div className="flex flex-col lg:flex-row items-start justify-evenly space-x-2  pt-5 w-full px-6  ">
+        <div className="bg-[#FFBF00] py-5 px-3 rounded-xl text-center w-full lg:w-auto h-auto lg:h-64">
+          <div className="flex flex-row justify-start items-center  py-4 px-4">
+            <span className="text-[8vw]  md:text-6xl font-bold text-black font-nexa">
+              10
+            </span>
+            <span className="text-[3.8vw] md:text-2xl font-semibold text-black text-start ml-2 md:ml-4">
+              Years Of <br /> Experience
+            </span>
+            <img
+              className="md:mt-4 lg:mt-0 ml-auto w-8 h-8"
+              src="./images/arrow-down.svg"
+              alt="arrow down"
+            />
+          </div>
+          <div className="text-sm lg:text-[13px] mt-4 px-4 text-left text-black">
+            Here are many variations of passages of Lorem Ipsum available,
+            but the majority have suffered alteration in some form. Here are
+            many variations of passages of Lorem Ipsum available.
+          </div>
+        </div>
+        <div className="bg-[#FFBF00] py-5 px-3 rounded-xl text-center w-full lg:w-auto h-auto lg:h-64">
+          <div className="flex flex-row justify-start items-center  py-4 px-4">
+            <span className="text-[8vw]  md:text-6xl font-bold text-black font-nexa">
+              96
+            </span>
+            <span className="text-[3.8vw] md:text-2xl font-semibold text-black text-start ml-2 md:ml-4">
+              Completed <br /> Project
+            </span>
+            <img
+              className="md:mt-4 lg:mt-0 ml-auto w-8 h-8"
+              src="./images/arrow-down.svg"
+              alt="arrow down"
+            />
+          </div>
+          <div className="text-sm lg:text-[13px] mt-4 px-4 text-left text-black">
+            Project completion marks the successful culmination of a planned set of activities and deliverables. It signifies that all objectives and milestones have been achieved within the defined scope, time, and budget.
+          </div>
+        </div>
+        <div className="bg-[#FFBF00] py-5 px-3 rounded-xl text-center w-full lg:w-auto h-auto lg:h-64">
+          <div className="flex flex-row justify-start items-center  py-4 px-4">
+            <span className="text-[8vw]  md:text-6xl font-bold text-black font-nexa">
+              11K
+            </span>
+            <span className="text-[3.8vw] md:text-2xl font-semibold text-black text-start ml-2 md:ml-4">
+              Happy <br /> customers
+            </span>
+            <img
+              className="md:mt-4 lg:mt-0 ml-auto w-8 h-8"
+              src="./images/arrow-down.svg"
+              alt="arrow down"
+            />
+          </div>
+          <div className="text-sm lg:text-[13px] mt-4 px-4 text-left text-black">
+            Project completion is the final phase of a project where all planned tasks, deliverables, and objectives are successfully achieved. It involves reviewing the work to ensure it meets the required standards.
+          </div>
+        </div>
+
+
+      </div>
     </section>
   );
 }
@@ -186,7 +189,7 @@ function TestimonialContent() {
       <div className="flex flex-col w-[30%]  max-md:ml-0 max-md:w-full">
         <div className="flex flex-col mt-0 font-bold text-black  max-md:mt-0">
           <div className="flex justify-end items-start h-48  -mt-20 bg-stone-300 ">
-          <img
+            <img
               alt="image6"
               loading="lazy"
               src=" ./images/contact6.png"
@@ -377,37 +380,92 @@ function BusinessTalk() {
           </h1>
         </header>
         <EmailForm />
-        <SendButton />
       </div>
     </section>
   );
 }
 function EmailForm() {
+  const [formData, setFormData] = useState({
+    email: "",
+    
+  });
+
+  const handleInputChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const dataToSubmit = {
+      email: formData.email,
+      about: "Some one try to contact you....",
+    };
+
+    try {
+      const response = await emailjs.send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        "template_c0bc7g9",
+        dataToSubmit,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      );
+
+      if (response.status === 200) {
+        console.log("Form submitted successfully:", response);
+        setFormData({ email: "" }); // Clear form data
+        alert("Form submitted successfully!");
+      } else {
+        alert("Submission failed. Please try again.");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("An error occurred. Please try again.");
+    }
+  };
+
   return (
-    <form className="flex flex-col grow shrink-0 my-auto basis-0 w-fit max-md:max-w-full">
-      <label htmlFor="emailInput" className="self-start ml-4 max-md:ml-2.5">
-        Enter your Email
-      </label>
-      <input
-        type="email"
-        id="emailInput"
-        className="shrink-0 mt-2 h-10 bg-zinc-200 rounded-lg max-md:max-w-full"
-        aria-label="Enter your Email"
-      />
+    <form
+      onSubmit={handleSubmit}
+      className="flex  w-full max-w-md space-y-7 items-center"
+    >
+      <div className="flex flex-col w-full">
+        <label
+          htmlFor="email"
+          className="text-sm font-medium text-gray-700 mb-1"
+        >
+          Enter your Email
+        </label>
+        <input
+          type="email"
+          id="email"
+          value={formData.email}
+          onChange={handleInputChange}
+          className="mt-2 h-10 w-full px-3 bg-zinc-200 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          aria-label="Enter your Email"
+          aria-describedby="emailHelp"
+          required
+        />
+        
+      </div>
+
+      <button
+        type="submit"
+        className="flex justify-center items-center bg-yellow-400 hover:bg-yellow-500 text-white font-bold ms-3 py-2 px-6 rounded-full shadow-md transition-all duration-200"
+      >
+        SEND
+      </button>
     </form>
   );
 }
-function SendButton() {
-  return (
-    <button className="flex justify-center items-center  gap-0.5 m-auto text-sm max-md:flex-wrap rounded-full bg-yellow-400  h-[88px] w-[88px] ">
-      <span className="font-bold whitespace-nowrap">SEND</span>
-    </button>
-  );
-}
+
 
 export default function About() {
   return (
-    <div className="">
+    <div >
       <Header />
       <FounderSection />
       <WhyDifferentSection />

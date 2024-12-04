@@ -135,7 +135,7 @@ const TrustedCompanies = () => {
     { src: "./images/charged.png", alt: "Charged", animation: "fade-left" },
     { src: "./images/coke.png", alt: "Coke", animation: "fade-down" },
     { src: "./images/albasir.png", alt: "Albasir", animation: "fade-right" },
-    { src: "./images/charged.png", alt: "Charged", animation: "fade-right" },
+    { src: "./images/myfroyoland.png", alt: "myfroyoland", animation: "fade-up" },
   ];
 
   return (
@@ -152,10 +152,38 @@ const TrustedCompanies = () => {
           <div
             key={index}
             data-aos={image.animation}
-            className="overflow-hidden rounded-xl lg:w-80 lg:h-40 md:w-60 md:h-32 w-40 h-20 my-4"
+            className="rounded-xl lg:w-80 lg:h-40 md:w-60 md:h-32 w-40 h-20 my-4 overflow-hidden  bg-white"
           >
             <img
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
+              src={image.src}
+              alt={image.alt}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+const TrustedCompaniesW = () => {
+  const images = [
+    { src: "./images/navigators.png", alt: "Charged", animation: "fade-left" },
+    { src: "./images/usana.png", alt: "Coke", animation: "fade-down" },
+    { src: "./images/eagle.png", alt: "Coke", animation: "fade-down" },
+  ];
+
+  return (
+    <div className="my-4 space-x-2 overflow-hidden">
+  
+      <div className="flex flex-wrap justify-evenly items-center">
+        {images.map((image, index) => (
+          <div
+            key={index}
+            data-aos={image.animation}
+            className="rounded-xl lg:w-80 lg:h-36 md:w-60 md:h-32 w-40 h-20 my-4 overflow-hidden "
+          >
+            <img
+              className="w-full h-full object-contain"
               src={image.src}
               alt={image.alt}
             />
@@ -287,6 +315,7 @@ export default function Home() {
       <LoadingBanner />
       <DigitalMarketing cardsData={cardsData} />
       <TrustedCompanies />
+      <TrustedCompaniesW />
       <ReviewsCard />
     </div>
   );

@@ -121,7 +121,7 @@ const ImageSlider = () => {
       }, 500);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   return (
     <div className="relative w-full h-64 rounded-lg overflow-hidden">

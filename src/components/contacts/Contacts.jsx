@@ -144,10 +144,10 @@ function ContactForm() {
 
     try {
       const response = await emailjs.send(
-        'service_xdgfygi',
-        'template_ql7byg4',
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         dataToSubmit,
-        'yM19gTyg8r3XU9BsD'
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       );
 
       if (response.status === 200) {
