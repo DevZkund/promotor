@@ -54,20 +54,20 @@ export const cardsData = [
 const DigitalMarketing = ({ cardsData }) => {
   const navigate = useNavigate();
   const [currentCardIndex, setCurrentCardIndex] = useState(0); // Current card index
-  const [animationClass, setAnimationClass] = useState("opacity-0 translate-x-full"); // Initial animation class
+  const [fadeClass, setFadeClass] = useState("opacity-100"); // For fade-in effect
 
+  // Update the current card index every 2 seconds with a fade transition
   useEffect(() => {
-    // Update the animation and card index every 4 seconds
     const interval = setInterval(() => {
-      setAnimationClass("opacity-0 translate-x-full"); // Start slide-out animation
+      setFadeClass("opacity-0"); // Fade out the current card
+
       setTimeout(() => {
+        // Update the card index after the fade out transition
         setCurrentCardIndex((prevIndex) => (prevIndex + 1) % cardsData.length);
-        setAnimationClass("opacity-0 -translate-x-full"); // Prepare for slide-in animation
-        setTimeout(() => {
-          setAnimationClass("opacity-100 translate-x-0"); // Slide-in animation
-        }, 300); // Small delay for smooth transition
-      }, 600); // Slide-out duration
-    }, 4000); // Change card every 4 seconds
+        setFadeClass("opacity-100"); // Fade in the new card
+      }, 500); // Wait for the fade-out duration before changing the card
+
+    }, 3000); // Change card every 2 seconds
 
     // Clear the interval on unmount
     return () => clearInterval(interval);
@@ -81,46 +81,48 @@ const DigitalMarketing = ({ cardsData }) => {
   };
 
   return (
-    <div className="flex flex-col md:grid md:grid-cols-2 justify-evenly items-center gap-[2.33vw] p-[4.69vw] w-full border-b-[0.1px] border-b-white/5">
+    <div className="md:flex justify-around">
       {/* Animated Card Section */}
-      <div className="w-full flex justify-center overflow-hidden">
-        <div className="bg-white/5 w-10/12 h-auto md:w-80 p-[1.5vw] shadow-sm shadow-white grid justify-center items-center rounded-[2.8rem]">
-          <div className=" w-[80%] h-[90%] m-auto lg:w-full lg:h-full rounded-xl ">
-            <div
-              className={` w-full h-full transition-all duration-500 ease-in-out ${animationClass}`}
-            >
-              <img
-                className="w-full h-full object-cover rounded-xl"
-                src={currentCard.imageUrl}
-                alt={currentCard.title}
-              />
-            </div>
+      <div className="flex justify-center items-center">
+        {/* Card with fade transition */}
+        <div
+          className="bg-white/5 text-white rounded-[2rem] my-4 sm:my-0 p-6 w-[250px] md:w-[300px] lg:w-[350px] shadow-lg transition-all duration-300 ease-in-out"
+        >
+          {/* Image Section */}
+          <div className={`w-full mx-auto md:h-36 lg:h-48 rounded-xl overflow-hidden ${fadeClass}`} style={{ transition: "all 0.3s ease-in-out" }}>
+            <img
+              src={currentCard.imageUrl}
+              alt={currentCard.title}
+              className="w-full h-full object-cover"
+            />
           </div>
-          <h1 className="text-white lg:text-[1.87vw] md:text-2xl text-xl font-prociono mt-[0.8vw] text-center">
+
+          {/* Text Content */}
+          <h1 className="text-base md:text-2xl font-serif font-bold text-center mt-6">
             {currentCard.title}
           </h1>
-          <p className="font-prompt lg:text-sm md:text-sm text-[12px] text-justify p-3 pt-[0.8vw]">
+          <p className="text-[11px] sm:text-sm text-gray-300 text-justify mt-4 min-h-36 md:min-h-44">
             {currentCard.description}
           </p>
-          <div className="flex justify-center items-center mt-[1.8vw]">
-            <div className="flex justify-center items-center w-36 h-8 lg:w-[9vw] lg:h-[3.5vw] md:w-36 md:h-10 circular-color-box shadow-sm shadow-white/70 rounded-xl">
-              <button onClick={() => handleNavigate(currentCard.path)} className="w-[96%] h-[94%] bg-black/90 rounded-lg text-center">
-                {currentCard.buttonLabel}
-              </button>
-            </div>
+
+          {/* Button */}
+          <div className="flex justify-center items-center mx-auto w-36 h-8 lg:w-[9vw] lg:h-[3.5vw] md:w-36 md:h-10 circular-color-box shadow-sm shadow-white/70 rounded-xl">
+            <button onClick={() => handleNavigate(currentCard.path)} className="w-[96%] h-[94%] bg-black/90 rounded-lg text-center">
+              {currentCard.buttonLabel}
+            </button>
           </div>
         </div>
       </div>
 
       {/* Static Text Section */}
-      <div className="text-center w-full gap-[3vw] py-[1.87vw] mt-8 md:mt-0">
+      <div className="text-center mt-16 md:my-auto">
         <h1 className="text-[8vw] font-prociono">Our</h1>
         <h1 className="text-[8vw] font-prociono">
           Serv<span className="text-yellow-400">ices</span>
         </h1>
         <button
           onClick={() => handleNavigate("/services")}
-          className="border-white border-2 shadow-sm shadow-white bg-yellow-500 hover:bg-yellow-400 hover:scale-110 text-black lg:w-44 lg:h-16 w-28 h-12 my-4 lg:mt-24 rounded-lg font-bold md:text-sm text-sm lg:text-lg"
+          className="border-2 border-white shadow-sm shadow-white bg-yellow-500 hover:bg-yellow-400 hover:scale-110 text-black lg:w-44 lg:h-16 w-28 h-12 my-4 rounded-lg font-bold text-sm lg:text-lg"
         >
           Explore More
         </button>
@@ -128,11 +130,6 @@ const DigitalMarketing = ({ cardsData }) => {
     </div>
   );
 };
-
-
-
-
-
 
 
 const StackedText = ({ topText, bottomText }) => {

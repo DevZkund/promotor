@@ -26,14 +26,14 @@ function FounderSection() {
       <div className="grid md:grid-cols-2 grid-col-1 justify-evenly items-center md:items-start my-12 mx-auto h-full w-11/12 lg:w-10/12 ">
         <div className="w-full  h-full relative  overflow-hidden mb-8 md:mb-0">
           <img
-            className="rounded-lg object-cover shadow-md shadow-white p-2 w-full h-auto"
+            className="rounded-lg object-cover p-2 w-full h-auto"
             src="./images/founder.png"
             alt="Founder"
           />
 
         </div>
         <div className="flex-1  items-center text-justify justify-center px-8 pt-4 w-full md:w-auto">
-          <p className="leading-relaxed text-xl">
+          <p className="leading-relaxed text-sm lg:text-lg xl:text-xl ">
             You'll often find me sipping on bottomless cups of coffee,
             brainstorming the next big campaign, and occasionally challenging
             the office plant to a game of chess (I usually lose). I believe
@@ -55,8 +55,8 @@ function FounderSection() {
 
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row items-start justify-evenly space-x-2  pt-5 w-full px-6  ">
-        <div className="bg-[#FFBF00] py-5 px-3 rounded-xl text-center w-full lg:w-auto h-auto lg:h-64">
+      <div className="flex flex-col lg:flex-row items-center justify-evenly space-x-2  pt-5 w-full px-6  ">
+        <div className="bg-[#FFBF00] my-2 py-5 px-3 rounded-xl text-center w-full lg:w-auto h-auto lg:h-64">
           <div className="flex flex-row justify-start items-center  py-4 px-4">
             <span className="text-[8vw]  md:text-6xl font-bold text-black font-nexa">
               10
@@ -76,7 +76,7 @@ function FounderSection() {
             many variations of passages of Lorem Ipsum available.
           </div>
         </div>
-        <div className="bg-[#FFBF00] py-5 px-3 rounded-xl text-center w-full lg:w-auto h-auto lg:h-64">
+        <div className="bg-[#FFBF00] my-2 py-5 px-3 rounded-xl text-center w-full lg:w-auto h-auto lg:h-64">
           <div className="flex flex-row justify-start items-center  py-4 px-4">
             <span className="text-[8vw]  md:text-6xl font-bold text-black font-nexa">
               96
@@ -94,7 +94,7 @@ function FounderSection() {
             Project completion marks the successful culmination of a planned set of activities and deliverables. It signifies that all objectives and milestones have been achieved within the defined scope, time, and budget.
           </div>
         </div>
-        <div className="bg-[#FFBF00] py-5 px-3 rounded-xl text-center w-full lg:w-auto h-auto lg:h-64">
+        <div className="bg-[#FFBF00] my-2 py-5 px-3 rounded-xl text-center w-full lg:w-auto h-auto lg:h-64">
           <div className="flex flex-row justify-start items-center  py-4 px-4">
             <span className="text-[8vw]  md:text-6xl font-bold text-black font-nexa">
               11K

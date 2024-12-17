@@ -4,14 +4,15 @@ const TrustedCompanies = () => {
     { src: "./images/coke.png", alt: "Coke" },
     { src: "./images/albasir.png", alt: "Albasir" },
     { src: "./images/myfroyoland.png", alt: "myfroyoland" },
-    { src: "./images/navigators.png", alt: "Charged" },
-    { src: "./images/usana.png", alt: "Coke" },
-    { src: "./images/eagleAdvisor.avif", alt: "Coke" },
+    { src: "./images/navigators.png", alt: "navigators" },
+    { src: "./images/usana.png", alt: "usana" },
+    { src: "./images/eagleAdvisor.avif", alt: "eagleAdvisor" },
+    { src: "./images/platinu.png", alt: "platinu" },
   ];
 
   const repeatedImages = [...images, ...images, ...images, ...images, ...images];
   return (
-    <div className="relative flex items-center bg-white py-4 my-1">
+    <div className="relative flex items-center bg-black py-4 my-1 overflow-hidden">
       <div className="flex animate-scroll logos">
         {repeatedImages.map((image, index) => (
           <div

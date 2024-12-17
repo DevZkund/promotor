@@ -17,7 +17,7 @@ export default function Contacts() {
       </div>
 
       {/* Main contact area */}
-      <div className="self-center mt-36 px-2 md:px-24 w-full max-w-[1441px] max-md:mt-10 max-md:max-w-full">
+      <div className="self-center mt-36 px-2 md:px-8 lg:px-12 xl:px-24 w-full max-w-[1441px] max-md:mt-10 max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col">
           <div className="flex flex-col w-[45%] max-md:ml-0 max-md:w-full">
             <ContactDetails />
@@ -37,7 +37,7 @@ export default function Contacts() {
 
 // Contact Details Component
 const ContactDetails = () => (
-  <div className="flex flex-col grow items-start px-5 mt-1.5 text-white max-md:mt-10 max-md:max-w-full">
+  <div className="flex flex-col grow items-start px- mt-1.5 text-white max-md:mt-10 max-md:max-w-full">
     <div className="self-stretch text-sm font-bold text-white uppercase tracking-[2.8px] max-md:max-w-full">
       Contact our agency
     </div>
@@ -289,9 +289,9 @@ const CheckboxInput = ({ name, label, checked, onChange }) => (
       name={name}
       checked={checked}
       onChange={onChange}
-      className="w-6 h-6 border border-black bg-transparent appearance-none  checked:border-black relative"
+      className="w-6 h-6 md:w-4 md:h-4 lg:w-6 lg:h-6 border border-black bg-transparent appearance-none  checked:border-black relative"
     />
-    <label htmlFor={name} className="ml-3 text-base text-black">
+    <label htmlFor={name} className="ml-3 text-base md:text-sm lg:text-base text-black">
       {label}
     </label>
     <style jsx>{`
