@@ -129,7 +129,7 @@ function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     const dataToSubmit = {
       name: formData.name,
       email: formData.email,
@@ -141,7 +141,7 @@ function ContactForm() {
       strategyConsulting: formData.strategyConsulting ? "Yes" : "No",
       other: formData.other ? "Yes" : "No",
     };
-
+  
     try {
       const response = await emailjs.send(
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
@@ -149,9 +149,12 @@ function ContactForm() {
         dataToSubmit,
         process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       );
-
+  
       if (response.status === 200) {
-        console.log("Form submitted successfully", response);
+        // Success Alert
+        alert("Submitted successfully!");
+  
+        // Reset form data
         setFormData({
           name: "",
           email: "",
@@ -164,12 +167,17 @@ function ContactForm() {
           other: false,
         });
       } else {
+        // Error Alert
+        alert("Error submitting form. Please try again later.");
         console.error("Error submitting form", response);
       }
     } catch (error) {
+      // Error Alert
+      alert("An error occurred while submitting the form. Please try again.");
       console.error("Error submitting form", error);
     }
   };
+  
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col bg-black">
