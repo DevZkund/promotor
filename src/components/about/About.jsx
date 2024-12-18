@@ -196,7 +196,9 @@ function BusinessTalk() {
 }
 function EmailForm() {
   const [formData, setFormData] = useState({
+    name: "Visitor",
     email: "",
+    message: "Try to contact you!",
     
   });
 
@@ -213,13 +215,20 @@ function EmailForm() {
 
     const dataToSubmit = {
       email: formData.email,
-      about: "Some one try to contact you....",
+      name: "Visitor",
+      message: "Try to contact you!",
+      websiteDesign: false,
+    uxDesign: false,
+    userResearch: false,
+    contentCreation: false,
+    strategyConsulting: false,
+    other: false,
     };
 
     try {
       const response = await emailjs.send(
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        "template_c0bc7g9",
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         dataToSubmit,
         process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       );

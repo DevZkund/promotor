@@ -1,26 +1,92 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { servicePageData } from "./serviceDetailsData";
+import emailjs from "emailjs-com";
 
 function ContactForm() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleInputChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const dataToSubmit = {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,      
+      websiteDesign: false,
+    uxDesign: false,
+    userResearch: false,
+    contentCreation: false,
+    strategyConsulting: false,
+    other: false,
+    };
+
+    try {
+      const response = await emailjs.send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,        
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        dataToSubmit,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      );
+
+      if (response.status === 200) {
+        alert("Your message has been sent successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        alert("Failed to send your message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("An error occurred. Please try again later.");
+    }
+  };
+
   return (
     <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
       <h2 className="text-lg md:text-xl font-semibold text-black mb-4">Have Any Queries?</h2>
 
       {/* Form Section */}
-      <form className="text-black text-base">
+      <form onSubmit={handleSubmit} className="text-black text-base">
         <input
           type="text"
+          id="name"
           placeholder="Full name"
+          value={formData.name}
+          onChange={handleInputChange}
+          required
           className="w-full mt-4 text-sm md:text-base text-black placeholder:text-black bg-transparent border-b border-gray-400 outline-none"
         />
         <input
           type="email"
+          id="email"
           placeholder="Email"
+          value={formData.email}
+          onChange={handleInputChange}
+          required
           className="w-full mt-4 text-sm md:text-base text-black placeholder:text-black bg-transparent border-b border-gray-400 outline-none"
         />
         <textarea
+          id="message"
           placeholder="Message"
+          value={formData.message}
+          onChange={handleInputChange}
+          required
           className="w-full mt-4 text-sm md:text-base text-black placeholder:text-black bg-transparent border-b border-gray-400 outline-none resize-none"
           rows="3"
         ></textarea>
@@ -62,6 +128,8 @@ function ContactForm() {
     </div>
   );
 }
+
+
 
 const VideoComponent = ({ path }) => (
   <div className="w-full">

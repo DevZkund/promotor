@@ -158,7 +158,7 @@ function ContactForm() {
         setFormData({
           name: "",
           email: "",
-          about: "",
+          message: "",
           websiteDesign: false,
           uxDesign: false,
           userResearch: false,

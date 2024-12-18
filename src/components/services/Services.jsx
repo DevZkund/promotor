@@ -1,4 +1,6 @@
 import React from "react";
+import emailjs from 'emailjs-com';
+import { useState } from "react";
 import { services } from "./servicesData";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from 'lucide-react'
@@ -99,7 +101,7 @@ function Optimization() {
                 Optimization
               </h1>
             </div>
-            
+
             <div className="relative">
               <img
                 src="./images/skyrocket.png"
@@ -141,7 +143,8 @@ function Optimization() {
         </div>
       </div>
     </section>
-  )}
+  )
+}
 
 
 function OurMilstone() {
@@ -225,6 +228,58 @@ function OurMilstone() {
 }
 
 function GetInTouch() {
+  const [formData, setFormData] = useState({
+    name: "Visitor",
+    email: "",
+    message: "Try to contact you!",
+
+  });
+
+  const handleInputChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const dataToSubmit = {
+      email: formData.email,
+      name: "Visitor",
+      message: "Try to contact you!",
+      websiteDesign: false,
+    uxDesign: false,
+    userResearch: false,
+    contentCreation: false,
+    strategyConsulting: false,
+    other: false,
+    };
+
+    try {
+      const response = await emailjs.send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        dataToSubmit,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      );
+
+      if (response.status === 200) {
+        console.log("Form submitted successfully:", response);
+        setFormData({ email: "" }); // Clear form data
+        alert("Submitted successfully!");
+      } else {
+        alert("Submission failed. Please try again.");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("An error occurred. Please try again.");
+    }
+  };
+
+
   return (
     <div className="flex flex-col text-sm text-white">
       <div className="flex flex-col justify-center items-center px-20 py-36 w-full bg-stone-400 max-md:px-5 max-md:py-24 max-md:max-w-full">
@@ -242,18 +297,25 @@ function GetInTouch() {
           </div>
 
           {/* Form Section */}
-          <div className="flex items-center gap-6 mt-20 max-md:mt-10">
-            <div className="flex flex-col w-full max-w-[380px]">
-              <input
-                className="text-base text-white placeholder:text-white bg-transparent outline-none p-3 max-md:w-full"
-                placeholder="Your Email ID"
-              />
-              <div className="mt-3.5 h-px bg-zinc-300" />
-            </div>
-            <div className="flex justify-center items-center  font-bold whitespace-nowrap bg-yellow-600 rounded-full sm:h-[88px] sm:w-[88px] h-[64px] w-[64px] max-md:px-5">
-              SEND
-            </div>
-          </div>
+          <form
+            onSubmit={handleSubmit}>
+            <div className="flex items-center gap-6 mt-20 max-md:mt-10">
+              <div className="flex flex-col w-full max-w-[380px]">
+                <input
+                  type="email"
+                  id="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                  className="text-base text-white placeholder:text-white bg-transparent outline-none p-3 max-md:w-full"
+                  placeholder="Your Email ID"
+                />
+                <div className="mt-3.5 h-px bg-zinc-300" />
+              </div>
+              <button type="submit" className="flex justify-center items-center  font-bold whitespace-nowrap bg-yellow-600 rounded-full sm:h-[88px] sm:w-[88px] h-[64px] w-[64px] max-md:px-5">
+                SEND
+              </button>
+            </div></form>
         </div>
       </div>
     </div>
