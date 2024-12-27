@@ -153,11 +153,12 @@ function WhyDifferentSection() {
                 </div>
               </div>
               <div className="flex flex-col ml-5 w-[40%] max-md:ml-0 max-md:w-full ">
-                <div className="shrink-0 mx-auto max-w-full bg-stone-300 h-[22rem] w-[32rem] max-md:mt-10 rounded-2xl">
+                <div className="shrink-0 mx-auto max-w-full bg-stone-300 h-[22rem] w-[32rem] max-md:mt-10 rounded-2xl overflow-hidden">
                   <img
-                    src="./images/about-img-2.png"
-                    alt="about-img-2"
-                    className="h-[22rem] w-[32rem]"
+                    src="./images/about-promotr.jpg"
+                    alt="about-promotr"
+                    className="h-[22rem] w-[32rem] object-fill overflow-hidden"
+                    
                   />
                 </div>
               </div>
