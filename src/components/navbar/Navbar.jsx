@@ -24,9 +24,9 @@ export default function Navbar() {
 
   return (
     <header className="flex items-center justify-between p-4 sticky top-0 z-50 bg-black">
-      <div className="flex items-center space-x-4 h-8 w-44">
-        <img src="./images/promotrw.png" alt="logo" />
-      </div>
+      <Link className="flex items-center space-x-4 h-8 w-44" to="/">
+        <img src="./images/promotrw.png" alt="logo"  />
+      </Link>
       <nav className="hidden md:flex space-x-4 lg:space-x-8">
         <Link
           className={`text-base md:text-sm lg:text-md ${

@@ -158,7 +158,7 @@ function WhyDifferentSection() {
                     src="./images/about-promotr.jpg"
                     alt="about-promotr"
                     className="h-[22rem] w-[32rem] object-fill overflow-hidden"
-                    
+
                   />
                 </div>
               </div>
@@ -200,7 +200,7 @@ function EmailForm() {
     name: "Visitor",
     email: "",
     message: "Try to contact you!",
-    
+
   });
 
   const handleInputChange = (e) => {
@@ -219,11 +219,11 @@ function EmailForm() {
       name: "Visitor",
       message: "Try to contact you!",
       websiteDesign: false,
-    uxDesign: false,
-    userResearch: false,
-    contentCreation: false,
-    strategyConsulting: false,
-    other: false,
+      uxDesign: false,
+      userResearch: false,
+      contentCreation: false,
+      strategyConsulting: false,
+      other: false,
     };
 
     try {
@@ -269,7 +269,7 @@ function EmailForm() {
           aria-describedby="emailHelp"
           required
         />
-        
+
       </div>
 
       <button

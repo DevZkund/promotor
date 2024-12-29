@@ -17,7 +17,7 @@ const TrustedCompanies = () => {
         {repeatedImages.map((image, index) => (
           <div
             key={index}
-            className="rounded-xl lg:w-80 lg:h-40 md:w-60 md:h-32 w-40 h-20 mx-2 bg-white flex-shrink-0"
+            className="rounded-xl p-4 lg:w-80 lg:h-40 md:w-60 md:h-32 w-40 h-20 mx-2 bg-white flex-shrink-0"
           >
             <img
               className="w-full h-full object-contain"
