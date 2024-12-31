@@ -4,6 +4,8 @@ import "./index.css";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
 import TrustedCompanies from "./TrustedCompanies";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 const LoadingBanner = () => {
   return (
@@ -38,7 +40,7 @@ export const cardsData = [
     imageUrl: "./images/web.png",
     buttonLabel: "Explore",
     path: "/service?service=webDevelopment"
-    
+
   },
   {
     title: "Digital Marketing",
@@ -145,32 +147,91 @@ const StackedText = ({ topText, bottomText }) => {
   );
 };
 const ReviewsCard = () => {
-  const styles = {
-    container: {
-      backgroundImage: 'url("./images/card-bg.png")',
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "center center",
-      position: "relative",
-      overflow: "hidden",
+
+  const reviewCards = [
+    {
+      id: 1,
+      name: "Eagle-I-Advisor",
+      role: "MD-Gurinder Singh",
+      avatarInitial: "G",
+      color: "#D72929",
+      review:
+        "Promotr transformed Eagle-I-Advisor's online presence, boosting engagement with a professional and engaging website. Highly recommend!",
+    },
+    {
+      id: 2,
+      name: "Navigator Overseas",
+      role: "MD-Veena",
+      avatarInitial: "V",
+      color: "#407B20",
+      review:
+        "Promotr revamped Navigator Overseas' online platform, delivering a sleek, user-friendly website that boosted engagement. Highly impressed!",
+    },
+    {
+      id: 3,
+      name:  (
+        <>
+          Al Basir Group<br />of Industries
+        </>
+      ),
+      role: "MD-Mohammad Al Roof",
+      avatarInitial: "M",
+      color: "#C29100",
+      review:
+        "Promotr elevated Al Basir Group of Industries' online presence with a professional, user-friendly website. Exceptional work!",
+    },
+    {
+      id: 4,
+      name: "Coca Cola",
+      role: (
+        <>
+          Channel Marketing<br />Head - Bikram Khanna
+        </>
+      ),
+      avatarInitial: "B",
+      color: "#D90A2C",
+      review:
+        "Promotr enhanced Coca-Cola's digital presence with a dynamic, user-friendly website. Outstanding service and expertise",
+    },
+    {
+      id: 5,
+      name: "My Froyo Land",
+      role: "Rattan Kharbanda",
+      avatarInitial: "B",
+      color: "#D90A2C",
+      review:
+        "Promotr enhanced Coca-Cola's digital presence with a dynamic, user-friendly website. Outstanding service and expertise",
+    },
+  ];
+
+  const responsive = {
+    superLarge: {
+      // >= 1600px
+      breakpoint: { min: 1600, max: 4000 },
+      items: 5, // Show 5 items on extra large screens
+    },
+    large: {
+      // >= 1200px and < 1600px
+      breakpoint: { min: 1200, max: 1599 },
+      items: 3, // Show 4 items on large screens
+    },
+    mediumLarge: {
+      // >= 1024px and < 1200px
+      breakpoint: { min: 1024, max: 1199 },
+      items: 3, // Show 3 items on medium-large screens
+    },
+    medium: {
+      // >= 768px and < 1024px
+      breakpoint: { min: 768, max: 1023 },
+      items: 2, // Show 2 items on medium screens
+    },
+    small: {
+      // < 768px
+      breakpoint: { min: 0, max: 767 },
+      items: 1, // Show 1 item on small screens
     },
   };
-  // Card logic
-  const [reviewCards, setReviewCards] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("./data/reviewsModel.json");
-        const data = await response.json();
-        setReviewCards(data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
 
   return (
     <>
@@ -180,64 +241,61 @@ const ReviewsCard = () => {
           bottomText={"Customer Review"}
         />
       </div>
-      <div className="flex flex-wrap justify-evenly items-center">
-        {reviewCards.map((review, index) => (
-          <div className="w-auto p-2" key={index}>
-            <div
-              data-aos="flip-right"
-              className="lg:max-w-80  lg:min-w-80 lg:min-h-72 lg:max-h-72 md:min-w-72 md:min-h-[17rem] md:max-w-72 md:max-h-[17rem] min-w-64  min-h-60 max-w-64 max-h-60 p-4"
-              style={styles.container}
+      <div className="w-full"> {/* Main wrapper for padding */}
+        <Carousel
+          responsive={responsive}
+          infinite={true} // Infinite scroll
+          arrows={true}   // Show navigation arrows
+          autoPlay={true} // Auto play on slide change
+          autoPlaySpeed={3000} // Speed between automatic slide change (in ms)
+          containerClass="carousel-container"
+        >
+          {/* Loop over the reviewCards array */}
+          {reviewCards.map((review) => (
+            <div className="sm:ml-16 w-[320px] h-[320px] overflow-hidden" key={review.id}
+              style={{
+                backgroundImage: 'url("./images/Rectangle.png")',
+                backgroundSize: '100% 100%', // Stretch to fill the div without cropping
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center center', // Center the image if it's smaller
+                // position: 'absolute', // Ensure it covers the entire space
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+              }}
             >
-              <div className="w-full flex justify-evenly items-center py-2">
-                <div className="rounded-full lg:w-20 lg:h-20 md:h-16 md:w-16 h-16 w-16 overflow-hidden border object-center object-cover">
-                  <img
-                    className="w-full h-full"
-                    src={review.image}
-                    alt={review.name}
-                  />
-                </div>
-                <div className="grid justify-center items-start m-2 ">
-                  <h1 className="font-inter lg:text-xl">{review.name}</h1>
-                  <div className="flex justify-start gap-1">
-                    <img
-                      className="w-3 h-3"
-                      src="./images/Star.svg"
-                      alt="star"
-                    />
-                    <img
-                      className="w-3 h-3"
-                      src="./images/Star.svg"
-                      alt="star"
-                    />
-                    <img
-                      className="w-3 h-3"
-                      src="./images/Star.svg"
-                      alt="star"
-                    />
-                    <img
-                      className="w-3 h-3"
-                      src="./images/Star.svg"
-                      alt="star"
-                    />
-                    <img
-                      className="w-3 h-3"
-                      src="./images/Star.svg"
-                      alt="star"
-                    />
+              <div
+                data-aos="flip-right"
+                className="p-8 mt-1 overflow-hidden h-full w-full" // Ensure this div fills the parent
+
+              >
+                <div className="flex items-center space-x-4">
+                  {/* Avatar with dynamic background color */}
+                  <div
+                    className="flex items-center justify-center text-white rounded-full h-16 w-16 text-lg font-bold"
+                    style={{ backgroundColor: review.color }}
+                  >
+                    {review.avatarInitial}
+                  </div>
+                  <div>
+                    <h2 className="text-lg font-bold">{review.name}</h2>
+                    <p className="text-sm text-gray-400">{review.role}</p>
                   </div>
                 </div>
+                <p className="mt-6 text-sm text-gray-300 text-center">{review.review}</p>
               </div>
-              <p className="text-center text-sm lg:mt-10 mt-4 lg:px-4 md:px-3 font-inter lg:text-sm md:text-sm text-[0.7rem]">
-                {review.description}
-              </p>
             </div>
-          </div>
-        ))}
-        
+          ))}
+
+        </Carousel>
       </div>
+
+
     </>
   );
 };
+
 
 export default function Home() {
   useEffect(() => {
@@ -258,9 +316,11 @@ export default function Home() {
           Trusted By Fast Growing <br />
           <span className="text-yellow-400">Companies</span>
         </h1>
-      <TrustedCompanies />
+        <TrustedCompanies />
       </div>
       <ReviewsCard />
+
+
     </div>
   );
 }

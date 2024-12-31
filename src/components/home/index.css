@@ -36,3 +36,20 @@
   width: max-content;
 }
 
+ /* Card */
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  gap: 10px; /* Adjust spacing between cards */
+}
+
+.carousel-card {
+  flex: 1;
+  min-width: 0;
+  /* Add other styles for your card */
+}
+
+button {
+  margin: 10px;
+}
