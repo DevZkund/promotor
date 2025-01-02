@@ -169,7 +169,7 @@ const ReviewsCard = () => {
     },
     {
       id: 3,
-      name:  (
+      name: (
         <>
           Al Basir Group<br />of Industries
         </>
@@ -252,38 +252,40 @@ const ReviewsCard = () => {
         >
           {/* Loop over the reviewCards array */}
           {reviewCards.map((review) => (
-            <div className="sm:ml-16 w-[320px] h-[320px] overflow-hidden" key={review.id}
-              style={{
-                backgroundImage: 'url("./images/Rectangle.png")',
-                backgroundSize: '100% 100%', // Stretch to fill the div without cropping
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center center', // Center the image if it's smaller
-                // position: 'absolute', // Ensure it covers the entire space
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-              }}
-            >
-              <div
-                data-aos="flip-right"
-                className="p-8 mt-1 overflow-hidden h-full w-full" // Ensure this div fills the parent
-
+            <div className="w-full flex justify-center">
+              <div className="w-[320px] h-[320px] overflow-hidden" key={review.id}
+                style={{
+                  backgroundImage: 'url("./images/Rectangle.png")',
+                  backgroundSize: '100% 100%', // Stretch to fill the div without cropping
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center center', // Center the image if it's smaller
+                  // position: 'absolute', // Ensure it covers the entire space
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                }}
               >
-                <div className="flex items-center space-x-4">
-                  {/* Avatar with dynamic background color */}
-                  <div
-                    className="flex items-center justify-center text-white rounded-full h-16 w-16 text-lg font-bold"
-                    style={{ backgroundColor: review.color }}
-                  >
-                    {review.avatarInitial}
+                <div
+                  data-aos="flip-right"
+                  className="p-8 mt-1 overflow-hidden h-full w-full" // Ensure this div fills the parent
+
+                >
+                  <div className="flex items-center space-x-4">
+                    {/* Avatar with dynamic background color */}
+                    <div
+                      className="flex items-center justify-center text-white rounded-full h-16 w-16 text-lg font-bold"
+                      style={{ backgroundColor: review.color }}
+                    >
+                      {review.avatarInitial}
+                    </div>
+                    <div>
+                      <h2 className="text-lg font-bold">{review.name}</h2>
+                      <p className="text-sm text-gray-400">{review.role}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h2 className="text-lg font-bold">{review.name}</h2>
-                    <p className="text-sm text-gray-400">{review.role}</p>
-                  </div>
+                  <p className="mt-6 text-sm text-gray-300 text-center">{review.review}</p>
                 </div>
-                <p className="mt-6 text-sm text-gray-300 text-center">{review.review}</p>
               </div>
             </div>
           ))}

@@ -87,8 +87,8 @@ function Optimization() {
   ]
 
   return (
-    <section className="bg-zinc-900 min-h-screen px-6 py-16 md:px-12 lg:px-20">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-zinc-900 w-full px-6 py-16 md:px-12 lg:px-20">
+      <div className=" mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Column */}
           <div className="space-y-8">
@@ -106,9 +106,7 @@ function Optimization() {
               <img
                 src="./images/skyrocket.png"
                 alt="Marketing Strategy Rocket"
-                width={500}
-                height={500}
-                className="w-full max-w-md mx-auto"
+                className="w-[350px] sm:w-[500px] h-[360px] sm:h-[500px] mx-auto "
               />
               {/* <button className="bg-amber-500 text-black font-medium px-6 py-2 rounded-full mt-6 hover:bg-amber-400 transition-colors">
                 View More
