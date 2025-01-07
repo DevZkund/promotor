@@ -4,8 +4,8 @@ import "./index.css";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
 import TrustedCompanies from "./TrustedCompanies";
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const LoadingBanner = () => {
   return (
@@ -31,7 +31,7 @@ export const cardsData = [
       "Graphic design is the art of composing visual elements — such as typography, images, colors, and shapes. Designing the layout of a magazine, creating a poster for a theatre performance, and designing packaging for a product are all examples of graphic design.",
     imageUrl: "./images/graphic.png",
     buttonLabel: "Explore",
-    path: "/service?service=graphicDesigning"
+    path: "/service?service=graphicDesigning",
   },
   {
     title: "Web Development",
@@ -39,8 +39,7 @@ export const cardsData = [
       " Web Development refers to a term that includes all the processes involved in developing a web project or website.Web developers develop websites, specifically by creating the site's code, connecting it to a server and maintaining its accessibility to users.",
     imageUrl: "./images/web.png",
     buttonLabel: "Explore",
-    path: "/service?service=webDevelopment"
-
+    path: "/service?service=webDevelopment",
   },
   {
     title: "Digital Marketing",
@@ -48,10 +47,9 @@ export const cardsData = [
       "Boost your online presence with our cutting-edge Digital Marketing service. At Digital Marketing, we use performance marketing to leverage your brand across various platforms and channels to drive desired results.",
     imageUrl: "./images/digital.png",
     buttonLabel: "Explore",
-    path: "/service?service=digitalMarketing"
+    path: "/service?service=digitalMarketing",
   },
 ];
-
 
 const DigitalMarketing = ({ cardsData }) => {
   const navigate = useNavigate();
@@ -68,7 +66,6 @@ const DigitalMarketing = ({ cardsData }) => {
         setCurrentCardIndex((prevIndex) => (prevIndex + 1) % cardsData.length);
         setFadeClass("opacity-100"); // Fade in the new card
       }, 500); // Wait for the fade-out duration before changing the card
-
     }, 3000); // Change card every 2 seconds
 
     // Clear the interval on unmount
@@ -87,11 +84,12 @@ const DigitalMarketing = ({ cardsData }) => {
       {/* Animated Card Section */}
       <div className="flex justify-center items-center">
         {/* Card with fade transition */}
-        <div
-          className="bg-white/5 text-white rounded-[2rem] my-4 sm:my-0 p-6 w-[250px] md:w-[300px] lg:w-[350px] shadow-lg transition-all duration-300 ease-in-out"
-        >
+        <div className="bg-white/5 text-white rounded-[2rem] my-4 sm:my-0 p-6 w-[250px] md:w-[300px] lg:w-[350px] shadow-lg transition-all duration-300 ease-in-out">
           {/* Image Section */}
-          <div className={`w-full mx-auto md:h-36 lg:h-48 rounded-xl overflow-hidden ${fadeClass}`} style={{ transition: "all 0.3s ease-in-out" }}>
+          <div
+            className={`w-full mx-auto md:h-36 lg:h-48 rounded-xl overflow-hidden ${fadeClass}`}
+            style={{ transition: "all 0.3s ease-in-out" }}
+          >
             <img
               src={currentCard.imageUrl}
               alt={currentCard.title}
@@ -109,7 +107,10 @@ const DigitalMarketing = ({ cardsData }) => {
 
           {/* Button */}
           <div className="flex justify-center items-center mx-auto w-36 h-8 lg:w-[9vw] lg:h-[3.5vw] md:w-36 md:h-10 circular-color-box shadow-sm shadow-white/70 rounded-xl">
-            <button onClick={() => handleNavigate(currentCard.path)} className="w-[96%] h-[94%] bg-black/90 rounded-lg text-center">
+            <button
+              onClick={() => handleNavigate(currentCard.path)}
+              className="w-[98%] h-[96%] bg-black/90 rounded-lg text-center p-0 m-0"
+            >
               {currentCard.buttonLabel}
             </button>
           </div>
@@ -133,7 +134,6 @@ const DigitalMarketing = ({ cardsData }) => {
   );
 };
 
-
 const StackedText = ({ topText, bottomText }) => {
   return (
     <div className="flex flex-col items-center -space-y-10">
@@ -147,7 +147,6 @@ const StackedText = ({ topText, bottomText }) => {
   );
 };
 const ReviewsCard = () => {
-
   const reviewCards = [
     {
       id: 1,
@@ -171,7 +170,9 @@ const ReviewsCard = () => {
       id: 3,
       name: (
         <>
-          Al Basir Group<br />of Industries
+          Al Basir Group
+          <br />
+          of Industries
         </>
       ),
       role: "MD-Mohammad Al Roof",
@@ -185,7 +186,9 @@ const ReviewsCard = () => {
       name: "Coca Cola",
       role: (
         <>
-          Channel Marketing<br />Head - Bikram Khanna
+          Channel Marketing
+          <br />
+          Head - Bikram Khanna
         </>
       ),
       avatarInitial: "B",
@@ -232,7 +235,6 @@ const ReviewsCard = () => {
     },
   };
 
-
   return (
     <>
       <div className="my-8 py-16">
@@ -241,11 +243,13 @@ const ReviewsCard = () => {
           bottomText={"Customer Review"}
         />
       </div>
-      <div className="w-full"> {/* Main wrapper for padding */}
+      <div className="w-full">
+        {" "}
+        {/* Main wrapper for padding */}
         <Carousel
           responsive={responsive}
           infinite={true} // Infinite scroll
-          arrows={true}   // Show navigation arrows
+          arrows={true} // Show navigation arrows
           autoPlay={true} // Auto play on slide change
           autoPlaySpeed={3000} // Speed between automatic slide change (in ms)
           containerClass="carousel-container"
@@ -253,12 +257,14 @@ const ReviewsCard = () => {
           {/* Loop over the reviewCards array */}
           {reviewCards.map((review) => (
             <div className="w-full flex justify-center">
-              <div className="w-[320px] h-[320px] overflow-hidden" key={review.id}
+              <div
+                className="w-[320px] h-[320px] overflow-hidden"
+                key={review.id}
                 style={{
                   backgroundImage: 'url("./images/Rectangle.png")',
-                  backgroundSize: '100% 100%', // Stretch to fill the div without cropping
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'center center', // Center the image if it's smaller
+                  backgroundSize: "100% 100%", // Stretch to fill the div without cropping
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center center", // Center the image if it's smaller
                   // position: 'absolute', // Ensure it covers the entire space
                   top: 0,
                   left: 0,
@@ -269,7 +275,6 @@ const ReviewsCard = () => {
                 <div
                   data-aos="flip-right"
                   className="p-8 mt-1 overflow-hidden h-full w-full" // Ensure this div fills the parent
-
                 >
                   <div className="flex items-center space-x-4">
                     {/* Avatar with dynamic background color */}
@@ -284,20 +289,18 @@ const ReviewsCard = () => {
                       <p className="text-sm text-gray-400">{review.role}</p>
                     </div>
                   </div>
-                  <p className="mt-6 text-sm text-gray-300 text-center">{review.review}</p>
+                  <p className="mt-6 text-sm text-gray-300 text-center">
+                    {review.review}
+                  </p>
                 </div>
               </div>
             </div>
           ))}
-
         </Carousel>
       </div>
-
-
     </>
   );
 };
-
 
 export default function Home() {
   useEffect(() => {
@@ -321,8 +324,6 @@ export default function Home() {
         <TrustedCompanies />
       </div>
       <ReviewsCard />
-
-
     </div>
   );
 }

@@ -57,8 +57,8 @@ const ContactInfo = () => (
     <div className="flex gap-5 justify-between mt-8 max-md:mt-10">
       <img
         loading="lazy"
-        src="images/pick.png"
-        className="shrink-0 self-start aspect-square  w-6  h-8"
+        src="icons/clickWhite.png"
+        className="shrink-0 self-start aspect-square   w-6  h-8"
         alt="email icon"
       />
       <div className="flex flex-col">
@@ -69,7 +69,7 @@ const ContactInfo = () => (
     <div className="flex gap-5 mt-10 text-xl font-bold max-md:mt-10">
       <img
         loading="lazy"
-        src="images/call.png"
+        src="icons/callWhite.png"
         className="shrink-0 aspect-square w-6  h-8"
         alt="location icon"
       />
@@ -83,7 +83,7 @@ const ContactInfo = () => (
     <div className="flex gap-5 justify-between mt-6 text-xl font-bold max-md:mt-10">
       <img
         loading="lazy"
-        src="images/location.png"
+        src="icons/locationWhite.png"
         className="shrink-0 w-6 h-8 aspect-square"
         alt="phone icon"
       />
