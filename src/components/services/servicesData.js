@@ -47,7 +47,7 @@ export const services = [
     description:
       "Join us for our Events and Sponsorships and enjoy the opportunity to learn something new in a fun and engaging way. Our events are designed to inspire curiosity and promote intellectual growth, featuring expert speakers and interactive activities.",
     imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/6aac2afb00928a6e9bf76de307099a6facaa0fa4fb156ddd1824d20df9aee273?placeholderIfAbsent=true&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928",
+      "./icons/Events.png",
     link: "/contact"
   },
 ];

@@ -57,8 +57,8 @@ const ContactInfo = () => (
     <div className="flex gap-5 justify-between mt-8 max-md:mt-10">
       <img
         loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/abd4d96b5758f643617697a2efc7857d33c6b1f8e864048dfb3f92c2a49184b1?apiKey=0a4a5a77f3084b74ad367ef3cc9e3928&&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928"
-        className="shrink-0 self-start aspect-[0.45] w-[21px]"
+        src="images/pick.png"
+        className="shrink-0 self-start aspect-square  w-6  h-8"
         alt="email icon"
       />
       <div className="flex flex-col">
@@ -69,8 +69,8 @@ const ContactInfo = () => (
     <div className="flex gap-5 mt-10 text-xl font-bold max-md:mt-10">
       <img
         loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/1fecaf2f9dc0202c6642cda095087e97722250af32690aaab4898d73abf477dc?apiKey=0a4a5a77f3084b74ad367ef3cc9e3928&&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928"
-        className="shrink-0 aspect-[0.61] w-[20px]"
+        src="images/call.png"
+        className="shrink-0 aspect-square w-6  h-8"
         alt="location icon"
       />
       <div className="flex-auto text-lg self-start">
@@ -83,8 +83,8 @@ const ContactInfo = () => (
     <div className="flex gap-5 justify-between mt-6 text-xl font-bold max-md:mt-10">
       <img
         loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/58808968ce035f710f9e4437d39925603a625e74792589cac0292f63370b7fc3?apiKey=0a4a5a77f3084b74ad367ef3cc9e3928&&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928"
-        className="shrink-0 w-6 aspect-square"
+        src="images/location.png"
+        className="shrink-0 w-6 h-8 aspect-square"
         alt="phone icon"
       />
       <div className="self-start text-lg">Call Us</div>

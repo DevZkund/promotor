@@ -169,7 +169,7 @@ function OurMilstone() {
                 <img
                   alt="temp"
                   loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/69a550d9772070289308622ebace724b9fffca43feee31c99dd8505ff5cfd557?placeholderIfAbsent=true&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928"
+                  src="icons/Business.png"
                   className="object-contain aspect-[0.93] w-[93px]"
                 />
                 <div className="mt-10 text-5xl max-md:text-4xl">196k</div>
@@ -183,7 +183,7 @@ function OurMilstone() {
                 <img
                   alt="temp"
                   loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/538610b406a25e66ec4d70898fbe52102ae787390c1229be2c7748aa18c67319?placeholderIfAbsent=true&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928"
+                  src="icons/Strategies.png"
                   className="object-contain max-w-full aspect-[1.02] w-[104px]"
                 />
                 <div className="mt-9 text-5xl max-md:text-4xl">16k</div>
@@ -196,7 +196,7 @@ function OurMilstone() {
                   <img
                     alt="temp"
                     loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/f0ad613910b3bd38c5d8ab2d05a0cb18d94dd7aa846a32131f3a232c844e0e43?placeholderIfAbsent=true&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928"
+                    src="icons/Projects.png"
                     className="object-contain w-full aspect-[1.15]"
                   />
                   <div className="mt-10 max-md:text-4xl">346k</div>
@@ -209,7 +209,7 @@ function OurMilstone() {
                 <img
                   alt="temp"
                   loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/58b5a0a975f0955083804348d2909e0382a1fe87d533f15049f6351c2fbb608a?placeholderIfAbsent=true&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928"
+                  src="icons/Satisfied.png"
                   className="object-contain aspect-[0.88] w-[88px]"
                 />
                 <div className="mt-10 text-5xl max-md:text-4xl">146k</div>
@@ -377,7 +377,7 @@ function OurInstagram() {
               <img
                 alt="logo"
                 loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/7755031af78101a31b0783ec9a1b863ef3d00bfa4d74d5c0ae071bcb84e8195a?placeholderIfAbsent=true&apiKey=0a4a5a77f3084b74ad367ef3cc9e3928"
+                src="icons/instagram.png"
                 className="relative z-10 object-contain aspect-square w-[50px]"
               />
             </a>
