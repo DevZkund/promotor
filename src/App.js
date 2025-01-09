@@ -44,7 +44,7 @@ function App() {
           <title>Promotr</title>
           <meta
             name="description"
-            content="Welcome to our website. Explore our services, learn more about us, or get in touch today!"
+            content="Promotr Marketing Agency | Amplify your brand’s voice with innovative marketing solutions! 🚀 We specialize in SEO, branding, social media campaigns, and memes that drive results. Based in India and Australia, we’re your trusted digital marketing partner!"
           />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta
