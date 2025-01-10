@@ -78,7 +78,8 @@ const ContactInfo = () => (
       </div>
     </div>
     <div className="mt-0 ml-9 text-sm leading-6 max-md:ml-2.5">
-      Head quaters- 7/5 Scanlon DR Epping Melbourne
+      Head quaters-  7/5 Scanlon Dr, Epping
+      VIC, Melbourne, Victoria, Australia
     </div>
     <div className="flex gap-5 justify-between mt-6 text-xl font-bold max-md:mt-10">
       <img
