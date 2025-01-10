@@ -172,7 +172,7 @@ function OurMilstone() {
                   src="icons/Business.png"
                   className="object-contain aspect-[0.93] w-[93px]"
                 />
-                <div className="mt-10 text-5xl max-md:text-4xl">196k</div>
+                <div className="mt-10 text-5xl max-md:text-4xl">50+</div>
                 <div className="self-stretch mt-5 text-3xl">
                   Business Growth
                 </div>
@@ -186,7 +186,7 @@ function OurMilstone() {
                   src="icons/Strategies.png"
                   className="object-contain max-w-full aspect-[1.02] w-[104px]"
                 />
-                <div className="mt-9 text-5xl max-md:text-4xl">16k</div>
+                <div className="mt-9 text-5xl max-md:text-4xl">100+</div>
                 <div className=" mt-5 text-3xl">Strategies planed</div>
               </div>
             </div>
@@ -199,7 +199,7 @@ function OurMilstone() {
                     src="icons/Projects.png"
                     className="object-contain w-full aspect-[1.15]"
                   />
-                  <div className="mt-10 max-md:text-4xl">346k</div>
+                  <div className="mt-10 max-md:text-4xl">1k+</div>
                 </div>
                 <div className="mt-5 text-3xl">Projects Released</div>
               </div>
@@ -212,7 +212,7 @@ function OurMilstone() {
                   src="icons/Satisfied.png"
                   className="object-contain aspect-[0.88] w-[88px]"
                 />
-                <div className="mt-10 text-5xl max-md:text-4xl">146k</div>
+                <div className="mt-10 text-5xl max-md:text-4xl">100+</div>
                 <div className="self-stretch mt-5 text-3xl">
                   Satisfied Clients
                 </div>

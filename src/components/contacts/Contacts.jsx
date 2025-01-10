@@ -111,12 +111,12 @@ function ContactForm() {
     name: "",
     email: "",
     about: "",
-    websiteDesign: false,
-    uxDesign: false,
-    userResearch: false,
-    contentCreation: false,
-    strategyConsulting: false,
-    other: false,
+    DigitalMarketing: false,
+    GraphicDesigning: false,
+    WebDevelopment: false,
+    TraditionalMarketing: false,
+    PoliticalManagement: false,
+    EventsAndSponsorships: false,
   });
 
   const handleChange = (e) => {
@@ -134,12 +134,12 @@ function ContactForm() {
       name: formData.name,
       email: formData.email,
       about: formData.about || "No information provided",
-      websiteDesign: formData.websiteDesign ? "Yes" : "No",
-      uxDesign: formData.uxDesign ? "Yes" : "No",
-      userResearch: formData.userResearch ? "Yes" : "No",
-      contentCreation: formData.contentCreation ? "Yes" : "No",
-      strategyConsulting: formData.strategyConsulting ? "Yes" : "No",
-      other: formData.other ? "Yes" : "No",
+      DigitalMarketing: formData.DigitalMarketing ? "Yes" : "No",
+      GraphicDesigning: formData.GraphicDesigning ? "Yes" : "No",
+      WebDevelopment: formData.WebDevelopment ? "Yes" : "No",
+      TraditionalMarketing: formData.TraditionalMarketing ? "Yes" : "No",
+      PoliticalManagement: formData.PoliticalManagement ? "Yes" : "No",
+      EventsAndSponsorships: formData.EventsAndSponsorships ? "Yes" : "No",
     };
   
     try {
@@ -159,12 +159,12 @@ function ContactForm() {
           name: "",
           email: "",
           message: "",
-          websiteDesign: false,
-          uxDesign: false,
-          userResearch: false,
-          contentCreation: false,
-          strategyConsulting: false,
-          other: false,
+          DigitalMarketing: false,
+          GraphicDesigning: false,
+          WebDevelopment: false,
+          TraditionalMarketing: false,
+          PoliticalManagement: false,
+          EventsAndSponsorships: false,
         });
       } else {
         // Error Alert
@@ -207,7 +207,7 @@ function ContactForm() {
           type="email"
           name="email"
           placeholder="Email"
-          className="mt-4 px-4 py-3 border-b bg-transparent border-black placeholder:text-black"
+          className="mt-4 px-4 text-black py-3 border-b bg-transparent border-black placeholder:text-black"
           value={formData.email}
           onChange={handleChange}
         />
@@ -215,7 +215,7 @@ function ContactForm() {
         <textarea
           name="about"
           placeholder="About Your Project"
-          className="mt-4 px-4 py-1 border-b bg-transparent border-black placeholder:text-black"
+          className="mt-4 px-4 py-1 text-black border-b bg-transparent border-black placeholder:text-black"
           value={formData.about}
           onChange={handleChange}
         />
@@ -228,49 +228,49 @@ function ContactForm() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
           <div>
             <CheckboxInput
-              name="websiteDesign"
-              label="Website Design"
-              checked={formData.websiteDesign}
+              name="DigitalMarketing"
+              label="Digital Marketing"
+              checked={formData.DigitalMarketing}
               onChange={handleChange}
             />
           </div>
           <div>
             <CheckboxInput
-              name="uxDesign"
-              label="UX Design"
-              checked={formData.uxDesign}
+              name="GraphicDesigning"
+              label="Graphic Designing"
+              checked={formData.GraphicDesigning}
               onChange={handleChange}
             />
           </div>
           <div>
             <CheckboxInput
-              name="userResearch"
-              label="User Research"
-              checked={formData.userResearch}
+              name="WebDevelopment"
+              label="Web Development"
+              checked={formData.WebDevelopment}
               onChange={handleChange}
             />
           </div>
           <div>
             <CheckboxInput
-              name="contentCreation"
-              label="Content Creation"
-              checked={formData.contentCreation}
+              name="TraditionalMarketing"
+              label="Traditional Marketing"
+              checked={formData.TraditionalMarketing}
               onChange={handleChange}
             />
           </div>
           <div>
             <CheckboxInput
-              name="strategyConsulting"
-              label="Strategy Consulting"
-              checked={formData.strategyConsulting}
+              name="PoliticalManagement"
+              label="Political Management"
+              checked={formData.PoliticalManagement}
               onChange={handleChange}
             />
           </div>
           <div>
             <CheckboxInput
-              name="other"
-              label="Other"
-              checked={formData.other}
+              name="EventsAndSponsorships"
+              label="Events And Sponsorships"
+              checked={formData.EventsAndSponsorships}
               onChange={handleChange}
             />
           </div>

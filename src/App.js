@@ -49,7 +49,7 @@ function App() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta
             http-equiv="Content-Security-Policy"
-            content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';"
+            content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://api.emailjs.com;"
           />
           <meta name="robots" content="index, follow" />
           <meta

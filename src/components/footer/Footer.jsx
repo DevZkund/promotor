@@ -25,10 +25,10 @@ const Footer = () => {
         </div>
         <div className="text-sm text-right  md:text-left">
           <p>Phone: +91-6283910290</p>
-          <p>Phone: +61- 416927444</p>
-          <p>Email: Promotrworld01@gmail.com</p>
+          <p>Phone: +61-0416927444</p>
+          <p>Email: promotrworld01@gmail.com</p>
           {/* <p>Contact Us: info@planthaven.com</p> */}
-          <p>Address: Head quaters- 7/5 <br></br>scanlon DR Epping Melbourne</p>
+          <p>Head quaters: <u>7/5 Scanlon Dr, Epping<br></br> VIC, Melbourne, Victoria, Australia</u></p>
         </div>
       </div>
       <div className="flex justify-center md:justify-end space-x-4 pt-2  border-t-[0.1px] border-t-white/5">

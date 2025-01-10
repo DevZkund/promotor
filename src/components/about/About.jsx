@@ -59,7 +59,7 @@ function FounderSection() {
         <div className="bg-[#FFBF00] my-2 py-5 px-3 rounded-xl text-center w-full lg:w-auto h-auto lg:h-64">
           <div className="flex flex-row justify-start items-center  py-4 px-4">
             <span className="text-[8vw]  md:text-6xl font-bold text-black font-nexa">
-              10
+            5+
             </span>
             <span className="text-[3.8vw] md:text-2xl font-semibold text-black text-start ml-2 md:ml-4">
               Years Of <br /> Experience
