@@ -93,7 +93,7 @@ const ContactInfo = () => (
     <div className="mt-2 ml-9 text-base leading-6 max-md:ml-2.5">
       +91 6283910290
       <br />
-      +61- 416927444
+      +61-04169274
     </div>
     <div className="shrink-0 self-stretch mt-8 bg-stone-300 h-[260px] max-md:mt-10 max-md:max-w-full">
       <img
