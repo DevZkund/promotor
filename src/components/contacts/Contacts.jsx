@@ -44,7 +44,7 @@ const ContactDetails = () => (
     <div className="self-stretch mt-5 text-4xl font-bold text-white max-md:max-w-full max-md:text-4xl">
       Our <span className="text-yellow-400">Branch</span> Office -{" "}
     </div>
-    <div className="self-stretch mt-6 text-sm leading-6 max-md:mt-10 max-md:max-w-full">
+    <div className="self-stretch mt-6 text-sm leading-6 max-md:mt-10 max-md:max-w-full font-poppins">
       Here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
     </div>
     <ContactInfo />
@@ -302,7 +302,7 @@ const CheckboxInput = ({ name, label, checked, onChange }) => (
     <label htmlFor={name} className="ml-3 text-base md:text-sm lg:text-base text-black">
       {label}
     </label>
-    <style jsx>{`
+    <style>{`
       input[type="checkbox"]:checked::before {
         content: "";
         position: absolute;

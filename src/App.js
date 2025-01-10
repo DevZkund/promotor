@@ -39,7 +39,7 @@ function App() {
 
   return (
     <HelmetProvider>
-      <div className="bg-black text-white w-full mx-auto">
+      <div className="bg-black text-white w-full mx-auto font-poppins">
         <Helmet>
           <title>Promotr</title>
           <meta
@@ -48,14 +48,20 @@ function App() {
           />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta
-            http-equiv="Content-Security-Policy"
-            content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://api.emailjs.com;"
-          />
+        http-equiv="Content-Security-Policy"
+        content="
+          default-src 'self'; 
+          script-src 'self'; 
+          style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; 
+          font-src 'self' https://fonts.gstatic.com; 
+          connect-src 'self' https://api.emailjs.com;"
+      />
           <meta name="robots" content="index, follow" />
           <meta
             name="keywords"
             content="Promotr, Promotrworld, promotr, promotrworld, digital marketing, web development, UX design, content creation, strategy consulting, online branding, SEO"
           />
+          
           <link rel="canonical" href="https://promotrworld.in" />
         </Helmet>
 

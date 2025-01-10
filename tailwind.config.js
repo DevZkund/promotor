@@ -4,11 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        inter: ['Inter', 'sans-serif'],
-        spectral: ['Spectral', 'serif'],
-        prociono: ['Prociono', 'serif'],
-        prompt: ['Prompt', 'sans-serif'],
-        nexa: ['Nexa XBold', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
       
     },
