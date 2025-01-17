@@ -44,9 +44,7 @@ const ContactDetails = () => (
     <div className="self-stretch mt-5 text-4xl font-bold text-white max-md:max-w-full max-md:text-4xl">
       Our <span className="text-yellow-400">Branch</span> Office -{" "}
     </div>
-    <div className="self-stretch mt-6 text-sm leading-6 max-md:mt-10 max-md:max-w-full font-poppins">
-      Here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
-    </div>
+   
     <ContactInfo />
   </div>
 );
@@ -93,7 +91,7 @@ const ContactInfo = () => (
     <div className="mt-2 ml-9 text-base leading-6 max-md:ml-2.5">
       +91 6283910290
       <br />
-      +61-04169274
+      +61-0416927444
     </div>
     <div className="shrink-0 self-stretch mt-8 bg-stone-300 h-[260px] max-md:mt-10 max-md:max-w-full">
       <img
@@ -326,18 +324,10 @@ const MediaDisplay = () => (
 
   <div className="grid grid-cols-1 md:grid-cols-4 gap-5 py-10 pl-5 pr-5 mt-36 w-full bg-stone-300 max-md:pl-5 max-md:mt-10">
     <div className="bg-white h-[481px] w-full max-h-[60vh] sm:h-[300px]">
-      <video
-        src="videos/contact-V.mp4"
+    <img
+        src="images/contact1.png"
+        alt="Placeholder 2"
         className="w-full h-full object-cover"
-        autoPlay
-        loop
-        muted
-        playsInline
-        ref={(video) => {
-          if (video) {
-            video.playbackRate = 0.5; // Set playback speed to 50% (slow)
-          }
-        }}
       />
     </div>
     <div className="bg-white h-[481px] w-full max-h-[60vh] sm:h-[300px]">

@@ -116,7 +116,7 @@ function ContactForm() {
           </div>
         </div>
         <div className="flex gap-4 items-start mt-6">
-          <img src="icons/call.png" alt="Call" className="w-6 h-6" />
+          <img src="icons/callBlack.png" alt="Call" className="w-6 h-6" />
           <div>
             <div className="text-sm md:text-lg font-bold">Call Us</div>
             <div className="text-xs md:text-sm">

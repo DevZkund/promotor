@@ -287,12 +287,7 @@ function GetInTouch() {
           </div>
           <div className="mt-3 text-5xl font-bold text-center max-md:text-4xl">
             Ready to Work With Us ?
-          </div>
-          <div className="mt-3.5 text-base leading-8 text-center max-md:max-w-full">
-            Here are many variations of passages of Lorem Ipsum available,{" "}
-            <br />
-            but the majority have suffered alteration in some form.
-          </div>
+          </div>        
 
           {/* Form Section */}
           <form

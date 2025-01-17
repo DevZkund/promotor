@@ -147,9 +147,9 @@ function WhyDifferentSection() {
                     <br />
                     slightly believable.{" "}
                   </div>
-                  <div className="self-start px-5 py-2 mt-5 text-sm bg-black rounded-[90px] max-md:px-5 max-md:mt-10">
+                  {/* <div className="self-start px-5 py-2 mt-5 text-sm bg-black rounded-[90px] max-md:px-5 max-md:mt-10">
                     Know More
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="flex flex-col ml-5 w-[40%] max-md:ml-0 max-md:w-full ">
@@ -181,11 +181,11 @@ function WhyDifferentSection() {
 function BusinessTalk() {
   return (
     <section className="flex justify-center items-center p-16 pb-20 text-black bg-neutral-100 max-md:px-5">
-      <div className="flex gap-5 justify-between mt-20 w-full max-w-[1443px] max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
+      <div className="flex gap-5 justify-between mt-6 w-full max-w-[1443px] max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
         <header className="flex flex-col font-bold max-md:max-w-full">
-          <h2 className="text-sm uppercase tracking-[2.8px] max-md:max-w-full">
+          {/* <h2 className="text-sm uppercase tracking-[2.8px] max-md:max-w-full">
             Business Talk's
-          </h2>
+          </h2> */}
           <h1 className="mt-7 text-5xl max-md:max-w-full max-md:text-4xl">
             Let's get in touch, <br /> we reply your Queries.
           </h1>

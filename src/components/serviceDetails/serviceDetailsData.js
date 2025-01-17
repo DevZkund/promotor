@@ -20,8 +20,8 @@ export const servicePageData = {
       title: "Digital Marketing",
       subtitle:
         "Boost your online presence with our cutting-edge Digital Marketing service. At Digital Marketing, we use performance marketing to leverage your brand across various platforms and channels to drive desired results.",
-      companyName: "Promotr",
-      location: "Promotr: The Best Digital Marketing Agency in Chandigarh",
+      companyName: "Promotr:",
+      location: "The Best Digital Marketing Agency in Chandigarh",
       description: `We help businesses of all sizes grow their online presence and reach their target audience.
       Promotr is the best digital marketing agency in Chandigarh. We offer a variety of services to help businesses of all sizes achieve their online marketing goals, including SEO, social media marketing, content marketing, email marketing, web design, and development.
  `,
@@ -88,13 +88,12 @@ export const servicePageData = {
       description:
         "We help businesses of all sizes reach their target audience through effective graphic design services. Our team of experienced and certified graphic designers can help you with a wide range of services, including:",
       services: [
-        "Logo Design",
-        "Branding",
-        "Website Design",
-        "Social Media Graphics",
-        "Print Advertising",
-        "Packaging Design",
-        "And More!",
+        "Custom website design and development",
+        "E-commerce website development",
+        "WordPress website development",
+        "Website maintenance and support",
+        "Search engine optimization (SEO)",
+        "And more!",
       ],
 
       footer:
@@ -103,7 +102,7 @@ export const servicePageData = {
   },
   traditionalMarketing: {
     video: {
-      path: "/videos/webDevelopment.mp4"
+      path: "/videos/TraditionalMarketing.mp4"
     },
     imageGrid: [
       { src: "/icons/BTL.png", name: "BTL" },

@@ -146,89 +146,87 @@ const StackedText = ({ topText, bottomText }) => {
     </div>
   );
 };
+
 const ReviewsCard = () => {
   const reviewCards = [
     {
       id: 1,
-      name: "Eagle-I-Advisor",
-      role: "MD-Gurinder Singh",
-      avatarInitial: "G",
-      color: "#D72929",
+      name: (
+        <>
+          Navigator<br />Overseas
+        </>
+      ),
+      avatarInitial: "images/navigatorsWhite.png",
+      color: "#000",
       review:
-        "Working with Tushar and his Promotr team was a game-changer for us. Their expertise in lead generation through Facebook ads helped us connect with more students interested in our IELTS courses. Additionally, their innovative approach to traditional marketing, including organizing student conferences across various colleges in Chandigarh, allowed us to engage directly with students and address their queries about studying abroad. Thanks to their efforts, we’ve seen a significant increase in student inquiries and enrollment. We highly recommend their services!",
+        "Their creative marketing strategies significantly boosted our lead generation efforts at Chitkara and Panjab University, effectively connecting us with the right audience. Highly recommended for impactful, results-driven solutions!",
+      role: "MD- Veena",
     },
     {
       id: 2,
-      name: "Navigator Overseas",
-      role: "MD-Veena",
-      avatarInitial: "V",
-      color: "#407B20",
+      name: (
+        <>
+          Usana Health <br /> Science
+        </>
+      ),
+      avatarInitial: "images/usana.png",
+      color: "#ffffff",
       review:
-        "Working with Tushar and his Promtr team was a seamless and rewarding experience. They played a key role in driving lead generation for our services at Chitkara University and Panjab University. Their creative marketing techniques not only captured the attention of students but also helped us effectively engage with potential clients. Their innovative approach and dedication have been instrumental in boosting our presence and connecting with the right audience. Highly recommended for impactful and result-oriented marketing solutions!",
+        "The Promotr team did an amazing job creating video content for Usana Health Sciences. From reels to client testimonials, they brought our brand's story to life. The videos turned out great and got awesome feedback. Highly recommend their services!",
+      role: "MD-Gurinder Singh",
     },
     {
       id: 3,
       name: (
         <>
-          Al Basir Group
-          <br />
-          of Industries
+          Froyoland
         </>
       ),
-      role: "MD-Al Roof",
-      avatarInitial: "M",
-      color: "#C29100",
+      avatarInitial: "images/myfroyoland.png",
+      color: "#ffffff",
       review:
-        "Tushar and his Promotr team delivered exceptional results for our business. Their performance marketing strategies helped us achieve a remarkable ROAS of 6X while promoting our shawls and clothing within India. Their deep understanding of the market and dedication to maximizing our returns were evident throughout the campaign. Thanks to their efforts, we saw a significant boost in sales and brand visibility. We highly recommend their services to anyone looking to scale their business effectively!",
+        "The Promotr team brought creativity and innovation to our Chandigarh outlet. During the BANGR Festival, their Bollywood-inspired slogans like 'Dil wale Froyo le jaenge!' on cups made our brand stand out and connect with a larger audience. Their strategies boosted our brand awareness in a fun and memorable way. Highly recommended!",
+      role: "MD-Rattanbir Singh",
     },
     {
       id: 4,
-      name: "Coca Cola",
-      role: (
+      name: (
         <>
-          Channel Marketing
-          <br />
-          Head - Bikram Khanna
+          COCA COLA
         </>
       ),
-      avatarInitial: "B",
-      color: "#D90A2C",
+      avatarInitial: "images/coco-cola.png",
+      color: "#ffffff",
       review:
-        "Collaborating with Tushar and his Promotr team was a fantastic experience. For the launch of our new product, Charged, they executed innovative brand awareness campaigns that truly resonated with our target audience. One of the standout initiatives was distributing 3,000 bottles at Panjab University during student activities, creating a buzz and driving engagement among students. Their creative approach and seamless execution made a significant impact, ensuring our product reached the right audience in a memorable way. We look forward to working with them again on future projects!",
+        "Working with the Promotr team for the launch of our product, Charged, was fantastic. Their creative campaigns, like distributing 3,000 bottles at Panjab University during student activities, created a buzz and connected us with our target audience.",
+      role: "Marketing Head-Bikram Khanna",
     },
-   
     {
       id: 5,
-      name: "Eagle I Advisor",
-      role: "Director: Simar Gill Mc Colough",
-      avatarInitial: "S",
-      color: "#D90A2C",
+      name: (
+        <>
+          Eagle I Advisor
+        </>
+      ),
+      avatarInitial: "images/eagleAdvisor.avif",
+      color: "#ffffff",
       review:
-        "Tushar and his Promotr team did a phenomenal job in creating high-quality video content for Usana Health Sciences. From shooting engaging reels to capturing authentic client testimonials, their work truly brought our brand's story to life. Their professionalism and creative vision ensured every video aligned perfectly with our brand's image and values. The final products were exceptional and received great feedback from our audience. We highly recommend their services for anyone looking to elevate their marketing efforts with compelling visual content!",
+        "Working with  Promotr team was a game-changer. Their Facebook ads boosted student interest in our IELTS courses, and their student conferences in Chandigarh colleges allowed us to engage directly with students. We saw a big increase in inquiries and enrollments thanks to their efforts",
+      role: "MD-Gurinder Singh",
     },
     {
       id: 6,
-      name: "My Froyoland",
-      role: "Owner: Rattanbir Singh",
-      avatarInitial: "M",
-      color: "#D90A2C",
+      name: (
+        <>
+          Platinum Truck<br />Body and Repair
+        </>
+      ),
+      avatarInitial: "images/platinu.png",
+      color: "#ffffff",
       review:
-        "Tushar and his Promotr team brought an incredible level of creativity and innovation to our brand. For our Chandigarh outlet, their unique marketing strategies significantly boosted brand awareness. A standout initiative was during the Bhangra Festival, where they designed Bollywood-inspired slogans like 'Dil wale Froyo le jaenge!' on our cups and strategically placed them throughout the event. This not only grabbed attention but also made our brand a memorable part of the festival. Their efforts helped us connect with a larger audience in a fun and impactful way. Highly recommended for anyone looking to elevate their brand presence!",
+        "The Promotr team helped us build a strong online presence by designing a user-friendly website for Platinum Truck Body and Repair and improving our SEO. Their work boosted our visibility, attracted more clients, and exceeded our expectations. Highly recommend their services!",
+      role: "Owner-Tejinder Babli",
     },
-    {
-      id: 7,
-      name: (<>
-        Platinum Truck Body
-        <br />
-        and Repair
-      </>),
-      role: "Owner: Tejinder Babli",
-      avatarInitial: "T",
-      color: "#D90A2C",
-      review:
-        "Tushar and his Promotr team were instrumental in helping us establish a strong online presence. They designed a dynamic and user-friendly website for Platinum Truck Body and Repair, ensuring it showcased our services effectively. In addition, their expertise in SEO significantly improved our visibility, driving more traffic to our site and attracting new clients. Their professionalism, creativity, and dedication to delivering results were exceptional. We highly recommend their services for anyone looking to enhance their digital presence!",
-    },
-   
   ];
 
   const responsive = {
@@ -267,7 +265,7 @@ const ReviewsCard = () => {
           bottomText={"Customer Review"}
         />
       </div>
-      <div className="w-[90%] mx-auto ">
+      <div className="w-full mx-auto ">
         {" "}
         {/* Main wrapper for padding */}
         <Carousel
@@ -277,6 +275,8 @@ const ReviewsCard = () => {
           autoPlay={true} // Auto play on slide change
           autoPlaySpeed={3000} // Speed between automatic slide change (in ms)
           containerClass="carousel-container"
+          customLeftArrow={<CustomLeftArrow />}
+          customRightArrow={<CustomRightArrow />}
         >
           {/* Loop over the reviewCards array */}
           {reviewCards.map((review) => (
@@ -298,23 +298,32 @@ const ReviewsCard = () => {
               >
                 <div
                   data-aos="flip-right"
-                  className="p-8 mt-1 overflow-hidden h-full w-full" // Ensure this div fills the parent
+                  className="p-6 mt-1 overflow-hidden h-full w-full" // Ensure this div fills the parent
                 >
                   <div className="flex items-center space-x-4">
                     {/* Avatar with dynamic background color */}
                     <div
-                      className="flex items-center justify-center text-white rounded-full h-10 w-10 text-base font-bold"
+                      className="flex items-center justify-center text-white rounded-full h-16 w-16 text-base font-bold overflow-hidden"
                       style={{ backgroundColor: review.color }}
                     >
-                      {review.avatarInitial}
+                      {/* {review.avatarInitial} */}
+                      <img
+                        className="h-12 w-12 object-contain"
+                        src={review.avatarInitial}
+                        alt="avatar"
+                      />
                     </div>
                     <div>
-                      <h2 className="text-base font-bold">{review.name}</h2>
-                      <p className="text-xs text-gray-400">{review.role}</p>
+                      <h2 className="text-3xl font-bold">
+                        {review.name}
+                      </h2>
                     </div>
                   </div>
-                  <p className="mt-5 text-xs text-gray-300 text-justify">
+                  <p className="mt-5 text-sm text-gray-300 text-left">
                     {review.review}
+                  </p>
+                  <p className="text-base absolute bottom-10 left-10 text-white">
+                    {review.role}
                   </p>
                 </div>
               </div>
@@ -325,6 +334,44 @@ const ReviewsCard = () => {
     </>
   );
 };
+
+const CustomLeftArrow = ({ onClick }) => (
+  <button
+    className="absolute left-[0px] top-1/2 transform -translate-y-1/2 bg-white/10 p-2 rounded-full shadow hover:bg-white/20"
+    onClick={onClick}
+  >
+    {/* Replace with your arrow icon */}
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-6 w-6 text-white"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={2}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+    </svg>
+  </button>
+);
+
+const CustomRightArrow = ({ onClick }) => (
+  <button
+    className="absolute right-[0px] top-1/2 transform -translate-y-1/2 bg-white/10 p-2 rounded-full shadow hover:bg-white/20"
+    onClick={onClick}
+  >
+    {/* Replace with your arrow icon */}
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-6 w-6 text-white"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={2}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+    </svg>
+  </button>
+);
 
 export default function Home() {
   useEffect(() => {
