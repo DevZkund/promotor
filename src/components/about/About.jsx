@@ -79,7 +79,7 @@ function FounderSection() {
         <div className="bg-[#FFBF00] my-2 py-5 px-3 rounded-xl text-center w-full lg:w-auto h-auto lg:h-64">
           <div className="flex flex-row justify-start items-center  py-4 px-4">
             <span className="text-[8vw]  md:text-6xl font-bold text-black font-nexa">
-              96
+            100+
             </span>
             <span className="text-[3.8vw] md:text-2xl font-semibold text-black text-start ml-2 md:ml-4">
               Completed <br /> Project
@@ -97,7 +97,7 @@ function FounderSection() {
         <div className="bg-[#FFBF00] my-2 py-5 px-3 rounded-xl text-center w-full lg:w-auto h-auto lg:h-64">
           <div className="flex flex-row justify-start items-center  py-4 px-4">
             <span className="text-[8vw]  md:text-6xl font-bold text-black font-nexa">
-              11K
+            1K+
             </span>
             <span className="text-[3.8vw] md:text-2xl font-semibold text-black text-start ml-2 md:ml-4">
               Happy <br /> customers
@@ -139,13 +139,7 @@ function WhyDifferentSection() {
                     Trust, Diligence, Succeed!
                   </div>
                   <div className="mt-6 text-sm leading-6 max-md:mt-5 max-md:max-w-full">
-                    here are many variations of passages of Lorem Ipsum
-                    available, <br />
-                    but the majority have suffered alteration in some form, by{" "}
-                    <br />
-                    injected humour, or randomised words which don't look even{" "}
-                    <br />
-                    slightly believable.{" "}
+                  Look for an agency that has helped businesses like yours achieve their goals and take their online presence to the next level. Last but not least, creativity is key. You need someone who thinks outside the box, someone who can come up with innovative solutions to your marketing problems.
                   </div>
                   {/* <div className="self-start px-5 py-2 mt-5 text-sm bg-black rounded-[90px] max-md:px-5 max-md:mt-10">
                     Know More

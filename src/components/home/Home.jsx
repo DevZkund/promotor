@@ -173,7 +173,7 @@ const ReviewsCard = () => {
       color: "#ffffff",
       review:
         "The Promotr team did an amazing job creating video content for Usana Health Sciences. From reels to client testimonials, they brought our brand's story to life. The videos turned out great and got awesome feedback. Highly recommend their services!",
-      role: "MD-Gurinder Singh",
+      role: "Simar Gill Mc Colough, Director",
     },
     {
       id: 3,
@@ -319,7 +319,7 @@ const ReviewsCard = () => {
                       </h2>
                     </div>
                   </div>
-                  <p className="mt-5 text-sm text-gray-300 text-left">
+                  <p className="mt-6 text-sm text-gray-300 text-left">
                     {review.review}
                   </p>
                   <p className="text-base absolute bottom-10 left-10 text-white">

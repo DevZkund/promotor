@@ -28,7 +28,7 @@ export const services = [
     id: "traditionalMarketing",
     title: "Traditional Marketing",
     description:
-      "With years of experience in the field, we are experts in navigating the ever-changing realm of politics. We offer a comprehensive range of services that cover every aspect of political campaigns, from strategic planning to grassroots organizing.",
+      "We believe in the power of old-school marketing tactics that have stood the test of time. Our services include print advertising, direct mail, and in-person events that are sure to catch the attention of your target audience.",
     imageSrc:
       "./icons/TraditionalMarketing.png",
     link: "/service"
