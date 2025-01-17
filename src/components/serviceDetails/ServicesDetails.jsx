@@ -120,7 +120,7 @@ function ContactForm() {
           <div>
             <div className="text-sm md:text-lg font-bold">Call Us</div>
             <div className="text-xs md:text-sm">
-              +91 6283910290 <br /> +61- 416927444
+              +91 6283910290 <br /> +61-0416927444
             </div>
           </div>
         </div>
