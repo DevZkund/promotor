@@ -37,7 +37,7 @@ function App() {
     return () => clearTimeout(timer); // Cleanup timer on component unmount
   }, []);
 
-  return (
+  return (          
     <HelmetProvider>
       <div className="bg-black text-white w-full mx-auto font-poppins">
         <Helmet>
