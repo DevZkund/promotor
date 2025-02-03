@@ -2,24 +2,35 @@ const fs = require('fs');
 const { SitemapStream, streamToPromise } = require('sitemap');
 const path = require('path');
 
-// List of routes in your app
+// List of static routes in your app
 const routes = [
   '/',
   '/about',
   '/contact',
   '/services',
-  '/service',
 ];
 
-// Base URL of your website
+// Dynamic service routes (Example: Replace with actual service slugs from a database)
+const serviceRoutes = [
+  '/service/digitalMarketing',
+  '/service/graphicDesigning',
+  '/service/webDevelopment',
+  '/service/traditionalMarketing',
+];
+
 const baseUrl = 'https://promotrworld.in';
 
 (async () => {
   const sitemap = new SitemapStream({ hostname: baseUrl });
 
-  // Add each route to the sitemap
+  // Add static routes
   routes.forEach((route) => {
     sitemap.write({ url: route, changefreq: 'daily', priority: 0.8 });
+  });
+
+  // Add dynamic service routes
+  serviceRoutes.forEach((route) => {
+    sitemap.write({ url: route, changefreq: 'weekly', priority: 0.7 });
   });
 
   sitemap.end();
@@ -31,5 +42,5 @@ const baseUrl = 'https://promotrworld.in';
     sitemapXml.toString()
   );
 
-  console.log('Sitemap successfully generated at public/sitemap.xml');
+  console.log('✅ Sitemap successfully generated at public/sitemap.xml');
 })();

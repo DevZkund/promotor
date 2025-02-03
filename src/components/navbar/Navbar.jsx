@@ -25,7 +25,7 @@ export default function Navbar() {
   return (
     <header className="flex items-center justify-between p-4 sticky top-0 z-50 bg-black">
       <Link className="flex items-center space-x-4 h-8 w-44" to="/">
-        <img src="./images/promotrw.png" alt="logo"  />
+        <img src={`${process.env.PUBLIC_URL}/images/promotrw.png`} alt="logo"  />
       </Link>
       <nav className="hidden md:flex space-x-4 lg:space-x-8">
         <Link

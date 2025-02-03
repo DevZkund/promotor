@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Route,
   Routes,
   useLocation,
@@ -14,50 +14,26 @@ import Contacts from "./components/contacts/Contacts";
 import Services from "./components/services/Services";
 import ServicesDetails from "./components/serviceDetails/ServicesDetails";
 
+
 // Scroll to top on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-
   return null;
 };
 
 function App() {
-  return (          
+  return (
     <HelmetProvider>
       <div className="bg-black text-white w-full mx-auto font-poppins">
-        <Helmet>
-          <title>Promotr</title>
-          <meta
-            name="description"
-            content="Promotr Marketing Agency | Amplify your brand’s voice with innovative marketing solutions! 🚀 We specialize in SEO, branding, social media campaigns, and memes that drive results. Based in India and Australia, we’re your trusted digital marketing partner!"
-          />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta
-        http-equiv="Content-Security-Policy"
-        content="
-          default-src 'self'; 
-          script-src 'self'; 
-          style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; 
-          font-src 'self' https://fonts.gstatic.com; 
-          connect-src 'self' https://api.emailjs.com;"
-      />
-          <meta name="robots" content="index, follow" />
-          <meta
-            name="keywords"
-            content="Promotr, Promotrworld, promotr, promotrworld, digital marketing, web development, UX design, content creation, strategy consulting, online branding, SEO"
-          />
-          
-          <link rel="canonical" href="https://promotrworld.in" />
-        </Helmet>
-
         <Router>
           <ScrollToTop />
           <Navbar />
+          
           <Routes>
+            {/* Home Page */}
             <Route
               path="/"
               element={
@@ -66,13 +42,15 @@ function App() {
                     <title>Home - Promotr</title>
                     <meta
                       name="description"
-                      content="Discover our homepage and start exploring what we have to offer."
+                      content="Discover Promotr, your go-to digital marketing agency specializing in SEO, branding, and social media campaigns. 🚀"
                     />
                   </Helmet>
                   <Home />
                 </>
               }
             />
+
+            {/* About Page */}
             <Route
               path="/about"
               element={
@@ -81,13 +59,15 @@ function App() {
                     <title>About Us - Promotr</title>
                     <meta
                       name="description"
-                      content="Learn more about our mission, values, and team."
+                      content="Learn more about Promotr’s mission, values, and expertise in digital marketing. We create strategies that work!"
                     />
                   </Helmet>
                   <About />
                 </>
               }
             />
+
+            {/* Contact Page */}
             <Route
               path="/contact"
               element={
@@ -96,13 +76,15 @@ function App() {
                     <title>Contact Us - Promotr</title>
                     <meta
                       name="description"
-                      content="Get in touch with us for inquiries, feedback, or support."
+                      content="Get in touch with Promotr for inquiries, collaborations, or support. Let’s amplify your brand together!"
                     />
                   </Helmet>
                   <Contacts />
                 </>
               }
             />
+
+            {/* Services Page */}
             <Route
               path="/services"
               element={
@@ -111,22 +93,24 @@ function App() {
                     <title>Our Services - Promotr</title>
                     <meta
                       name="description"
-                      content="Explore the wide range of services we offer to meet your needs."
+                      content="Explore the range of services offered by Promotr, including SEO, branding, content creation, and digital marketing strategies."
                     />
                   </Helmet>
                   <Services />
                 </>
               }
             />
+
+            {/* Service Details Page (Dynamic) */}
             <Route
-              path="/service"
+              path="/service/:id"
               element={
                 <>
                   <Helmet>
                     <title>Service Details - Promotr</title>
                     <meta
                       name="description"
-                      content="Detailed information about our individual services."
+                      content="Detailed insights into our specialized services. Discover how Promotr can enhance your digital presence."
                     />
                   </Helmet>
                   <ServicesDetails />
@@ -134,6 +118,7 @@ function App() {
               }
             />
           </Routes>
+
           <Footer />
         </Router>
       </div>

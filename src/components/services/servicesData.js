@@ -6,7 +6,7 @@ export const services = [
     description:
       "Boost your online presence with our cutting-edge Digital Marketing service. At Digital Marketing, we use performance marketing to leverage your brand across various platforms and channels to drive desired results.",
     imageSrc: "./icons/DigitalMarketing.png",
-    link: "/service"
+    link: "/service/digitalMarketing"
   },
   {
     id: "graphicDesigning",
@@ -14,7 +14,7 @@ export const services = [
     description:
       "Graphic Designing service is tailored to meet your needs. We offer creative solutions to help you stand out from the crowd, in a way that resonates with your audience. Our designers are always thinking outside the box.",
     imageSrc: "./icons/GraphicDesigning.png",
-    link: "/service"
+    link: "/service/graphicDesigning"
   },
   {
     id: "webDevelopment",
@@ -22,7 +22,7 @@ export const services = [
     description:
       "Looking for website development ? Look no further than Promotr. Our team of experts will create a website that showcases your strengths and captures your brand's essence, while providing a top-notch user experience",
     imageSrc: "./icons/WebDevelopment.png",
-    link: "/service"
+    link: "/service/webDevelopment"
   },
   {
     id: "traditionalMarketing",
@@ -31,7 +31,7 @@ export const services = [
       "We believe in the power of old-school marketing tactics that have stood the test of time. Our services include print advertising, direct mail, and in-person events that are sure to catch the attention of your target audience.",
     imageSrc:
       "./icons/TraditionalMarketing.png",
-    link: "/service"
+    link: "/service/traditionalMarketing"
   },
   {
     id: "politicalManagement",

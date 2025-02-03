@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-white/5 text-foreground px-4 md:px-16 pb-4">
       <div className="flex flex-row md:flex-row  justify-between items-center">
         <div className="mb-4 md:mb-0">
-          <img className="w-48 h-24" src="./images/promotrw.png" alt="Promotrw Logo" />
+          <img className="w-48 h-24" src={`${process.env.PUBLIC_URL}/images/promotrw.png`} alt="Promotrw Logo" />
           <div className="hidden md:flex space-x-4 py-3">
             <Link to="/" className="hover:text-muted-foreground">
               Home

@@ -102,21 +102,21 @@ function ContactForm() {
       <div className="mt-8 text-black">
         <h3 className="text-sm md:text-lg font-semibold text-gray-800">Contact Our Office</h3>
         <div className="flex gap-4 items-start mt-6">
-          <img src="icons/click.png" alt="Chat" className="w-6 h-6" />
+          <img src={`${process.env.PUBLIC_URL}/icons/click.png`} alt="Chat" className="w-6 h-6" />
           <div>
             <div className="text-sm md:text-lg font-bold">Chat to us</div>
             <div className="text-xs lg:text-sm md:-ps-4 lg:p-0">promotrworld01@gmail.com</div>
           </div>
         </div>
         <div className="flex gap-4 items-start mt-6">
-          <img src="icons/location.png" alt="Location" className="w-6 h-6" />
+          <img src={`${process.env.PUBLIC_URL}/icons/location.png`} alt="Location" className="w-6 h-6" />
           <div>
             <div className="text-sm md:text-lg font-bold">Visit our Office Branch</div>
             <div className="text-xs md:text-sm">Headquarters: 7/5 Scanlon DR, Epping, Melbourne</div>
           </div>
         </div>
         <div className="flex gap-4 items-start mt-6">
-          <img src="icons/callBlack.png" alt="Call" className="w-6 h-6" />
+          <img src={`${process.env.PUBLIC_URL}/icons/callBlack.png`} alt="Call" className="w-6 h-6" />
           <div>
             <div className="text-sm md:text-lg font-bold">Call Us</div>
             <div className="text-xs md:text-sm">
@@ -170,13 +170,13 @@ const ImageGrid = ({ images }) => {
 
 const ImageSlider = () => {
   const images = [
-    "images/contact1.png",
-    "images/contact2.png",
-    "images/contact3.png",
-    "images/contact4.jpg",
-    "images/contact5.png",
+    `${process.env.PUBLIC_URL}/images/contact1.png`,
+    `${process.env.PUBLIC_URL}/images/contact2.png`,
+    `${process.env.PUBLIC_URL}/images/contact3.png`,
+    `${process.env.PUBLIC_URL}/images/contact4.jpg`,
+    `${process.env.PUBLIC_URL}/images/contact5.png`,
   ];
-
+  
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [fade, setFade] = useState(true);
 
@@ -226,6 +226,8 @@ const GraphicDesignSection = ({ title, subtitle, companyName, location, descript
 
 function ServicesDetails() {
   const location = useLocation();
+  
+  // Parse the query string to get the 'service' query param
   const queryParams = new URLSearchParams(location.search);
   const service = queryParams.get("service");
   const serviceData = servicePageData[service];
@@ -237,6 +239,8 @@ function ServicesDetails() {
       </div>
     );
   }
+
+
 
   const { imageGrid, graphicDesignSection, video } = serviceData;
 
