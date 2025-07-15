@@ -28,7 +28,7 @@ const Footer = () => {
           <p>Phone: +61-0416927444</p>
           <p>Email: promotrworld01@gmail.com</p>
           {/* <p>Contact Us: info@planthaven.com</p> */}
-          <p>Head quaters: <u>7/5 Scanlon Dr, Epping<br></br> VIC, Melbourne, Victoria, Australia</u></p>
+          <p>Head quaters: <u>Melbourne, Australia</u></p>
         </div>
       </div>
       <div className="flex justify-center md:justify-end space-x-4 pt-2  border-t-[0.1px] border-t-white/5">
